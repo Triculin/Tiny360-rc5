@@ -1,0 +1,102 @@
+/* Scss Document */
+
+$primary_color: #363f45;
+
+$light-gray: #919599;
+
+$orange:  #fe5621;
+
+$green: #4bae4f;
+
+$primary_color_three:#FE5621;
+
+$blue: #3e50b4;
+
+$yellow: #fec006;
+
+$white: #fff;
+
+$color-one:#f34235;
+
+$color-two:#fe9700;
+
+$color-three:#8ac249;
+
+$primary_color_one:#f2f9ff;
+
+$font-weight:700;
+
+$secondary-font-weight:400;
+
+$secondary-color:#919599;
+
+$secondary-color-one:#9da2a6;
+
+$primary-color-one:#f0f1f5;
+
+$primary-color-two:#02a8f3;
+
+$background: #f0f1f5;
+
+$background_two: #ebecf2;
+
+$background_one:#fe6d3f;
+
+$font-stack: 'Source Sans Pro', sans-serif;
+
+@mixin defaulttype{ outline:0; text-decoration:none; color:$primary_color;}
+
+@mixin header-part{ background: #f2f9ff;box-shadow: none;}
+
+@mixin transition{ -webkit-transform: translateY(-50%);-ms-transform: translateY(-50%); transform: translateY(-50%);}
+
+@mixin transform{ -webkit-transition: all .3s ease;-moz-transition: all .3s ease;-ms-transition: all .3s ease;-o-transition: all .3s ease;}
+
+@mixin fontsize{font-size: 16px;font-size: 1.6rem;}
+
+@mixin font_size{ font-size: 24px;font-size: 2.4rem;}
+
+@mixin defaulttype-one{ background: rgba(0,0,0,.1);}
+
+@mixin margin{ margin:0;}
+
+@mixin padding{ padding:0}
+
+@mixin font-size{ font-size: 20px; font-size: 2rem;}
+
+@mixin font{ font-size: 14px;font-size: 1.4rem;}
+
+@mixin border-radius{ -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}
+
+@mixin background-clip{ -moz-background-clip: padding;-webkit-background-clip: padding-box;background-clip: padding-box;}
+
+@mixin user-select{-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;
+-ms-user-select: none;user-select: none;}
+
+@mixin font-size-one{ font-size: 18px;font-size: 1.8rem;}
+
+@mixin font-size-two{ font-size:12px; font-size:1.2rem;}
+
+@mixin border-radius-one{ -webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;}
+
+@mixin box-shadow{ -webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none;}
+
+@mixin primary-content{ font-style:italic;color:$secondary-color;}
+
+@mixin widht{ width: 26px;height: 26px;}
+
+@mixin font-size-three{ font-size: 22px;font-size: 2.2rem;}
+
+@mixin call-out{-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+
+@mixin text-shadow{ -webkit-text-shadow: none;-moz-text-shadow: none;text-shadow: none;}
+
+@mixin opacity{ -moz-opacity: 0;-khtml-opacity: 0;-webkit-opacity: 0;}
+
+@mixin opacity-one{ -moz-opacity: 1;-khtml-opacity: 1;-webkit-opacity: 1;opacity: 1;}
+
+@mixin box-shadow-one{ -webkit-box-shadow: 0 3px 8px #cec9c9;-moz-box-shadow: 0 3px 8px #cec9c9;box-shadow: 0 3px 8px #cec9c9;}
+
+@mixin content-one{ font-weight:$font-weight; color:$white; background:$orange;}
+
+@mixin content_two{ font-style:normal;color:$orange;}

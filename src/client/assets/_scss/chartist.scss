@@ -1,0 +1,804 @@
+/* Scss Document */
+
+@import "_mixin.scss";
+
+.ct-double-octave:after, .ct-major-eleventh:after, .ct-major-second:after, .ct-major-seventh:after, .ct-major-sixth:after, .ct-major-tenth:after, .ct-major-third:after, .ct-major-twelfth:after, .ct-minor-second:after, .ct-minor-seventh:after, .ct-minor-sixth:after, .ct-minor-third:after, .ct-octave:after, .ct-perfect-fifth:after, .ct-perfect-fourth:after, .ct-square:after {
+	content: "";
+	clear: both
+}
+.ct-double-octave:after, .ct-double-octave:before, .ct-golden-section:after, .ct-major-eleventh:after, .ct-major-eleventh:before, .ct-major-second:after, .ct-major-second:before, .ct-major-seventh:after, .ct-major-seventh:before, .ct-major-sixth:after, .ct-major-sixth:before, .ct-major-tenth:after, .ct-major-tenth:before, .ct-major-third:after, .ct-major-third:before, .ct-major-twelfth:after, .ct-major-twelfth:before, .ct-minor-second:after, .ct-minor-second:before, .ct-minor-seventh:after, .ct-minor-seventh:before, .ct-minor-sixth:after, .ct-minor-sixth:before, .ct-minor-third:after, .ct-minor-third:before, .ct-octave:after, .ct-octave:before, .ct-perfect-fifth:after, .ct-perfect-fifth:before, .ct-perfect-fourth:after, .ct-perfect-fourth:before, .ct-square:after, .ct-square:before {
+	content: ""
+}
+
+.ct-label {
+	fill: rgba(0,0,0,.4);
+	color: rgba(0,0,0,.4);
+	font-size: .75rem;
+	line-height: 1
+}
+
+.ct-chart-bar{
+.ct-label{
+	display: block;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+.ct-chart-line {
+	display: block;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+}
+}
+
+.ct-label{
+.ct-horizontal{
+.ct-start {
+	@include box-align;
+	@include box-pack;
+	@include text;
+}
+.ct-end {
+	@include box-align-start;
+	@include box-pack;
+	@include text;
+}
+}
+.ct-vertical{
+.ct-start {
+	@include box-align;
+	-webkit-box-pack: flex-end;
+	-webkit-justify-content: flex-end;
+	-ms-flex-pack: flex-end;
+	justify-content: flex-end;
+	text-align: right;
+	text-anchor: end
+}
+.ct-end{
+	@include box-align;
+	@include box-pack;
+	@include text;
+}
+}
+}
+
+.ct-chart-bar{
+.ct-label{
+.ct-horizontal{
+.ct-start {
+	@include box-align;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-align: center;
+	text-anchor: start;
+}
+.ct-end {
+	@include box-align-start;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-align: center;
+	text-anchor: start
+}
+}
+}
+}
+
+.ct-chart-bar{
+.ct-horizontal-bars{
+.ct-label{
+.ct-horizontal{
+.ct-start {
+	@include box-align;
+	@include box-pack;
+	@include text;
+}
+.ct-end {
+	@include box-align-start;
+	@include box-pack;
+	@include text;
+}
+}
+.ct-vertical{
+.ct-start{
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	@include box-pack;
+	text-align: right;
+	text-anchor: end;
+}
+.ct-end{
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: flex-start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: flex-start;
+	justify-content: flex-start;
+	text-align: left;
+	text-anchor: end
+}
+}
+}
+}
+}
+
+.ct-grid {
+	stroke: rgba(0,0,0,.2);
+	stroke-width: 1px;
+	stroke-dasharray: 2px
+}
+
+.ct-point {
+	stroke-width: 10px;
+	stroke-linecap: round
+}
+.ct-line {
+	fill: none;
+	stroke-width: 4px
+}
+.ct-area {
+	stroke: none;
+	fill-opacity: .1
+}
+.ct-bar {
+	fill: none;
+	stroke-width: 10px
+}
+.ct-slice-donut {
+	fill: none;
+	stroke-width: 60px
+}
+
+.ct-series-a{
+.ct-bar{
+	stroke: #d70206
+}
+.ct-line{
+	stroke: #d70206
+}
+.ct-point{
+	stroke: #d70206
+}
+.ct-slice-donut {
+	stroke: #d70206
+}
+}
+
+.ct-series-a{
+.ct-area{
+	fill: #d70206
+}
+.ct-slice-pie {
+	fill: #d70206
+}
+}
+
+.ct-series-b{
+.ct-bar{
+	stroke: #f05b4f
+}
+.ct-line{
+	stroke: #f05b4f
+}
+.ct-point{
+	stroke: #f05b4f
+}
+.ct-slice-donut {
+	stroke: #f05b4f
+}
+}
+
+.ct-series-b{
+.ct-area{
+	fill: #f05b4f
+}
+.ct-slice-pie {
+	fill: #f05b4f
+}
+}
+
+.ct-series-c{
+.ct-bar{
+	stroke: #f4c63d
+}
+.ct-line{
+	stroke: #f4c63d
+}
+.ct-point{
+	stroke: #f4c63d
+}
+.ct-slice-donut {
+	stroke: #f4c63d
+}
+}
+
+.ct-series-c{
+.ct-area{
+.ct-slice-pie {
+	fill: #f4c63d
+}
+}
+}
+
+.ct-series-d{
+.ct-bar{
+	stroke: #d17905
+}
+.ct-line{
+	stroke: #d17905
+}
+.ct-point{
+	stroke: #d17905
+}
+.ct-slice-donut {
+	stroke: #d17905
+}
+}
+
+.ct-series-d {
+.ct-area{
+	fill: #d17905
+}
+.ct-slice-pie {
+	fill: #d17905
+}
+}
+
+.ct-series-e{
+.ct-bar{
+	stroke: #453d3f
+}
+.ct-line{
+	stroke: #453d3f
+}
+.ct-point{
+	stroke: #453d3f
+}
+.ct-slice-donut {
+	stroke: #453d3f
+}
+}
+
+.ct-series-e{
+.ct-area{
+	fill: #453d3f
+}
+.ct-slice-pie {
+	fill: #453d3f
+}
+}
+
+.ct-series-f{
+.ct-bar{
+	stroke: #59922b
+}
+.ct-line{
+	stroke: #59922b
+}
+.ct-point{
+	stroke: #59922b
+}	
+.ct-slice-donut	{
+	stroke: #59922b
+}
+}
+
+.ct-series-f{
+.ct-area{
+	fill: #59922b
+}
+.ct-slice-pie {
+	fill: #59922b
+}
+}
+
+.ct-series-g{
+.ct-bar{
+	stroke: #0544d3
+}
+.ct-line{
+	stroke: #0544d3
+}
+.ct-point{
+	stroke: #0544d3
+}	
+.ct-slice-donut	{
+	stroke: #0544d3
+}
+}	
+		
+.ct-series-g{
+.ct-area{
+	fill: #0544d3
+}
+.ct-slice-pie {
+	fill: #0544d3
+}
+}		
+	
+
+.ct-series-h{
+.ct-bar{
+	stroke: #6b0392
+}
+.ct-line{
+	stroke: #6b0392
+}
+.ct-point{
+	stroke: #6b0392
+}	
+.ct-slice-donut	{
+	stroke: #6b0392
+}
+}	
+		
+.ct-series-h{
+.ct-area{
+	fill: #6b0392
+}
+.ct-slice-pie {
+	fill: #6b0392
+}
+}					
+	
+
+.ct-series-i{
+.ct-bar{
+	stroke: #f05b4f
+}
+.ct-line{
+	stroke: #f05b4f
+}
+.ct-point{
+	stroke: #f05b4f
+}	
+.ct-slice-donut	{
+	stroke: #f05b4f
+}
+}	
+		
+.ct-series-i{
+.ct-area{
+	fill: #f05b4f
+}
+.ct-slice-pie {
+	fill: #f05b4f
+}
+}
+
+
+.ct-series-j{
+.ct-bar{
+	stroke: #dda458
+}
+.ct-line{
+	stroke: #dda458
+}
+.ct-point{
+	stroke:#dda458
+}	
+.ct-slice-donut	{
+	stroke: #dda458
+}
+}	
+		
+.ct-series-j{
+.ct-area{
+	fill: #dda458
+}
+.ct-slice-pie {
+	fill:#dda458
+}
+}
+
+
+.ct-series-k{
+.ct-bar{
+	stroke: #eacf7d
+}
+.ct-line{
+	stroke: #eacf7d
+}
+.ct-point{
+	stroke:#eacf7d
+}	
+.ct-slice-donut	{
+	stroke: #eacf7d
+}
+}	
+		
+.ct-series-k{
+.ct-area{
+	fill: #eacf7d
+}
+.ct-slice-pie {
+	fill:#eacf7d
+}
+}
+
+
+.ct-series-l{
+.ct-bar{
+	stroke:#86797d
+}
+.ct-line{
+	stroke:#86797d
+}
+.ct-point{
+	stroke:#86797d
+}	
+.ct-slice-donut	{
+	stroke: #86797d
+}
+}	
+		
+.ct-series-j{
+.ct-area{
+	fill: #86797d
+}
+.ct-slice-pie {
+	fill:#86797d
+}
+}
+
+
+.ct-series-m{
+.ct-bar{
+	stroke: #b2c326
+}
+.ct-line{
+	stroke: #b2c326
+}
+.ct-point{
+	stroke:#b2c326
+}	
+.ct-slice-donut	{
+	stroke: #b2c326
+}
+}	
+		
+.ct-series-m{
+.ct-area{
+	fill: #b2c326
+}
+.ct-slice-pie {
+	fill:#b2c326
+}
+}
+
+
+.ct-series-n{
+.ct-bar{
+	stroke: #6188e2
+}
+.ct-line{
+	stroke: #6188e2
+}
+.ct-point{
+	stroke:#6188e2
+}	
+.ct-slice-donut	{
+	stroke: #6188e2
+}
+}	
+		
+.ct-series-n{
+.ct-area{
+	fill: #6188e2
+}
+.ct-slice-pie {
+	fill:#6188e2
+}
+}
+
+
+.ct-series-o{
+.ct-bar{
+	stroke: #a748ca
+}
+.ct-line{
+	stroke: #a748ca
+}
+.ct-point{
+	stroke:#a748ca
+}	
+.ct-slice-donut	{
+	stroke: #a748ca
+}
+}	
+		
+.ct-series-o{
+.ct-area{
+	fill: #a748ca
+}
+.ct-slice-pie {
+	fill:#a748ca
+}
+}
+
+
+.ct-square {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 100%
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}
+
+.ct-minor-second {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 93.75%
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}
+
+.ct-major-second {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 88.8888888889%
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}
+
+.ct-minor-third {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 83.3333333333%
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}
+
+.ct-major-third {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 80%
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}
+
+.ct-perfect-fourth {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 75%
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}
+
+.ct-perfect-fifth {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 66.6666666667%
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}
+
+.ct-minor-sixth {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 62.5%
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}
+
+.ct-golden-section {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 61.804697157%;
+}
+:after {
+	display: table;
+	clear: both
+}
+>svg {
+	@include square-one;
+}
+}
+
+
+.ct-major-sixth {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 60%
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}
+
+.ct-minor-seventh {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 56.25%;
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}
+
+.ct-major-seventh {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 53.3333333333%;
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}
+
+.ct-octave {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 50%
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}
+
+.ct-major-tenth {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 40%
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}
+
+.ct-major-eleventh {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 37.5%
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}
+
+.ct-major-twelfth {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 33.3333333333%
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}
+
+.ct-double-octave {
+	display: block;
+	position: relative;
+	width: 100%;
+:before {
+	@include square;
+	padding-bottom: 25%
+}
+:after {
+	display: table
+}
+>svg {
+	@include square-one;
+}
+}

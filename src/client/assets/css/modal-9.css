@@ -1,0 +1,175 @@
+/* Scss Document */
+/* Scss Document */
+/*---------------------------app.min.scss mixin start---------------*/
+/*------------own-styles.scss mixins start -------------*/
+/*------------------app.min.scss mixins end---------------------------*/
+/*-----------own-styles.scss mixins end -----------------*/
+/*----------------animate.min.scss mixin start -----------*/
+/*----------------animate.min.scss mixin End -----------*/
+/*---------------datatables.min.scss mixin start--------*/
+/*---------------datatables.min.scss mixin End--------*/
+/*----------------chartist.min.scss mixin Start -----------*/
+/*-------------------------------chartist.min.scss mixin End-------------*/
+/*-------------------------select2.min.scss mixin start-----------------*/
+/*-------------------------select2.min.scss mixin End-----------------*/
+/*-------------------------jquery-ui.min.scss mixin Start-----------------*/
+/*-------------------------jquery-ui.min.scss mixin End-----------------*/
+/*-------------------------bootstrap-datepicker.min.scss mixin Start-----------------*/
+/* Scss Document */
+/*----------------------app.min.scss variables start------------------*/
+/*----------------------app.min.scss variables end------------------*/
+/*-----------------------------own-styles.scss variables start--------------*/
+/*-----------------------------own-styles.scss variables end--------------*/
+/*-----------------------------select2.min.scss variables start------------*/
+.fl {
+  float: left;
+  display: inline;
+}
+
+.fr {
+  float: right;
+  display: inline;
+}
+
+.clear {
+  clear: both;
+  display: block;
+}
+
+ul, li, h1, h2, h3, h4, h5, h6, p {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: #ebecf2;
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #363f45;
+  font-family: "Source Sans Pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+a {
+  color: #363f45;
+  text-decoration: none;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+}
+
+.form-control {
+  box-shadow: none;
+  border-radius: 0;
+  background-clip: padding-box;
+  outline: 0;
+  border-color: #e6e7ed;
+  /*border-left: 3px solid #4bae4f;*/
+  font-weight: 400;
+  height: 45px;
+  padding: 16px 18px;
+  margin-bottom: 15px;
+}
+.form-control :focus {
+  outline: 0;
+  box-shadow: none;
+}
+.form-control :hover {
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-inline .form-group {
+  margin-right: 10px;
+}
+.form-inline .form-control {
+  margin-bottom: 0;
+}
+.form-inline .form-inline label {
+  margin-bottom: 0;
+}
+
+.modal-content {
+  border-radius: 0;
+  background-clip: padding-box;
+  border: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.modal-header {
+  padding: 30px;
+  position: relative;
+  border: 0;
+}
+.modal-header .modal-title {
+  margin: 0;
+}
+.modal-header .close {
+  margin: 0;
+  outline: 0;
+  top: 40px;
+  right: 30px;
+  position: absolute;
+}
+
+.modal-body {
+  padding: 0 30px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 24px;
+}
+
+.pop_box1 {
+  padding: 0 0 20px 0;
+}
+.pop_box1 .pop_box_btn ul li {
+  float: left;
+  display: inline;
+  margin: 0 20px 0 0;
+}
+.pop_box1 .pop_box_btn ul li :nth-child(2) {
+  margin: 0px;
+}
+.pop_box1 .pop_box_btn ul li a {
+  display: inline-block;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  line-height: 13px;
+}
+.pop_box1 .pop_box_btn ul li a :hover {
+  color: #fe6d3f;
+  border-bottom: 1px solid #fe6d3f;
+}
+
+.pop_box1 .info2_new {
+  display: inline-block;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  line-height: 13px;
+  margin: 0 0 20px 0px;
+  padding: 0px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+#added .row:last-child .form-group {
+  margin-bottom: 0px;
+}
+
+.row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+/*# sourceMappingURL=modal-9.css.map */
