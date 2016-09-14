@@ -3,7 +3,7 @@ import { DashboardComponent } from './index';
 
 export const DashboardRoutes: Route[] = [
   {
-    path: 'dashboard',
+    path: '',
     component: DashboardComponent
   }
 ];
