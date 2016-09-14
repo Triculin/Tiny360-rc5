@@ -1,0 +1,190 @@
+/* Scss Document */
+
+/*---------------------------app.min.scss mixin start---------------*/
+
+@mixin defaulttype{ outline:0; text-decoration:none; color:$primary_color;}
+
+@mixin header-part{ background: #f2f9ff;box-shadow: none;}
+
+@mixin transition{ -webkit-transform: translateY(-50%);-ms-transform: translateY(-50%); transform: translateY(-50%);}
+
+@mixin transform{ -webkit-transition: all .3s ease;-moz-transition: all .3s ease;-ms-transition: all .3s ease;-o-transition: all .3s ease;}
+
+@mixin fontsize{font-size: 16px;font-size: 1.6rem;}
+
+@mixin font_size{ font-size: 24px;font-size: 2.4rem;}
+
+@mixin defaulttype-one{ background: rgba(0,0,0,.1);}
+
+@mixin margin{ margin:0;}
+
+@mixin padding{ padding:0}
+
+@mixin font-size{ font-size: 20px; font-size: 2rem;}
+
+@mixin font{ font-size: 14px;font-size: 1.4rem;}
+
+@mixin border-radius{ -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}
+
+@mixin background-clip{ -moz-background-clip: padding;-webkit-background-clip: padding-box;background-clip: padding-box;}
+
+@mixin user-select{-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;
+-ms-user-select: none;user-select: none;}
+
+@mixin font-size-one{ font-size: 18px;font-size: 1.8rem;}
+
+@mixin font-size-two{ font-size:12px; font-size:1.2rem;}
+
+@mixin border-radius-one{ -webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;}
+
+@mixin box-shadow{ -webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none;}
+
+@mixin primary-content{ font-style:italic;color:$secondary-color;}
+
+@mixin widht{ width: 26px;height: 26px;}
+
+@mixin font-size-three{ font-size: 22px;font-size: 2.2rem;}
+
+@mixin call-out{-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+
+@mixin text-shadow{ -webkit-text-shadow: none;-moz-text-shadow: none;text-shadow: none;}
+
+@mixin opacity{ -moz-opacity: 0;-khtml-opacity: 0;-webkit-opacity: 0;}
+
+@mixin opacity-one{ -moz-opacity: 1;-khtml-opacity: 1;-webkit-opacity: 1;opacity: 1;}
+
+@mixin box-shadow-one{ -webkit-box-shadow: 0 3px 8px #cec9c9;-moz-box-shadow: 0 3px 8px #cec9c9;box-shadow: 0 3px 8px #cec9c9;}
+
+@mixin content-one{ font-weight:$font-weight; color:$white; background:$orange;}
+
+@mixin content_two{ font-style:normal;color:$orange;}
+
+/*------------own-styles.scss mixins start -------------*/
+
+@mixin margin{margin:0;}
+
+@mixin border{ border-radius: 3px; border: 1px solid #E0E0E0;}
+
+@mixin padding-one{font-weight: normal; padding: 12px 5px;}
+
+@mixin content_primary{ width:100%; height:100vh; margin:0 0 0 500px;}
+
+/*------------------app.min.scss mixins end---------------------------*/
+
+
+/*-----------own-styles.scss mixins end -----------------*/
+
+
+/*----------------animate.min.scss mixin start -----------*/
+
+@mixin transform_one{ -webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1);}
+
+@mixin transform_two{ -webkit-transform:scale3d(1, 1, 1);-ms-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1);}
+
+@mixin translate_one{ -webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0);}
+
+@mixin translate_two{ -webkit-transform:translate3d(0, 0, 0);-ms-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0);}
+
+@mixin timing{ -webkit-transition-timing-function:cubic-bezier(0.215, .61, .355, 1);transition-timing-function:cubic-bezier(0.215, .61, .355, 1);}
+
+@mixin transform_three{ -webkit-transform:scale3d(.3, .3, .3);-ms-transform:scale3d(.3, .3, .3);transform:scale3d(.3, .3, .3);}
+
+@mixin form-one{ -webkit-transform:none;-ms-transform:none;transform:none;}
+
+@mixin form_two{ -webkit-transform:none;transform:none;}
+
+@mixin scale{ -webkit-transform:scale3d(.3, .3, .3);transform:scale3d(.3, .3, .3);}
+
+@mixin perspective{ -webkit-transform:perspective(400px);transform:perspective(400px);}
+
+@mixin perspective_one{ -webkit-transform:perspective(400px);-ms-transform:perspective(400px);transform:perspective(400px);}
+
+@mixin origin{ -webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center;}
+
+@mixin origin-one{ -webkit-transform-origin:center;transform-origin:center;}
+
+@mixin origin-left{ -webkit-transform-origin:left bottom;transform-origin:left bottom;}
+
+@mixin origin-left-one{ -webkit-transform-origin:left bottom;-ms-transform-origin:left bottom;transform-origin:left bottom;}
+
+@mixin origin-right{ -webkit-transform-origin:right bottom;transform-origin:right bottom;}
+
+@mixin origin-right-one{ -webkit-transform-origin:right bottom;-ms-transform-origin:right bottom;transform-origin:right bottom;}
+
+
+/*----------------animate.min.scss mixin End -----------*/
+
+
+/*---------------datatables.min.scss mixin start--------*/
+/*---------------datatables.min.scss mixin End--------*/
+
+
+/*----------------chartist.min.scss mixin Start -----------*/
+
+@mixin box-align{ -webkit-box-align: flex-end;-webkit-align-items: flex-end;-ms-flex-align: flex-end;align-items: flex-end;}
+
+@mixin box-pack{ -webkit-box-pack: flex-start;-webkit-justify-content: flex-start;-ms-flex-pack: flex-start;justify-content: flex-start;}
+
+@mixin text{ text-align: left;text-anchor: start;}
+
+@mixin box-align-start{ -webkit-box-align: flex-start;-webkit-align-items: flex-start;-ms-flex-align: flex-start;align-items: flex-start;}
+
+@mixin square{ display: block;float: left;width: 0;height: 0;}
+
+@mixin square-one{ display: block;position: absolute;top: 0;left: 0;}
+
+/*-------------------------------chartist.min.scss mixin End-------------*/
+
+
+/*-------------------------select2.min.scss mixin start-----------------*/
+
+@mixin margin{ margin:0;}
+
+@mixin padding{ padding:0;}
+
+@mixin bottom-radius{ border-bottom-left-radius: 0;border-bottom-right-radius: 0;}
+
+@mixin border-top{ border-top-left-radius: 0;border-top-right-radius: 0;}
+
+@mixin border{ border: 1px solid #aaa;}
+
+@mixin border_one{ border: 1px solid #5897fb;}
+
+/*-------------------------select2.min.scss mixin End-----------------*/
+
+
+/*-------------------------jquery-ui.min.scss mixin Start-----------------*/
+
+
+@mixin position{ top: 0;left: 0;}
+
+@mixin width{ width: 100%;}
+
+@mixin height{ height: 100%;}
+
+@mixin wight{ width: 9px;height: 9px;}
+
+@mixin action{ -ms-touch-action: none;touch-action: none;}
+
+/*-------------------------jquery-ui.min.scss mixin End-----------------*/
+
+
+/*-------------------------bootstrap-datepicker.min.scss mixin Start-----------------*/
+
+@mixin widhtmar{ width: 1px;height: 1px;margin: -1px;}
+
+@mixin overflow{ overflow: hidden;clip: rect(0, 0, 0, 0);border: 0;}
+
+/*-------------------------bootstrap-datepicker.min.scss mixin End-----------------*/
+
+/*-------------------------style.scss mixin Start-----------------*/
+
+@mixin font-height{ font-size: 30px;line-height: 42px;}
+
+@mixin trans{ -webkit-transition: all 0.2s ease;-moz-transition: all 0.2s ease;-ms-transition: all 0.2s ease;-o-transition: all 0.2s ease;transition: all 0.2s ease;}
+
+@mixin position_one{ right: 0;bottom: 0;}
+
+@mixin web-border-radius{ -webkit-border-radius: 30px; -moz-border-radius: 30px;-ms-border-radius: 30px;-o-border-radius: 30px;}
+
+

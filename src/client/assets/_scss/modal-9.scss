@@ -1,0 +1,139 @@
+/* Scss Document */
+
+@import "_mixin.scss";
+
+@import "_variables.scss";
+
+.fl{ float:left; display:inline;}
+
+.fr{ float:right; display:inline;}
+
+.clear{ clear:both; display:block;}
+
+
+ul,li,h1,h2,h3,h4,h5,h6,p{ list-style:none !important;@include margin; @include padding; font-family:$font-stack;}
+
+html{ height:100%;}
+
+body{ min-height:100%; background:#ebecf2;@include font; color:$primary_color; font-family:$font-stack;  -webkit-font-smoothing:antialiased; position:relative;} 
+
+a{ color:$primary_color; text-decoration:none; @include transform; }
+
+
+.form-control {
+	@include box-shadow;
+	@include border-radius-one;
+	@include background-clip;
+	outline: 0;
+	border-color: #e6e7ed;
+	/*border-left: 3px solid #4bae4f;*/
+	font-weight: 400;
+	height: 45px;
+	padding: 16px 18px;
+	margin-bottom: 15px;
+:focus{
+	outline: 0;
+	@include box-shadow;
+}
+:hover {
+	outline: 0;
+	@include box-shadow;
+}
+}
+
+.form-inline {
+.form-group {
+	margin-right: 10px
+}
+.form-control{
+	margin-bottom: 0;
+}
+.form-inline label {
+	margin-bottom: 0;
+}
+}
+
+.modal-content {
+	@include border-radius-one;
+	@include background-clip;
+	border: 0;
+	-webkit-box-shadow: 0 5px 15px rgba(0,0,0,.4);
+	-moz-box-shadow: 0 5px 15px rgba(0,0,0,.4);
+	box-shadow: 0 5px 15px rgba(0,0,0,.4)
+}
+
+.modal-header {
+	padding: 30px;
+	position: relative;
+	border: 0;
+.modal-title {
+	margin: 0
+}
+.close {
+	margin: 0;
+	outline: 0;
+	top: 40px;
+	right: 30px;
+	position: absolute
+}
+}
+
+.modal-body {
+	padding: 0 30px;
+	@include font;
+	line-height: 24px;
+}
+
+.pop_box1{
+	padding:0 0 20px 0;
+.pop_box_btn{
+ul{
+li{
+	float:left;
+	display:inline;
+	margin: 0 20px 0 0;
+:nth-child(2){
+	margin:0px;
+}
+a{
+	display:inline-block;
+	font-family:$font-stack;
+	font-weight:$font-weight;
+	line-height: 13px;
+:hover{
+	color:$background_one;
+	border-bottom:1px solid $background-one;
+}
+}
+}
+}
+}
+}
+
+.pop_box1{
+.info2_new{
+	display:inline-block;
+	font-family:$font-stack;
+	font-weight:$font-weight;
+	line-height: 13px;
+	margin: 0 0 20px 0px;
+	padding:0px; 
+	background:none; 
+	border:none; 
+	border-bottom:1px solid; 
+	outline:none;
+}
+}
+
+#added{
+.row:last-child{
+.form-group{
+	margin-bottom:0px;
+}
+}
+}
+
+.row {
+	margin-left: -12px;
+	margin-right: -12px
+}

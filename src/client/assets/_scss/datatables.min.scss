@@ -1,0 +1,346 @@
+/*
+ * This combined file was created by the DataTables downloader builder:
+ *   https://datatables.net/download
+ *
+ * To rebuild or modify this file with the latest versions of the included
+ * software please visit:
+ *   https://datatables.net/download/#bs/jqc-1.11.3,dt-1.10.9
+ *
+ * Included libraries:
+ *   jQuery compat 1.11.3, DataTables 1.10.9
+ */
+ 
+table.dataTable{
+    clear: both;
+	margin-top: 20px !important;
+	margin-bottom: 6px !important;
+	max-width: none !important;
+td{
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+th {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box
+}
+}
+
+table.dataTable{
+td{
+.dataTables_empty{
+	text-align: center;
+}
+}
+th{
+.dataTables_empty {
+	text-align: center;
+}
+}
+}
+
+table.dataTable{
+.nowrap{
+th{
+	white-space: nowrap;
+}
+td {
+	white-space: nowrap
+}
+}
+}
+
+div.dataTables_wrapper{
+div.dataTables_length{
+label{
+	font-weight: normal;
+	text-align: left;
+	white-space: nowrap
+}
+select {
+	width: 75px;
+	display: inline-block
+}
+}
+
+
+
+div.dataTables_filter {
+	text-align: right;
+label {
+	font-weight: normal;
+	white-space: nowrap;
+	text-align: left
+}
+input {
+	margin-left: 0.5em;
+	display: inline-block;
+	width: auto
+}
+}
+
+
+div.dataTables_info {
+	padding-top: 8px;
+	white-space: nowrap;
+}
+div.dataTables_paginate {
+	margin: 0;
+	white-space: nowrap;
+	text-align: right;
+ul.pagination {
+	margin: 2px 0;
+	white-space: nowrap
+}
+}
+}
+
+table.dataTable{
+thead{
+>tr{
+>th:active{
+	outline: none;
+}
+>td:active {
+	outline: none
+}
+}
+}
+}
+
+table.dataTable{
+thead{
+.sorting{
+table.dataTable{
+thead{
+.sorting_asc{
+table.dataTable{
+thead{	
+.sorting_desc{
+table.dataTable{
+thead{	
+.sorting_asc_disabled{
+table.dataTable{
+thead{	
+.sorting_desc_disabled{
+	cursor: pointer;
+	position: relative
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+
+
+table.dataTable{
+thead{
+.sorting:after{	
+table.dataTable{
+thead{		
+.sorting_asc:after{
+table.dataTable{
+thead{		
+.sorting_desc:after{
+table.dataTable{
+thead{		
+.sorting_asc_disabled:after{
+table.dataTable{
+thead{		
+.sorting_desc_disabled:after{
+	position: absolute;
+	bottom: 16px;
+	right: 3px;
+	display: block;
+	font-family: 'Glyphicons Halflings';
+	opacity: 0.5;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+
+table.dataTable{
+thead{
+.sorting:after {
+	opacity: 0.2;
+	content: "\e150"	
+}
+.sorting_asc:after {
+	content: "\e155"
+}	
+.sorting_desc:after {
+	content: "\e156"
+}
+.sorting_asc_disabled:after{
+	color: #eee
+}
+.sorting_desc_disabled:after {
+	color: #eee
+}
+}
+}
+
+div.dataTables_scrollHead{
+table{
+.dataTable {
+	margin-bottom: 0 !important
+}
+}
+}
+
+
+div{
+.dataTables_scrollBody{
+table {
+	border-top: none;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+.sorting:after{
+	display: none;
+}
+.sorting_asc:after{
+	display: none;
+}
+.sorting_desc:after {
+	display:none;
+}
+}
+}
+}
+
+div.dataTables_scrollBody{
+table{
+tbody{
+tr:first-child{
+th{
+	border-top: none
+}
+td{
+	border-top: none
+}
+}
+}
+}
+}
+
+div.dataTables_scrollFoot{
+table{
+	margin-top: 0 !important;
+	border-top: none
+}
+}
+
+@media screen and (max-width: 767px) {
+div.dataTables_wrapper{
+div.dataTables_length{
+	text-align: center;
+}
+div.dataTables_filter{
+	text-align: center;
+}
+div.dataTables_info{
+	text-align:center;
+}
+div.dataTables_paginate{
+	text-align:center;
+}
+}
+}
+
+table{
+.dataTable{
+.table-condensed{
+>thead{
+>tr{
+>th{
+	padding-right: 20px
+}
+}
+}
+.sorting:after{
+	top: 6px;
+	right: 6px;
+}
+.sorting_asc:after{
+	top: 6px;
+	right: 6px
+}
+.sorting_desc:after {
+	top: 6px;
+	right: 6px
+}
+}
+}
+}
+
+table{
+.table-bordered{
+.dataTable {
+	border-collapse: separate !important		
+th{
+	border-left-width: 0
+}
+td {
+	border-left-width: 0
+}
+th:last-child{
+	border-right-width: 0;
+}
+th:last-child{
+	border-right-width: 0;
+}
+td:last-child{
+	border-right-width: 0;
+}
+td:last-child{
+	border-right-width: 0;
+}
+}
+}
+}
+
+table{
+.table-bordered{
+.dataTable{
+tbody{
+th{
+	border-bottom-width: 0
+}
+td {
+	border-bottom-width: 0
+}
+}
+}
+}
+}
+
+div.dataTables_scrollHead table.table-bordered {
+	border-bottom-width: 0
+}
+
+	
+	
+	
+	
+			

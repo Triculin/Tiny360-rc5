@@ -1,0 +1,116 @@
+/* Scss Document */
+
+/*
+
+	Supersized - Fullscreen Slideshow jQuery Plugin
+	Version : 3.2.7
+	Site	: www.buildinternet.com/project/supersized
+	
+	Author	: Sam Dunn
+	Company : One Mighty Roar (www.onemightyroar.com)
+	License : MIT License / GPL License
+	
+*/
+/*Speed*/
+/*Quality*/
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #111;
+}
+img {
+	border: none;
+	transition: none !important;
+}
+#supersized-loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 0;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	text-indent: -999em;
+	background: url(../img/progress.gif) no-repeat center center;
+	transition: none !important;
+}
+#supersized {
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	z-index: -999;
+	height: 100%;
+	width: 100%;
+	transition: none !important;
+	img {
+		width: auto;
+		height: auto;
+		position: relative;
+		display: none;
+		outline: none;
+		border: none;
+		transition: none !important;
+	}
+	li {
+		display: block;
+		list-style: none;
+		z-index: -30;
+		position: fixed;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #111;
+		transition: none !important;
+	}
+	a {
+		width: 100%;
+		height: 100%;
+		display: block;
+		transition: none !important;
+	}
+	li.prevslide {
+		z-index: -20;
+		transition: none !important;
+		img {
+			display: inline;
+			transition: none !important;
+		}
+	}
+	li.activeslide {
+		z-index: -10;
+		transition: none !important;
+		img {
+			display: inline;
+			transition: none !important;
+		}
+	}
+	li.image-loading {
+		background: #111 url(../img/progress.gif) no-repeat center center;
+		width: 100%;
+		height: 100%;
+		transition: none !important;
+		img {
+			visibility: hidden;
+			transition: none !important;
+		}
+	}
+}
+#supersized.speed {
+	img {
+		-ms-interpolation-mode: nearest-neighbor;
+		image-rendering: -moz-crisp-edges;
+		transition: none !important;
+	}
+}
+#supersized.quality {
+	img {
+		-ms-interpolation-mode: bicubic;
+		transition: none !important;
+	}
+}
