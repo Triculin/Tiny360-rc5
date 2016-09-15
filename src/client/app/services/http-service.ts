@@ -4,10 +4,11 @@ import {Observable} from "rxjs/Observable";
 @Injectable()
 export class HttpService {
 
-  url:string="http://localhost:8080/dropDowns";
+  url:string="http://localhost:8080/masterConfig";
+
   constructor(public http:Http) {}
 
-  public getDropdowns(): Observable<any> {
+  public getMasterConfig(): Observable<any> {
     return this.http.get(this.url)
       .map((responseData) => {
         return responseData.json();
