@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, Input, Output, EventEmitter, OnInit,ViewEncapsulation} from '@angular/core';
+import {HttpService} from "../services/http-service";
+import {HTTP_PROVIDERS} from "@angular/http";
 
 /**
  * This class represents the lazy loaded DashboardComponent.
@@ -7,6 +9,27 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   selector: 'ap-dashboard',
   templateUrl: 'dashboard.component.html',
+  providers: [HttpService , HTTP_PROVIDERS],
   styleUrls: ['dashboard.component.css']
 })
-export class DashboardComponent { }
+export class DashboardComponent implements OnInit { 
+  itemsObservables:any;
+  data:any;
+  keys:any;
+  constructor(
+ 
+              public httpService:HttpService) {
+
+  }
+ngOnInit() {
+   
+    
+    this.itemsObservables = this.httpService.getData("http://localhost:8080/dropDowns");
+    this.itemsObservables.subscribe(res => {
+    this.data = res.test1;  
+    
+    });
+    
+   
+  }
+}
