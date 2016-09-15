@@ -15,7 +15,7 @@ import {HTTP_PROVIDERS} from "@angular/http";
 export class DashboardComponent implements OnInit { 
   itemsObservables:any;
   data:any;
-  keys:any;
+  
   constructor(
  
               public httpService:HttpService) {
@@ -24,7 +24,7 @@ export class DashboardComponent implements OnInit {
 ngOnInit() {
    
     
-    this.itemsObservables = this.httpService.getData("http://localhost:8080/dropDowns");
+    this.itemsObservables = this.httpService.getDropdowns();
     this.itemsObservables.subscribe(res => {
     this.data = res.test1;  
     
