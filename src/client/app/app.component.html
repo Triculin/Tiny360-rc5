@@ -1,3 +1,9 @@
-<sd-toolbar></sd-toolbar>
-<sd-navbar></sd-navbar>
-<router-outlet></router-outlet>
+<div>
+    <sd-toolbar></sd-toolbar>
+    <sd-navbar *ngIf="9"></sd-navbar>
+    <div class="routing">
+        <p>
+            <router-outlet></router-outlet>
+        </p>
+    </div>
+</div>
