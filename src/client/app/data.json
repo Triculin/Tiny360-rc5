@@ -30,14 +30,16 @@
                 "routerLink": "holidays",
                 "styleIcon": "zmdi zmdi-mood zmdi-hc-fw icon",
                 "subMenuList": [{
-                    "name": "Store Settings",
-                    "routerLink": "store_settings",
-                    "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
-                }, {
-                    "name": "Store Settings",
-                    "routerLink": "store_settings",
-                    "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
-                }]
+                        "name": "Store Settings",
+                        "routerLink": "store_settings",
+                        "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
+                    },
+                    {
+                        "name": "General Settings",
+                        "routerLink": "general_settings",
+                        "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
+                    }
+                ]
             },
             {
                 "name": "System Users",

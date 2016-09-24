@@ -23,7 +23,7 @@ export class NavbarComponent {
   constructor(public httpService: HttpService)
   {
     this.httpService.getMasterConfig().subscribe(res =>{this.menuItems = res.menuList;});   
-}
+  }
 // getSubitems(i:menuList){
 //  this.submenus=this.menuItems[i].subMenuList;
 // }
@@ -33,7 +33,9 @@ export class NavbarComponent {
       this.count++;
 // alert(abc);
 // alert(this.menuItems.name+'name');
-
 // this.cnt = !this.cnt;
 }
+hello1(){
+    alert('hello from child' );
+  }
 }
