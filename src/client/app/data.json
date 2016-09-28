@@ -3,41 +3,108 @@
         "menuList": [{
                 "name": "Dashboard",
                 "routerLink": "",
+<<<<<<< HEAD
                 "styleIcon": "zmdi zmdi-apps zmdi-hc-fw icon"
+=======
+                "styleIcon": "zmdi zmdi-apps zmdi-hc-fw icon",
+                "subMenuList": []
+>>>>>>> 0ace24d7b7689eea2ad53bbe5f31ff78ca323077
             },
             {
                 "name": "Shop(s)",
                 "routerLink": "shop",
+<<<<<<< HEAD
                 "styleIcon": "zmdi zmdi-store zmdi-hc-fw icon"
+=======
+                "styleIcon": "zmdi zmdi-store zmdi-hc-fw icon",
+                "subMenuList": []
+
+>>>>>>> 0ace24d7b7689eea2ad53bbe5f31ff78ca323077
             },
             {
                 "name": "Workshop(s)",
                 "routerLink": "workshop",
+<<<<<<< HEAD
                 "styleIcon": "fa fa-fw fa-industry icon"
+=======
+                "styleIcon": "fa fa-fw fa-industry icon",
+                "subMenuList": []
+>>>>>>> 0ace24d7b7689eea2ad53bbe5f31ff78ca323077
             },
             {
                 "name": "staff",
                 "routerLink": "staff",
+<<<<<<< HEAD
                 "styleIcon": "zmdi zmdi-account-box-mail zmdi-hc-fw icon"
+=======
+                "styleIcon": "zmdi zmdi-account-box-mail zmdi-hc-fw icon",
+                "subMenuList": []
+>>>>>>> 0ace24d7b7689eea2ad53bbe5f31ff78ca323077
             },
             {
                 "name": "Holidays",
                 "routerLink": "holidays",
+<<<<<<< HEAD
                 "styleIcon": "zmdi zmdi-mood zmdi-hc-fw icon"
+=======
+                "styleIcon": "zmdi zmdi-mood zmdi-hc-fw icon",
+                "subMenuList": [{
+                        "name": "Store Settings",
+                        "routerLink": "store_settings",
+                        "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
+                    },
+                    {
+                        "name": "General Settings",
+                        "routerLink": "general_settings",
+                        "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
+                    }
+                ]
+>>>>>>> 0ace24d7b7689eea2ad53bbe5f31ff78ca323077
             },
             {
                 "name": "System Users",
                 "routerLink": "system_users",
+<<<<<<< HEAD
                 "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
+=======
+                "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon",
+                "subMenuList": []
+>>>>>>> 0ace24d7b7689eea2ad53bbe5f31ff78ca323077
             },
             {
                 "name": "Global Settings",
                 "routerLink": "global_settings",
+<<<<<<< HEAD
                 "styleIcon": "zmdi zmdi-settings zmdi-hc-fw icon"
+=======
+                "styleIcon": "zmdi zmdi-settings zmdi-hc-fw icon",
+                "subMenuList": [{
+                        "name": "Store Settings",
+                        "routerLink": "store_settings",
+                        "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
+                    },
+                    {
+                        "name": "General Settings",
+                        "routerLink": "general_settings",
+                        "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
+                    },
+                    {
+                        "name": "Cloth Settings",
+                        "routerLink": "cloth_settings",
+                        "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
+                    },
+                    {
+                        "name": "Cost Center",
+                        "routerLink": "cost_center",
+                        "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
+                    }
+                ]
+>>>>>>> 0ace24d7b7689eea2ad53bbe5f31ff78ca323077
             },
             {
                 "name": "Reports",
                 "routerLink": "reports",
+<<<<<<< HEAD
                 "styleIcon": "zmdi zmdi-collection-text zmdi-hc-fw icon"
             }
         ],
@@ -54,5 +121,11 @@
             "ClothCode": "Pt502",
             "ClothImage": "app/tmp/icon/order-pant.jpg"
         }
+=======
+                "styleIcon": "zmdi zmdi-collection-text zmdi-hc-fw icon",
+                "subMenuList": []
+            }
+        ]
+>>>>>>> 0ace24d7b7689eea2ad53bbe5f31ff78ca323077
     }
 }
