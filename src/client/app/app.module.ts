@@ -14,10 +14,17 @@ import { HolidaysModule } from './+holidays/holidays.module';
 import { SystemUsersModule } from './+system-users/system-users.module';
 import { GlobalSettingsModule } from './+global-settings/global-settings.module';
 import { ReportsModule } from './+reports/reports.module';
+import { StoreSettingsModule } from './+global-settings/+store-settings/store-settings.module';
+import { GeneralSettingsModule } from './+global-settings/+general-settings/general-settings.module';
+import { ClothSettingsModule } from './+global-settings/+cloth-settings/cloth-settings.module';
+import { CostCenterModule } from './+global-settings/+cost-center/cost-center.module';
 import { SharedModule } from './shared/shared.module';
+// import {DialogComponentModule } from './shared/dialog/dialog.component.module';
 
 @NgModule({
-  imports: [BrowserModule, HttpModule, RouterModule.forRoot(routes), DashboardModule, ShopModule, WorkshopModule,StaffModule,HolidaysModule,SystemUsersModule,GlobalSettingsModule,ReportsModule, SharedModule.forRoot()],
+  imports: [BrowserModule, HttpModule, RouterModule.forRoot(routes), DashboardModule, ShopModule,
+   WorkshopModule,StaffModule,HolidaysModule,SystemUsersModule,GlobalSettingsModule,ReportsModule,StoreSettingsModule,
+   GeneralSettingsModule,ClothSettingsModule,CostCenterModule, SharedModule.forRoot()],
   declarations: [AppComponent],
   providers: [{
     provide: APP_BASE_HREF,

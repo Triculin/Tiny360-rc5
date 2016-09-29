@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {HttpService} from "../../services/http-service";
 import {HTTP_PROVIDERS} from "@angular/http";
+import {menuList} from "./menuList";
+
 
 /**
  * This class represents the navigation bar component.
@@ -14,9 +16,19 @@ import {HTTP_PROVIDERS} from "@angular/http";
 })
 
 export class NavbarComponent {
+
   menuItems:any;
   constructor(public httpService: HttpService)
   {
     this.httpService.getMasterConfig().subscribe(res =>{this.menuItems = res.menuList;});
+
   }
+  cnt:number = 0;
+  count:number = 0;
+ 
+    toggleSubitems(i:number){
+      this.cnt=i;
+      this.count++;
+
+    }
 }
