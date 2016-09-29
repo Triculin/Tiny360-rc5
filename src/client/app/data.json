@@ -1,96 +1,39 @@
 {
     "masterConfig": {
-        "shopForm":[
-                                    {"name":"FirstName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"First Name","class":"form-control","id":"basicInput"},
-                                    {"name":"LastName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"Last Name","class":"form-control","id":"basicInput"},
-                                    {"name":"dateOfJoined","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Date of Jonied","class":"form-control","id":"basicInput"},
-                                    {"name":"Designation","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Designation","class":"form-control","id":"basicInput"},
-                                    {"name":"Contact Number","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Contact Number","class":"form-control","id":"basicInput"},
-                                    {"name":"Address","field":"optional","size":"col-xs-12 col-sm-12","type":"text","placeholder":"Address","class":"form-control","id":"basicInput"},
-                                    {"name":"Landmark","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Landmark","class":"form-control","id":"basicInput"},
-                                    {"name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","class":"form-control","id":"basicInput"},
-                                    {"name":"City","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"City","class":"form-control","id":"basicInput"},
-                                    {"name":"State","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"State","class":"form-control","id":"basicInput"},
-                                    {"name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","class":"form-control","id":"basicInput"}
-                                ],
         "menuList": [{
                 "name": "Dashboard",
                 "routerLink": "",
-
-                "styleIcon": "zmdi zmdi-apps zmdi-hc-fw icon",
-
-                "subMenuList": []
-
+                "styleIcon": "zmdi zmdi-apps zmdi-hc-fw icon"
             },
             {
                 "name": "Shop(s)",
                 "routerLink": "shop",
-
-
-
-                "styleIcon": "zmdi zmdi-store zmdi-hc-fw icon",
-                "subMenuList": []
-
+                "styleIcon": "zmdi zmdi-store zmdi-hc-fw icon"
             },
             {
                 "name": "Workshop(s)",
                 "routerLink": "workshop",
-                "styleIcon": "fa fa-fw fa-industry icon",
-                "subMenuList": []
+                "styleIcon": "fa fa-fw fa-industry icon"
             },
             {
                 "name": "staff",
                 "routerLink": "staff",
-                "styleIcon": "zmdi zmdi-account-box-mail zmdi-hc-fw icon",
-                "subMenuList": []
+                "styleIcon": "zmdi zmdi-account-box-mail zmdi-hc-fw icon"
             },
             {
                 "name": "Holidays",
                 "routerLink": "holidays",
-                "styleIcon": "zmdi zmdi-mood zmdi-hc-fw icon",
-                "subMenuList": [{
-                        "name": "Store Settings",
-                        "routerLink": "store_settings",
-                        "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
-                    },
-                    {
-                        "name": "General Settings",
-                        "routerLink": "general_settings",
-                        "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
-                    }
-                ]
+                "styleIcon": "zmdi zmdi-mood zmdi-hc-fw icon"
             },
             {
                 "name": "System Users",
                 "routerLink": "system_users",
-                "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon",
-                "subMenuList": []
+                "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
             },
             {
                 "name": "Global Settings",
                 "routerLink": "global_settings",
-                "styleIcon": "zmdi zmdi-settings zmdi-hc-fw icon",
-                "subMenuList": [{
-                        "name": "Store Settings",
-                        "routerLink": "store_settings",
-                        "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
-                    },
-                    {
-                        "name": "General Settings",
-                        "routerLink": "general_settings",
-                        "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
-                    },
-                    {
-                        "name": "Cloth Settings",
-                        "routerLink": "cloth_settings",
-                        "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
-                    },
-                    {
-                        "name": "Cost Center",
-                        "routerLink": "cost_center",
-                        "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
-                    }
-                ]
+                "styleIcon": "zmdi zmdi-settings zmdi-hc-fw icon"
             },
             {
                 "name": "Reports",
@@ -111,6 +54,5 @@
             "ClothCode": "Pt502",
             "ClothImage": "app/tmp/icon/order-pant.jpg"
         }
-            }
-        
+    }
 }

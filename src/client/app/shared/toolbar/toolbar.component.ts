@@ -1,5 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
-import { NavbarComponent } from '../navbar/navbar.component';
+import { Component } from '@angular/core';
 
 /**
  * This class represents the toolbar component.
@@ -7,14 +6,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 @Component({
   moduleId: module.id,
   selector: 'sd-toolbar',
-  templateUrl: 'toolbar.component.html',
-  directives: [NavbarComponent]
+  templateUrl: 'toolbar.component.html'
 })
 
-export class ToolbarComponent {
-  @ViewChild(NavbarComponent)
-  private abcd:NavbarComponent;
-  private hello(){
-  this.abcd.hello1();
-  }
-}
+export class ToolbarComponent {}
