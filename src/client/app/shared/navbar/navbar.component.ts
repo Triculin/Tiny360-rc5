@@ -15,6 +15,7 @@ import {menuList} from "./menuList";
 })
 
 export class NavbarComponent {
+
   menuItems:menuList;
   // cnt:boolean = false;
   cnt:number = 0;
@@ -37,5 +38,6 @@ export class NavbarComponent {
 }
 hello1(){
     alert('hello from child' );
+
   }
 }

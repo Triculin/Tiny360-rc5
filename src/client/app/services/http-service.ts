@@ -14,4 +14,10 @@ export class HttpService {
         return responseData.json();
       });
   }
+   public getData(): Observable<any> {
+    return this.http.get(this.url)
+      .map((responseData) => {
+        return responseData.json();
+      });
+  }
 }
