@@ -1,34 +1,3 @@
-
-<aside class="aside">
-    <div>
-        <!-- User profile -->
-        <div class="asideUserProfile">
-            <a href="user-profile.html" title="#" class="c">
-                <img src="../assets/img/happy-210x210.jpg" alt="#" class="img-responsive">
-                <!--<img src="tmp/washio-210x210.jpg" alt="#" class="img-responsive">
-				<span class="name hidden-xs hidden-sm">Patricia<br /> Brown-Johnes</span>-->
-            </a>
-        </div>
-        <!-- Navigation -->
-        <nav class="simpleList asideNavigation">
-            <ul>
-                <!--<li *ngFor="let items of menuItems let i=index" class="sub js-submenu active">-->
-                <li *ngFor="let items of menuItems let i=index" class="sub js-submenu active">
-                    <a [routerLink]="[items.routerLink]" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
-                        <i class="{{items.styleIcon}}"></i>
-                        <span class="hidden-xs hidden-sm">{{items.name}} <!--<span class="label label-info" (click)="getSubitems(i)">New</span>-->
-                        </span>
-                    </a>
-                    <!--cnt: {{cnt}} ; flaag: {{items.flaag}} ; count: {{count}}-->
-                    <!--<div *ngIf="cnt">-->
-                    <div *ngIf="((cnt==i)&&(count%2==1))">
-                        <span class="sub js-submenu" style="display: block;" *ngFor="let subitems of menuItems[i].subMenuList">
-                        <a [routerLink]="[subitems.routerLink]" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{subitems.name}}</a>
-                        </span>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</aside>
-
+<nav>
+    <a *ngFor="let items of menuItems" [routerLink]="[items.routerLink]" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{items.name}}</a>
+</nav>
