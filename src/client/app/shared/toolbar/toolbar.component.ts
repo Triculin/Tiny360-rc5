@@ -15,6 +15,6 @@ export class ToolbarComponent {
   @ViewChild(NavbarComponent)
   private abcd:NavbarComponent;
   private hello(){
-  this.abcd.hello1();
+  //this.abcd.hello1();
   }
 }
