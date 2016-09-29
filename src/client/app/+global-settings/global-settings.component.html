@@ -1,3 +1,57 @@
+<!-- The form controls for the various config parameters -->
 <div>
-    This is global-settings page.
+
+    <div class="col-xs-12  col-md-8 col-sm-8 col-lg-12">
+						<div class="box global">-->
+
+							<!-- Tabs -->
+						<ul class="nav nav-tabs userProfileTabs">
+							<li   *ngFor="let catageory of TGSlstCatageory;let i=index"><span (click)="go(i)" >{{catageory.value}}</span></li>
+						</ul>
+						</div>
+
+    </div>
+<div class="columns">
+    <div class="column">
+        <label class="control">Filter items
+            <!--<input type="text" class="input" placeholder="filter" [(ngModel)]="filter">-->
+        </label>
+    </div>
+</div>
+<div class="columns">
+    <div class="column">
+        <label class="control">itemsPerPage
+            <select >
+                <option [value]=10>10</option>
+                <option [value]=15>15</option>
+                <option [value]=20>20</option>
+                <option [value]=25>25</option>
+            </select>
+        </label>
+    </div>
+</div>
+ <table class="table" >
+			<thead>
+			    <tr>
+				    <th *ngFor="let name of colName">{{name}}
+                        </th>
+				</tr>
+			</thead>
+            <tbody>
+              <tr *ngFor="let row of data | global : globalSearchTerm | pagination : range">
+        <td *ngFor="let key of keys">
+            {{ row[key] }}
+        </td>
+    </tr>
+              
+			
+		    </tbody>
+        </table>
+        <pagination *ngIf="config.paginationEnabled" 
+            [numberOfItems]="numberOfItems" 
+            (updateRange)="range = $event"></pagination>
+<div class="is-text-centered">
+    
+</div>
+
 </div>

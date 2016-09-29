@@ -17,7 +17,9 @@ import {menuList} from "./menuList";
 
 export class NavbarComponent {
 
-  menuItems:any;
+  
+  menuItems:menuList;
+  
   constructor(public httpService: HttpService)
   {
     this.httpService.getMasterConfig().subscribe(res =>{this.menuItems = res.menuList;});
@@ -31,4 +33,7 @@ export class NavbarComponent {
       this.count++;
 
     }
+
+
+
 }
