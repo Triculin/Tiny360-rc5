@@ -12,7 +12,9 @@
   clear: both;
   display: block;
 }
-
+.modal-dialog{
+    margin:17% 32%;
+}
 ul, li, h1, h2, h3, h4, h5, h6, p {
   list-style: none !important;
   margin: 0;
@@ -78,6 +80,7 @@ a {
 .form-control:focus {
   outline: 0;
   box-shadow: none;
+  border: 1px solid lightblue;
 }
 .form-control:hover {
   outline: 0;
