@@ -19,6 +19,7 @@ import { GeneralSettingsModule } from './+global-settings/+general-settings/gene
 import { ClothSettingsModule } from './+global-settings/+cloth-settings/cloth-settings.module';
 import { CostCenterModule } from './+global-settings/+cost-center/cost-center.module';
 import { SharedModule } from './shared/shared.module';
+// import {DialogComponentModule } from './shared/dialog/dialog.component.module';
 
 @NgModule({
   imports: [BrowserModule, HttpModule, RouterModule.forRoot(routes), DashboardModule, ShopModule,

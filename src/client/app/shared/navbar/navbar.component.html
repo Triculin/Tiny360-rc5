@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<nav>
-    <a *ngFor="let items of menuItems" [routerLink]="[items.routerLink]" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{items.name}}</a>
-</nav>
-=======
+
 <aside class="aside">
     <div>
         <!-- User profile -->
@@ -21,7 +17,7 @@
                     <a [routerLink]="[items.routerLink]" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
                         <i class="{{items.styleIcon}}"></i>
                         <span class="hidden-xs hidden-sm">{{items.name}} <!--<span class="label label-info" (click)="getSubitems(i)">New</span>-->
-                        <span *ngIf="menuItems[i].subMenuList.length"><i class="zmdi zmdi-plus plus" (click)="toggleSubitems(i)"></i> </span></span>
+                        </span>
                     </a>
                     <!--cnt: {{cnt}} ; flaag: {{items.flaag}} ; count: {{count}}-->
                     <!--<div *ngIf="cnt">-->
@@ -35,4 +31,4 @@
         </nav>
     </div>
 </aside>
->>>>>>> 0ace24d7b7689eea2ad53bbe5f31ff78ca323077
+
