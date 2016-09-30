@@ -4,6 +4,7 @@ import {HTTP_PROVIDERS} from "@angular/http";
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 import {menuList} from "./menuList";
 
+
 /**
  * This class represents the navigation bar component.
  */
@@ -18,14 +19,25 @@ import {menuList} from "./menuList";
 
 export class NavbarComponent {
 
+  
   menuItems:menuList;
+
   public selected:number=999;
 	public selectedSubMenu=999;
 
-  constructor(public httpService: HttpService,private router: Router)
-  {
-    this.httpService.getMasterConfig().subscribe(res =>{this.menuItems = res.menuList;});   
+  constructor(public httpService: HttpService,private router: Router) {    this.httpService.getMasterConfig().subscribe(res =>{this.menuItems = res.menuList;});
+
   }
+
+  cnt:number = 0;
+  count:number = 0;
+ 
+    toggleSubitems(i:number){
+      this.cnt=i;
+      this.count++;
+
+    }
+
 
 expandMenu(index:number) {
 	  (this.selected===index)?this.selected=999:this.selected=index;

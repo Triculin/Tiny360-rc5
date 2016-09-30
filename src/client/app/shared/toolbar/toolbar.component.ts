@@ -10,8 +10,10 @@ import { Component, ViewChild } from '@angular/core';
 })
 
 export class ToolbarComponent {
+
   sidebar:string='block';
   private toggleSidebar(){
         (this.sidebar=='none')? this.sidebar='block':this.sidebar='none';        
+
   }
 }
