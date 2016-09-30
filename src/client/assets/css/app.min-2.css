@@ -951,7 +951,9 @@ all_add:hover .add_icon {
 .form-inline .form-inline label {
   margin-bottom: 0;
 }
-
+.modal-dialog{
+    margin:17% 32%;
+}
 .modal-content {
   border-radius: 0;
   background-clip: padding-box;

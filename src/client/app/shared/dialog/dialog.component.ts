@@ -19,7 +19,7 @@ export class DialogComponent {
    ngOnInit() {
     this.itemsObservables = this.httpService.getMasterConfig();
     this.itemsObservables.subscribe((res:any) => {
-     this.data = res.shopForm;
+     this.data = res.shop;
     });
   }
   onClickedExit() {

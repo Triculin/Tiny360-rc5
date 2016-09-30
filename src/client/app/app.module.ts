@@ -21,6 +21,7 @@ import { CostCenterModule } from './+global-settings/+cost-center/cost-center.mo
 import { SharedModule } from './shared/shared.module';
 // import {DialogComponentModule } from './shared/dialog/dialog.component.module';
 
+
 @NgModule({
   imports: [BrowserModule, HttpModule, RouterModule.forRoot(routes), DashboardModule, ShopModule,
    WorkshopModule,StaffModule,HolidaysModule,SystemUsersModule,GlobalSettingsModule,ReportsModule,StoreSettingsModule,

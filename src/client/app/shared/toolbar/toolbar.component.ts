@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 
+
 /**
  * This class represents the toolbar component.
  */
@@ -14,7 +15,5 @@ import { NavbarComponent } from '../navbar/navbar.component';
 export class ToolbarComponent {
   @ViewChild(NavbarComponent)
   private abcd:NavbarComponent;
-  private hello(){
-  this.abcd.hello1();
-  }
+  
 }
