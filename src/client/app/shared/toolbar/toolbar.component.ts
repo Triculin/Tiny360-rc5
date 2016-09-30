@@ -1,5 +1,4 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavbarComponent } from '../navbar/navbar.component';
 
 /**
  * This class represents the toolbar component.
@@ -7,14 +6,14 @@ import { NavbarComponent } from '../navbar/navbar.component';
 @Component({
   moduleId: module.id,
   selector: 'sd-toolbar',
-  templateUrl: 'toolbar.component.html',
-  directives: [NavbarComponent]
+  templateUrl: 'toolbar.component.html'
 })
 
 export class ToolbarComponent {
-  @ViewChild(NavbarComponent)
-  private abcd:NavbarComponent;
-  private hello(){
-  //this.abcd.hello1();
+
+  sidebar:string='block';
+  private toggleSidebar(){
+        (this.sidebar=='none')? this.sidebar='block':this.sidebar='none';        
+
   }
 }

@@ -10,5 +10,9 @@ import {Component} from '@angular/core';
   styleUrls: ['dashboard.component.css']
 })
 
-export class DashboardComponent {  
+export class DashboardComponent { 
+  test:string="none";
+  testing(){
+    this.test="block";
+  }
 }
