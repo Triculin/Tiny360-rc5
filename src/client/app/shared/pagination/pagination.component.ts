@@ -33,6 +33,7 @@ export class Pagination {
   private pageNumber:number;
   private range:number;
   public pageNumbers:Array<any>;
+ 
 
   constructor(public resource:ResourceService,
               public config:ConfigService) {

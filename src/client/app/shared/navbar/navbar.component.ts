@@ -4,6 +4,7 @@ import {HTTP_PROVIDERS} from "@angular/http";
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 import {menuList} from "./menuList";
 
+
 /**
  * This class represents the navigation bar component.
  */
@@ -18,7 +19,9 @@ import {menuList} from "./menuList";
 
 export class NavbarComponent {
 
+  
   menuItems:menuList;
+
   public selected:number=999;
 	public selectedSubMenu=999;
 
@@ -26,6 +29,7 @@ export class NavbarComponent {
   {
     this.httpService.getMasterConfig().subscribe(res =>{this.menuItems = res.menuList;});   
   }
+
 
 expandMenu(index:number) {
 	  (this.selected===index)?this.selected=999:this.selected=index;
