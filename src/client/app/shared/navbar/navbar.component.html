@@ -1,4 +1,3 @@
-
 <aside class="aside">
     <div>
         <!-- User profile -->
@@ -9,21 +8,23 @@
 				<span class="name hidden-xs hidden-sm">Patricia<br /> Brown-Johnes</span>-->
             </a>
         </div>
+
+
         <!-- Navigation -->
         <nav class="simpleList asideNavigation">
             <ul>
                 <!--<li *ngFor="let items of menuItems let i=index" class="sub js-submenu active">-->
-                <li *ngFor="let items of menuItems let i=index" class="sub js-submenu active">
-                    <a [routerLink]="[items.routerLink]" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+                <li *ngFor="let items of menuItems;let i=index" class="sub js-submenu">
+                    <a (click)="go(items.routerLink)" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+                        <!--<a [routerLink]="[items.routerLink]" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">-->
                         <i class="{{items.styleIcon}}"></i>
                         <span class="hidden-xs hidden-sm">{{items.name}} <!--<span class="label label-info" (click)="getSubitems(i)">New</span>-->
-                        <span *ngIf="menuItems[i].subMenuList.length"><i class="zmdi zmdi-plus plus" (click)="toggleSubitems(i)"></i> </span></span>
+                        <span *ngIf="menuItems[i].subMenuList.length"><i class="zmdi zmdi-plus plus" (click)="expandMenu(i)"></i> </span></span>
                     </a>
-                    <!--cnt: {{cnt}} ; flaag: {{items.flaag}} ; count: {{count}}-->
-                    <!--<div *ngIf="cnt">-->
-                    <div *ngIf="((cnt==i)&&(count%2==1))">
+                    <div *ngIf="i==selected">
                         <span class="sub js-submenu" style="display: block;" *ngFor="let subitems of menuItems[i].subMenuList">
-                        <a [routerLink]="[subitems.routerLink]" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{subitems.name}}</a>
+                        <a (click)="go(subitems.routerLink)" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{subitems.name}}</a>
+                        <!--<a [routerLink]="[subitems.routerLink]" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{subitems.name}}</a>-->
                         </span>
                     </div>
                 </li>
@@ -31,4 +32,3 @@
         </nav>
     </div>
 </aside>
-
