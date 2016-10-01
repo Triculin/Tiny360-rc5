@@ -20,6 +20,62 @@
 /*-----------------------------own-styles.scss variables start--------------*/
 /*-----------------------------own-styles.scss variables end--------------*/
 /*-----------------------------select2.min.scss variables start------------*/
+/*angular styles by lakshman*/
+.pagination {
+  margin: 25px 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box
+}
+.pagination>li {
+  display: inline-block;
+  margin: 0 2px
+}
+.pagination>li>a, .pagination>li>span {
+  background: #ebecf2;
+  border: 0;
+  color: #363f45;
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  text-align: center;
+  line-height: 56px;
+  font-size: 14px;
+  font-size: 1.4rem
+}
+.pagination>li>a:hover, .pagination>li>span:hover {
+  color: #363f45;
+  background: #e2e3ec
+}
+.pagination>li>a .fa, .pagination>li>span .fa {
+  font-size: 20px;
+  font-size: 2rem;
+  position: relative;
+  top: 2px;
+  color: #9da2a6
+}
+.pagination>li.active>a, .pagination>li.active>span {
+  font-weight: 700;
+  color: #fff;
+  background: #fe5621
+}
+.pagination>li.active>a:active, .pagination>li.active>a:focus, .pagination>li.active>a:hover, .pagination>li.active>span:active, .pagination>li.active>span:focus, .pagination>li.active>span:hover {
+  font-weight: 700;
+  color: #fff;
+  background: #fe5621
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span, .pagination>li:last-child>a, .pagination>li:last-child>span {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box
+}
+/*End*/
 ul, li, h1, h2, h3, h4, h5, h6, p {
   list-style: none !important;
   margin: 0;
@@ -3734,7 +3790,7 @@ hr {
 }
 
 label {
-  width: 100%;
+  /*width: 100%;*/
   cursor: pointer;
 }
 label span {

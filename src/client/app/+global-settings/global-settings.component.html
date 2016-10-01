@@ -1,57 +1,79 @@
-<!-- The form controls for the various config parameters -->
-<div>
+<div class="pageWrap">
+    <!-- Page content -->
+    <div class="pageContent extended">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-lg-12">
+                    <div class="box global">
+                        <div>
+                            This is global-settings page.
+                        </div>
+                        <!-- The form controls for the various config parameters -->
 
-    <div class="col-xs-12  col-md-8 col-sm-8 col-lg-12">
-						<div class="box global">-->
+                        <ul class="nav nav-tabs userProfileTabs" role="tablist">
+                            <li *ngFor="let tab of tabs;let i=index" role="presentation" [class.active]="i==tabIndex"><a (click)="goTab(i,tab)"> {{ tab.name }}</a></li>
+                        </ul>
+                        <div class="row" style="display:none;">
+                            <div class="col-xs-12 col-sm-5">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="basicInput" placeholder="Industy">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-2">
+                                <button type="button" class="btn bg-orange">Add New</button>
+                            </div>
+                        </div>
 
-							<!-- Tabs -->
-						<ul class="nav nav-tabs userProfileTabs">
-							<li   *ngFor="let catageory of TGSlstCatageory;let i=index"><span (click)="go(i)" >{{catageory.value}}</span></li>
-						</ul>
-						</div>
-
+                        <div class="col-xs-12 col-md-8 col-lg-8" style="padding:0; float:none;margin: 0 auto;">
+                            <div class="box box-without-bottom-padding ">
+                                <div class="columns">
+                                    <div class="column">
+                                        <label class="control">Search:
+                                            <input class="form-control" type="text" [(ngModel)]="search"/>
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="column">
+                                        <label class="control">Show
+                                            <select  [(ngModel)]="showNumberOfItems" (ngModelChange)="changeRange($event)">
+                                                <option [value]=10>10</option>
+                                                <option [value]=15>15</option>
+                                                <option [value]=20>20</option>
+                                                <option [value]=25>25</option>
+                                                <option [value]=100>100</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th *ngFor="let key of keys" (click)="orderBy(key)">
+                                                <span>{{ key}}
+                                                <span *ngIf="resource.order[key]=='' " class="glyphicon glyphicon-sort"></span>
+                                                <span *ngIf="resource.order[key]==='asc' " class="glyphicon glyphicon-sort-by-attributes-alt"></span>
+                                                <span *ngIf="resource.order[key]==='desc' " class="glyphicon glyphicon-sort-by-attributes"></span>
+                                                </span>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let row of data| search : term  | global : search| pagination : range">
+                                            <td *ngFor="let key of keys">
+                                                <span *ngIf="stringShow(row[key],key)">{{ row[key] }}</span>
+                                                <img *ngIf="imageShow(row[key])" [src]=row[key] style="width:35px;;height:35px;">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <pagination class="pagination" [numberOfItems]="numberOfItems" (updateRange)="range = $event" [paginationRange]="6"></pagination>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-<div class="columns">
-    <div class="column">
-        <label class="control">Filter items
-            <!--<input type="text" class="input" placeholder="filter" [(ngModel)]="filter">-->
-        </label>
-    </div>
-</div>
-<div class="columns">
-    <div class="column">
-        <label class="control">itemsPerPage
-            <select >
-                <option [value]=10>10</option>
-                <option [value]=15>15</option>
-                <option [value]=20>20</option>
-                <option [value]=25>25</option>
-            </select>
-        </label>
-    </div>
-</div>
- <table class="table" >
-			<thead>
-			    <tr>
-				    <th *ngFor="let name of colName">{{name}}
-                        </th>
-				</tr>
-			</thead>
-            <tbody>
-              <tr *ngFor="let row of data | global : globalSearchTerm | pagination : range">
-        <td *ngFor="let key of keys">
-            {{ row[key] }}
-        </td>
-    </tr>
-              
-			
-		    </tbody>
-        </table>
-        <pagination *ngIf="config.paginationEnabled" 
-            [numberOfItems]="numberOfItems" 
-            (updateRange)="range = $event"></pagination>
-<div class="is-text-centered">
-    
-</div>
-
 </div>

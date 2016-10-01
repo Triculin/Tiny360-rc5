@@ -1,18 +1,20 @@
 import {Pipe} from "@angular/core";
-import {ResourceService} from "../services/resource-service";
+import {ResourceService } from '../../index';
 @Pipe({
   name: 'global'
 })
 
 export class GlobalSearchPipe {
+  filter:any;
   constructor(public resource:ResourceService) {
   }
 
-  transform(dataArr:any, filter:any) {
+  transform(dataArr:any, searchstring:any) {
+    this.filter={value:searchstring};
     if (typeof dataArr === "undefined") {
       return;
     }
-    if (typeof filter === 'undefined' || Object.keys(filter).length === 0 || filter === "") {
+    if (typeof this.filter === 'undefined' || Object.keys(this.filter).length === 0 || this.filter === "") {
       return this.resource.data=dataArr;
     }
     this.resource.data = [];
@@ -32,7 +34,7 @@ export class GlobalSearchPipe {
           if (typeof row[value] === "number") {
             element = "" + row[value];
           }
-          if (element.indexOf(filter["value"].toLocaleLowerCase()) >= 0) {
+          if (element.indexOf(this.filter["value"].toLocaleLowerCase()) >= 0) {
             this.resource.data.push(row);
             return;
           }

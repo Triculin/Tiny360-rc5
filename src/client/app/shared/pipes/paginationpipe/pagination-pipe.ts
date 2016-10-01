@@ -1,5 +1,5 @@
 import {Pipe} from '@angular/core';
-import {ResourceService} from "../services/resource-service";
+import {ResourceService} from "../../index";
 
 @Pipe({
   name: 'pagination'

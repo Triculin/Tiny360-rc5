@@ -1,6 +1,6 @@
 import {Pipe} from '@angular/core';
-import {FiltersService} from "../services/filters-service";
-import {ResourceService} from "../services/resource-service";
+import {FiltersService} from "../../index";
+import {ResourceService} from "../../index";
 
 @Pipe({
   name: 'search'

@@ -1,0 +1,528 @@
+{
+  "masterConfig": {
+    "globalsettings": {
+      "TGSlstCatageory": [
+        {
+          "id": 0,
+          "value": "Cloth Types"
+        },
+        {
+          "id": 1,
+          "value": "Inventory Types"
+        },
+        {
+          "id": 2,
+          "value": "Petty Cash"
+        },
+        {
+          "id": 3,
+          "value": "Locations"
+        },
+        {
+          "id": 4,
+          "value": "Process"
+        },
+        {
+          "id": 5,
+          "value": "User Type"
+        },
+        {
+          "id": 6,
+          "value": "Others"
+        }
+      ],
+      "colNames": [
+        {
+          "id": 0,
+          "name": "ClothTypes",
+          "placeHolder": "Cloth Type",
+          "names": [
+            "S.No",
+            "ClothType",
+            "ClothCode",
+            "ClothImage"
+          ],
+          "model": [
+            1,
+            2,
+            4,
+            2
+          ],
+          "popText": "AddClothType",
+          "popImage": "fa fa-fw fa-industry"
+        },
+        {
+          "id": 1,
+          "name": "InventoryTypes",
+          "placeHolder": "Inventory",
+          "names": [
+            "S.No",
+            "ItemName",
+            "ClothCode"
+          ],
+          "model": [
+            1,
+            4,
+            1
+          ],
+          "popText": "Add Inventory",
+          "popImage": "zmdi zmdi-format-list-bulleted zmdi-hc-fw"
+        },
+        {
+          "id": 2,
+          "name": "PettyCash",
+          "placeHolder": "Petty Cash",
+          "names": [
+            "S.No",
+            "ItemName",
+            "Cost"
+          ],
+          "model": [
+            1,
+            4,
+            1
+          ],
+          "popText": "Add Petty Cash",
+          "popImage": "fa fa-fw fa-file-text"
+        },
+        {
+          "id": 3,
+          "name": "Locations",
+          "placeHolder": "Location",
+          "names": [
+            "S.No",
+            "Location"
+          ],
+          "model": [
+            1,
+            3
+          ],
+          "popText": "Add Location",
+          "popImage": "zmdi zmdi-my-location zmdi-hc-fw"
+        },
+        {
+          "id": 4,
+          "name": "Process",
+          "placeHolder": "Process",
+          "names": [
+            "S.No",
+            "ProcessName",
+            "Code",
+            "Price"
+          ],
+          "model": [
+            1,
+            4,
+            1,
+            1
+          ],
+          "popText": "Add Process",
+          "popImage": "fa fa-fw fa-line-chart"
+        },
+        {
+          "id": 5,
+          "name": "UserType",
+          "placeHolder": "User Type",
+          "names": [
+            "S.No",
+            "Others"
+          ],
+          "model": [
+            1,
+            4
+          ],
+          "popText": "Add Others",
+          "popImage": "fa fa-fw fa-line-chart"
+        },
+        {
+          "id": 6,
+          "name": "Others",
+          "placeHolder": "other",
+          "names": [
+            "id",
+            "Others"
+          ],
+          "model": [
+            1,
+            3
+          ],
+          "popText": "Add Others",
+          "popImage": "fa fa-fw fa-line-chart"
+        }
+      ],
+      "Data": [
+        {
+          "id": 0,
+          "name": "ClothTypes",
+          "values": [
+            {
+              "id": 1,
+              "ClothType": "Shrit",
+              "ClothCode": "St501",
+              "ClothImage": "assets/img/icon/order-shirt.jpg"
+            },
+            {
+              "id": 2,
+              "ClothType": "Pents",
+              "ClothCode": "Pt502",
+              "ClothImage": "assets/img/icon/order-pant.jpg"
+            },
+            {
+              "id": 3,
+              "ClothType": "Skirt",
+              "ClothCode": "Sk503",
+              "ClothImage": "assets/img/icon/order-skirt.jpg"
+            },
+            {
+              "id": 4,
+              "ClothType": "Shrit",
+              "ClothCode": "St501",
+              "ClothImage": "assets/img/icon/order-shirt.jpg"
+            },
+            {
+              "id": 5,
+              "ClothType": "Skirt",
+              "ClothCode": "Sk503",
+              "ClothImage": "assets/img/icon/order-skirt.jpg"
+            },
+            {
+              "id": 6,
+              "ClothType": "Pents",
+              "ClothCode": "Pt502",
+              "ClothImage": "assets/img/icon/order-pant.jpg"
+            },
+            {
+              "id": 7,
+              "ClothType": "Shrit",
+              "ClothCode": "St501",
+              "ClothImage": "assets/img/icon/order-shirt.jpg"
+            },
+            {
+              "id": 8,
+              "ClothType": "Pents",
+              "ClothCode": "Pt502",
+              "ClothImage": "assets/img/icon/order-pant.jpg"
+            },
+            {
+              "id": 9,
+              "ClothType": "Shrit",
+              "ClothCode": "St501",
+              "ClothImage": "assets/img/icon/order-shirt.jpg"
+            },
+            {
+              "id": 10,
+              "ClothType": "Pents",
+              "ClothCode": "Pt502",
+              "ClothImage": "assets/img/icon/order-pant.jpg"
+            },
+            {
+              "id": 11,
+              "ClothType": "Shrit",
+              "ClothCode": "St501",
+              "ClothImage": "assets/img/icon/order-shirt.jpg"
+            },
+            {
+              "id": 12,
+              "ClothType": "Skirt",
+              "ClothCode": "Sk503",
+              "ClothImage": "assets/img/icon/order-skirt.jpg"
+            },
+            {
+              "id": 13,
+              "ClothType": "Pents",
+              "ClothCode": "Pt502",
+              "ClothImage": "assets/img/icon/order-pant.jpg"
+            },
+            {
+              "id": 14,
+              "ClothType": "Skirt",
+              "ClothCode": "Sk503",
+              "ClothImage": "assets/img/icon/order-skirt.jpg"
+            },
+            {
+              "id": 15,
+              "ClothType": "Shrit",
+              "ClothCode": "St501",
+              "ClothImage": "assets/img/icon/order-shirt.jpg"
+            },
+            {
+              "id": 16,
+              "ClothType": "Pents",
+              "ClothCode": "Pt502",
+              "ClothImage": "assets/img/icon/order-pant.jpg"
+            },
+            {
+              "id": 17,
+              "ClothType": "Shrit",
+              "ClothCode": "St501",
+              "ClothImage": "assets/img/icon/order-shirt.jpg"
+            },
+            {
+              "id": 18,
+              "ClothType": "Skirt",
+              "ClothCode": "Sk503",
+              "ClothImage": "assets/img/icon/order-skirt.jpg"
+            },
+            {
+              "id": 19,
+              "ClothType": "Shrit",
+              "ClothCode": "St501",
+              "ClothImage": "assets/img/icon/order-shirt.jpg"
+            },
+            {
+              "id": 20,
+              "ClothType": "Pents",
+              "ClothCode": "Pt502",
+              "ClothImage": "assets/img/icon/order-pant.jpg"
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "name": "InventoryTypes",
+          "values": [
+            {
+              "id": "01.",
+              "ItemName": "Shrit",
+              "ClothCode": "St501"
+            },
+            {
+              "id": "02.",
+              "ItemName": "Shrit",
+              "ClothCode": "St501"
+            },
+            {
+              "id": "03.",
+              "ItemName": "Shrit",
+              "ClothCode": "St501"
+            },
+            {
+              "id": "04.",
+              "ItemName": "Shrit",
+              "ClothCode": "St501"
+            },
+            {
+              "id": "05.",
+              "ItemName": "Shrit",
+              "ClothCode": "St501"
+            },
+            {
+              "id": "06.",
+              "ItemName": "Shrit",
+              "ClothCode": "St501"
+            },
+            {
+              "id": "07.",
+              "ItemName": "Shrit",
+              "ClothCode": "St501"
+            },
+            {
+              "id": "08.",
+              "ItemName": "Shrit",
+              "ClothCode": "St501"
+            },
+            {
+              "id": "09.",
+              "ItemName": "Shrit",
+              "ClothCode": "St501"
+            },
+            {
+              "id": "10.",
+              "ItemName": "Shrit",
+              "ClothCode": "St501"
+            },
+            {
+              "id": "11.",
+              "ItemName": "Shrit",
+              "ClothCode": "St501"
+            },
+            {
+              "id": "12.",
+              "ItemName": "Shrit",
+              "ClothCode": "St501"
+            },
+            {
+              "id": "13.",
+              "ItemName": "Shrit",
+              "ClothCode": "St501"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "PettyCash",
+          "values": [
+            {
+              "id": "01.",
+              "ItemName": "Soap",
+              "Cost": "₹20/-"
+            },
+            {
+              "id": "02.",
+              "ItemName": "Surf",
+              "Cost": "₹50/-"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Locations",
+          "values": [
+            {
+              "id": "01.",
+              "Location": "Hyderbad"
+            },
+            {
+              "id": "02.",
+              "Location": "Secunderabad"
+            },
+            {
+              "id": "03.",
+              "Location": "Hydernagar"
+            },
+            {
+              "id": "04.",
+              "Location": "Hitech City"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Process",
+          "values": [
+            {
+              "id": "01.",
+              "ProcessName": "Soap",
+              "Code": "Pr510",
+              "price": "₹20/-"
+            },
+            {
+              "id": "02.",
+              "ProcessName": "Soap",
+              "Code": "Pr520",
+              "price": "₹50/-"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "UserType",
+          "values": [
+            {
+              "id": "01.",
+              "userType": "Informater"
+            },
+            {
+              "id": "02.",
+              "userType": "Informater2"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "Others",
+          "values": [
+            {
+              "id": "01.",
+              "Others": "others"
+            },
+            {
+              "id": "02.",
+              "Others": "others"
+            }
+          ]
+        }
+      ]
+    },
+    "menuList": [
+      {
+        "name": "Dashboard",
+        "routerLink": "",
+        "styleIcon": "zmdi zmdi-apps zmdi-hc-fw icon",
+        "subMenuList": []
+      },
+      {
+        "name": "Shop(s)",
+        "routerLink": "shop",
+        "styleIcon": "zmdi zmdi-store zmdi-hc-fw icon",
+        "subMenuList": []
+      },
+      {
+        "name": "Workshop(s)",
+        "routerLink": "workshop",
+        "styleIcon": "fa fa-fw fa-industry icon",
+        "subMenuList": []
+      },
+      {
+        "name": "staff",
+        "routerLink": "staff",
+        "styleIcon": "zmdi zmdi-account-box-mail zmdi-hc-fw icon",
+        "subMenuList": []
+      },
+      {
+        "name": "Holidays",
+        "routerLink": "holidays",
+        "styleIcon": "zmdi zmdi-mood zmdi-hc-fw icon",
+        "subMenuList": [
+          {
+            "name": "Store Settings",
+            "routerLink": "store_settings",
+            "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
+          },
+          {
+            "name": "General Settings",
+            "routerLink": "general_settings",
+            "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
+          }
+        ]
+      },
+      {
+        "name": "System Users",
+        "routerLink": "system_users",
+        "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon",
+        "subMenuList": []
+      },
+      {
+        "name": "Global Settings",
+        "routerLink": "global_settings",
+        "styleIcon": "zmdi zmdi-settings zmdi-hc-fw icon",
+        "subMenuList": [
+          {
+            "name": "Store Settings",
+            "routerLink": "store_settings",
+            "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
+          },
+          {
+            "name": "General Settings",
+            "routerLink": "general_settings",
+            "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
+          },
+          {
+            "name": "Cloth Settings",
+            "routerLink": "cloth_settings",
+            "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
+          },
+          {
+            "name": "Cost Center",
+            "routerLink": "cost_center",
+            "styleIcon": "zmdi zmdi-desktop-windows zmdi-hc-fw icon"
+          }
+        ]
+      }
+    ],
+    "test1": [
+      {
+        "ClothCode": "Pt502",
+        "ClothImage": "app/tmp/icon/order-pant.jpg"
+      },
+      {
+        "ClothCode": "Pt502",
+        "ClothImage": "app/tmp/icon/order-pant.jpg"
+      }
+    ],
+    "test2": {
+      "ClothCode": "Pt502",
+      "ClothImage": "app/tmp/icon/order-pant.jpg"
+    }
+  }
+}

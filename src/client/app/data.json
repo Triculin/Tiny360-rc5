@@ -22,7 +22,7 @@
 					      ],
 	
 	"Data":[
-				    { "id":0,"name":"ClothTypes",
+			 { "id":0,"name":"ClothTypes",
 				    					"values":[
 												    {"id":1,"ClothType":"Shrit","ClothCode":"St501","ClothImage":"assets/img/icon/order-shirt.jpg"},
 												    {"id":2,"ClothType":"Pents","ClothCode":"Pt502","ClothImage":"assets/img/icon/order-pant.jpg"},

@@ -65,7 +65,189 @@
 
 
 /*-----------------------------select2.min.scss variables start------------*/
+/*pagination Start*/
 
+.pagination {
+  margin: 25px 0;
+  border-radius: 0;
+  background-clip: padding-box;
+  float:right;
+}
+.pagination > li {
+  display: inline-block;
+  margin: 0 2px;
+}
+.pagination > li > a {
+  background: #ebecf2;
+  border: 0;
+  color: #363f45;
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  text-align: center;
+  line-height: 56px;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.pagination > li > span {
+  background: #ebecf2;
+  border: 0;
+  color: #363f45;
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  text-align: center;
+  line-height: 56px;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.pagination > li > a:hover {
+  color: #363f45;
+  background: #e2e3ec;
+}
+.pagination > li > span:hover {
+  color: #363f45;
+  background: #e2e3ec;
+}
+
+.pagination > li > a .fa {
+  font-size: 20px;
+  font-size: 2rem;
+  position: relative;
+  top: 2px;
+  color: #9da2a6;
+}
+.pagination > li > span .fa {
+  font-size: 20px;
+  font-size: 2rem;
+  position: relative;
+  top: 2px;
+  color: #9da2a6;
+}
+
+.pagination > li.active > a {
+  font-weight: 700;
+  color: #fff;
+  background: #fe5621;
+}
+.pagination > li.active > span {
+  font-weight: 700;
+  color: #fff;
+  background: #fe5621;
+}
+
+.pagination > li.active > a:active {
+  font-weight: 700;
+  color: #fff;
+  background: #fe5621;
+}
+.pagination > li.active > a:focus {
+  font-weight: 700;
+  color: #fff;
+  background: #fe5621;
+}
+.pagination > li.active > a:hover {
+  font-weight: 700;
+  color: #fff;
+  background: #fe5621;
+}
+.pagination > li.active > span:active {
+  font-weight: 700;
+  color: #fff;
+  background: #fe5621;
+}
+.pagination > li.active > span:focus {
+  font-weight: 700;
+  color: #fff;
+  background: #fe5621;
+}
+.pagination > li.active > span:hover {
+  font-weight: 700;
+  color: #fff;
+  background: #fe5621;
+}
+
+.pagination > li:first-child > a {
+  border-radius: 0;
+  background-clip: padding-box;
+}
+.pagination > li:first-child > span {
+  border-radius: 0;
+  background-clip: padding-box;
+}
+.pagination > li:last-child > a {
+  border-radius: 0;
+  background-clip: padding-box;
+}
+.pagination > li:last-child > span {
+  border-radius: 0;
+  background-clip: padding-box;
+}
+
+/*pagination End*/
+/*tabs*/
+
+.nav-tabs > li.active > a {
+  background: 0 0;
+  border: 0;
+  border-bottom: 1px solid #fe5621;
+  color: #fe5621;
+}
+
+.nav-tabs > li.active > a :focus {
+  background: 0 0;
+  border: 0;
+  border-bottom: 1px solid #fe5621;
+  color: #fe5621;
+}
+.nav-tabs > li.active > a :hover {
+  background: 0 0;
+  border: 0;
+  border-bottom: 1px solid #fe5621;
+  color: #fe5621;
+}
+
+.nav-tabs > li.active > a:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #fe5621;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  display: block;
+}
+
+.nav-tabs > li > a {
+  position: relative;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  color: #919599;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px 25px;
+}
+.nav-tabs > li > a :focus {
+  border: 0;
+  border-bottom: 1px solid #9da2a6;
+  background: 0 0;
+  color: #363f45;
+}
+.nav-tabs > li > a :hover {
+  border: 0;
+  border-bottom: 1px solid #9da2a6;
+  background: 0 0;
+  color: #363f45;
+}
+
+.nav-tabs .userProfileTabs {
+  margin-bottom: 20px;
+}
+.nav-tabs .userProfileTabs > li > a {
+  padding: 15px 30px;
+}
+/*tabs*/
 .text-gray {
     color: #363f45;
 }
@@ -1108,20 +1290,41 @@ a:focus {
     z-index: 3;
     padding-top: 60px;
 }
-
-.routing {
+[hidden] {
+  display: none;
+}
+.disable{
+  
+   cursor:not-allowed;
+}
+.disable1{
+  
+   pointer-events: none;
+  
+}
+/*SORTING*/
+.sorting{
+    position: absolute;
+    bottom: 16px;
+    right: 3px;
+    display: block;
+    font-family: 'Glyphicons Halflings';
+    opacity: 0.5;
+}
+/*SORTING*/
+/*.routing {
     margin: 0 auto;
     color: #ccc;
     font-weight: 500;
-}
+}*/
 
-.routing p {
+/*.routing p {
     font-family: "Source Sans Pro", sans-serif;
     color: #ccc;
     font-weight: 500;
     font-size: 14px;
     margin: 16px 0 0 222px !important;
-}
+}*/
 
 
 /*# sourceMappingURL=app.min-1.css.map */
