@@ -26,18 +26,18 @@
 
                         <div class="col-xs-12 col-md-8 col-lg-8" style="padding:0; float:none;margin: 0 auto;">
                             <div class="box box-without-bottom-padding ">
-                                <div class="columns">
-                                    <div class="column">
-                                        <label class="control">Search:
-                                            <input class="form-control" type="text" [(ngModel)]="search"/>
-                                            
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-6 col-lg-6">
+
+                                        <label for="search" style="line-height: 47px; width:100%;">Search:
+                                            <input id="search" style="float:right;    width: 83%;" class="form-control" type="text" [(ngModel)]="search"/>    
                                         </label>
+
                                     </div>
-                                </div>
-                                <div class="columns">
-                                    <div class="column">
-                                        <label class="control">Show
-                                            <select  [(ngModel)]="showNumberOfItems" (ngModelChange)="changeRange($event)">
+                                    <div class="col-xs-12 col-md-6 col-lg-6">
+
+                                        <label for="showNumberOfItems" style="line-height: 47px;">Show:
+                                            <select  id="showNumberOfItems" style="float:right; padding-top:10px;  width: 65%;" class="form-control" [(ngModel)]="showNumberOfItems" (ngModelChange)="changeRange($event)">
                                                 <option [value]=10>10</option>
                                                 <option [value]=15>15</option>
                                                 <option [value]=20>20</option>
@@ -45,24 +45,31 @@
                                                 <option [value]=100>100</option>
                                             </select>
                                         </label>
+
                                     </div>
                                 </div>
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th *ngFor="let key of keys" (click)="orderBy(key)">
-                                                <span>{{ key}}
-                                                <span *ngIf="resource.order[key]=='' " class="glyphicon glyphicon-sort"></span>
-                                                <span *ngIf="resource.order[key]==='asc' " class="glyphicon glyphicon-sort-by-attributes-alt"></span>
-                                                <span *ngIf="resource.order[key]==='desc' " class="glyphicon glyphicon-sort-by-attributes"></span>
-                                                </span>
+                                            <th>SNO</th>
+                                            <th  *ngFor="let key of keys;let i=index" (click)="orderBy(key,i);">
+                                                <span style="display: inline-flex;">{{ key|uppercase}}
+                                                <span style="padding-left: 20%;float:right" *ngIf="resource.order[key]!='asc'&& resource.order[key]!='desc'&&sortedCols.indexOf(i)>-1;" class="glyphicon glyphicon-sort"></span>
+                                                <span style="padding-left: 20%;float:right" *ngIf="resource.order[key]==='asc' &&sortedCols.indexOf(i)>-1;" class="glyphicon glyphicon-sort-by-attributes-alt"></span>
+                                                <span style="padding-left: 20%;float:right" *ngIf="resource.order[key]==='desc'&&sortedCols.indexOf(i)>-1; " class="glyphicon glyphicon-sort-by-attributes"></span>
+                                               </span>
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr *ngFor="let row of data| search : term  | global : search| pagination : range">
+                                        <tr *ngFor="let row of data| search : term  | global : search| pagination : range;let i=index">
+                                            <td>{{i+1}}</td>
                                             <td *ngFor="let key of keys">
                                                 <span *ngIf="stringShow(row[key],key)">{{ row[key] }}</span>
+                                                <span *ngIf="key==='actions'"> 
+                                                    <span><i class="zmdi zmdi-view-list zmdi-hc-fw"></i></span>
+                                                    <span><i class="zmdi zmdi-edit zmdi-hc-fw"></i></span>
+                                                </span>
                                                 <img *ngIf="imageShow(row[key])" [src]=row[key] style="width:35px;;height:35px;">
                                             </td>
                                         </tr>

@@ -13,16 +13,17 @@ import {PaginationComponent, GlobalSearchComponent, HttpService, FiltersService,
   encapsulation: ViewEncapsulation.None
 })
 export class GeneralSettingsComponent {
+   @ViewChild(PaginationComponent)
+  paginationTable: PaginationComponent;
   public data: Array<any>;
   public keys: Array<any>;
   public numberOfItems: number;
   public itemsObservables: any;
-  @ViewChild(PaginationComponent)
-  paginationTable: PaginationComponent;
-  private search: any = '';
-  private tabs: any;
-  private tabIndex: number = 0;
-  private showNumberOfItems: number = 10;
+  search: any = '';
+  tabs: any;
+  tabIndex: number = 0;
+  showNumberOfItems: number = 10;
+  sortedCols:Array<number>;
   constructor(public filtersService: FiltersService,
     public resource: ResourceService,
     public httpService: HttpService) {
@@ -33,13 +34,16 @@ export class GeneralSettingsComponent {
     this.itemsObservables.subscribe((res: any) => {
       this.tabs = res.globalsettings.Data;
       this.data = res.globalsettings.Data[0].values;
+      this.sortedCols=res.globalsettings.Data[0].sorted;
       this.numberOfItems = res.globalsettings.Data[0].values.length;
       this.keys = Object.keys(this.data[0]);
     });
   }
-  public orderBy(key: string) {
-    if (key.toLowerCase().indexOf('image') < 0)
-      this.data = this.resource.sortBy(key);
+
+  public orderBy(key:string,i:number) {
+   
+    if(this.sortedCols.indexOf(i)>-1)
+    this.data = this.resource.sortBy(key);
   };
   changeRange(value: any) {
     this.paginationTable.changeRange(value);
@@ -51,6 +55,7 @@ export class GeneralSettingsComponent {
     else {
       return false;
     }
+
   }
   stringShow(d: any, key: any) {
     if (typeof d === 'string') {
@@ -65,9 +70,11 @@ export class GeneralSettingsComponent {
   goTab(i: number, tab: any) {
     this.showNumberOfItems = 10;
     this.search = '';
+    this.resource.sortBy('');
     this.keys = Object.keys(tab.values[0]);
     this.paginationTable.changeRange(10);
     this.data = tab.values;
+    this.sortedCols=tab.sorted;
     this.tabIndex = i;
   }
 }
