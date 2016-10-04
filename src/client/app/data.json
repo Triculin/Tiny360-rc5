@@ -1,7 +1,230 @@
 {
 	"masterConfig": {
+		"staff": {
+			"sortedCols": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			],
+			"staffList": [
+				{
+					"id": 0,
+					"firstName": "Hakeem",
+					"lastName": "Adele",
+					"dateJoined": "01-10-2016",
+					"Designation": "Sr. Employee",
+					"contactNo": "9876543210",
+					"Location": "Hyderabad",
+					"actions": ""
+				},
+				{
+					"id": 1,
+					"firstName": "Raghavendra",
+					"lastName": "Rao",
+					"dateJoined": "01-10-2016",
+					"Designation": "Jr. Employee",
+					"contactNo": "9876543210",
+					"Location": "Secunderabad",
+					"actions": ""
+				},
+				{
+					"id": 2,
+					"firstName": "Mahesh",
+					"lastName": "Kumar",
+					"dateJoined": "01-10-2016",
+					"Designation": "Jr. Employee",
+					"contactNo": "0123456789",
+					"Location": "Delhi",
+					"actions": ""
+				},
+				{
+					"id": 3,
+					"firstName": "Naveen",
+					"lastName": "Kumar",
+					"dateJoined": "01-10-2016",
+					"Designation": "Sr. Employee",
+					"contactNo": "9876543210",
+					"Location": "Pune",
+					"actions": ""
+				},
+				{
+					"id": 4,
+					"firstName": "Satya",
+					"lastName": "Ramesh",
+					"dateJoined": "01-10-2016",
+					"Designation": "Jr. Employee",
+					"contactNo": "0123456789",
+					"Location": "Bangulore",
+					"actions": ""
+				},
+				{
+					"id": 5,
+					"firstName": "Krishna",
+					"lastName": "Veni",
+					"dateJoined": "01-10-2016",
+					"Designation": "Sr. Employee",
+					"contactNo": "9876543210",
+					"Location": "Chennai",
+					"actions": ""
+				},
+				{
+					"id": 6,
+					"firstName": "Ashok",
+					"lastName": "Kumar",
+					"dateJoined": "01-10-2016",
+					"Designation": "Jr. Employee",
+					"contactNo": "0123456789",
+					"Location": "Patna",
+					"actions": ""
+				},
+				{
+					"id": 7,
+					"firstName": "Pavan",
+					"lastName": "Satish",
+					"dateJoined": "01-10-2016",
+					"Designation": "Sr. Employee",
+					"contactNo": "9876543210",
+					"Location": "Vizag",
+					"actions": ""
+				},
+				{
+					"id": 8,
+					"firstName": "Jyothi",
+					"lastName": "Laxmi",
+					"dateJoined": "01-10-2016",
+					"Designation": "Jr. Employee",
+					"contactNo": "0123456789",
+					"Location": "Nagpur",
+					"actions": ""
+				},
+				{
+					"id": 9,
+					"firstName": "John",
+					"lastName": "Seena",
+					"dateJoined": "01-10-2016",
+					"Designation": "Jr. Employee",
+					"contactNo": "9876543210",
+					"Location": "Indore",
+					"actions": ""
+				},
+				{
+					"id": 10,
+					"firstName": "Matt",
+					"lastName": "Damon",
+					"dateJoined": "01-10-2016",
+					"Designation": "Jr. Employee",
+					"contactNo": "9876543210",
+					"Location": "Manipal",
+					"actions": ""
+				},
+				{
+					"id": 11,
+					"firstName": "Brian",
+					"lastName": "Lara",
+					"dateJoined": "01-10-2016",
+					"Designation": "Jr. Employee",
+					"contactNo": "0123456789",
+					"Location": "Jaipur",
+					"actions": ""
+				},
+				{
+					"id": 12,
+					"firstName": "Chris",
+					"lastName": "Gayle",
+					"dateJoined": "01-10-2016",
+					"Designation": "Sr. Employee",
+					"contactNo": "9876543210",
+					"Location": "Srinagar",
+					"actions": ""
+				},
+				{
+					"id": 13,
+					"firstName": "Hakeem",
+					"lastName": "Adele",
+					"dateJoined": "01-10-2016",
+					"Designation": "Jr. Employee",
+					"contactNo": "0123456789",
+					"Location": "Kochin",
+					"actions": ""
+				},
+				{
+					"id": 14,
+					"firstName": "Hakeem",
+					"lastName": "Adele",
+					"dateJoined": "01-10-2016",
+					"Designation": "Sr. Employe",
+					"contactNo": "9876543210",
+					"Location": "Dublin",
+					"actions": ""
+				},
+				{
+					"id": 15,
+					"firstName": "Ameer",
+					"lastName": "Khan",
+					"dateJoined": "01-10-2016",
+					"Designation": "Jr. Employee",
+					"contactNo": "0123456789",
+					"Location": "Durham",
+					"actions": ""
+				},
+				{
+					"id": 16,
+					"firstName": "Sri",
+					"lastName": "Latha",
+					"dateJoined": "01-10-2016",
+					"Designation": "Jr. Employee",
+					"contactNo": "9876543210",
+					"Location": "Auckland",
+					"actions": ""
+				},
+				{
+					"id": 17,
+					"firstName": "Sree",
+					"lastName": "Nadh",
+					"dateJoined": "01-10-2016",
+					"Designation": "Sr. Employee",
+					"contactNo": "9876543210",
+					"Location": "Kashmir",
+					"actions": ""
+				},
+				{
+					"id": 18,
+					"firstName": "Kaveri",
+					"lastName": "Reddy",
+					"dateJoined": "01-10-2016",
+					"Designation": "Jr. Employee",
+					"contactNo": "0123456789",
+					"Location": "Mumbai",
+					"actions": ""
+				},
+				{
+					"id": 19,
+					"firstName": "Krishna",
+					"lastName": "Vamsi",
+					"dateJoined": "01-10-2016",
+					"Designation": "Sr. Employee",
+					"contactNo": "0123456789",
+					"Location": "Kolkatta",
+					"ActionsImage1": "zmdi zmdi-view-list zmdi-hc-fw",
+					"ActionsImage2": "zmdi zmdi-edit zmdi-hc-fw"
+				}
+			]
+		},
 		"shop": {
-			"sortedCols":[0,1,2,3,4,5,6],
+			"sortedCols": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
 			"shopList": [
 				{
 					"id": "1",
@@ -330,7 +553,11 @@
 				{
 					"id": 0,
 					"name": "ClothTypes",
-					"sorted":[0,1,2],
+					"sorted": [
+						0,
+						1,
+						2
+					],
 					"values": [
 						{
 							"id": 1,
@@ -457,7 +684,11 @@
 				{
 					"id": 1,
 					"name": "InventoryTypes",
-					"sorted":[0,1,2],
+					"sorted": [
+						0,
+						1,
+						2
+					],
 					"values": [
 						{
 							"id": "01.",
@@ -529,7 +760,10 @@
 				{
 					"id": 2,
 					"name": "PettyCash",
-					"sorted":[0,1],
+					"sorted": [
+						0,
+						1
+					],
 					"values": [
 						{
 							"id": "01.",
@@ -546,7 +780,10 @@
 				{
 					"id": 3,
 					"name": "Locations",
-					"sorted":[0,1],
+					"sorted": [
+						0,
+						1
+					],
 					"values": [
 						{
 							"id": "01.",
@@ -569,7 +806,10 @@
 				{
 					"id": 4,
 					"name": "Process",
-					"sorted":[0,1],
+					"sorted": [
+						0,
+						1
+					],
 					"values": [
 						{
 							"id": "01.",
@@ -588,7 +828,10 @@
 				{
 					"id": 5,
 					"name": "UserType",
-					"sorted":[0,1],
+					"sorted": [
+						0,
+						1
+					],
 					"values": [
 						{
 							"id": "01.",
@@ -603,7 +846,10 @@
 				{
 					"id": 6,
 					"name": "Others",
-					"sorted":[0,1],
+					"sorted": [
+						0,
+						1
+					],
 					"values": [
 						{
 							"id": "01.",

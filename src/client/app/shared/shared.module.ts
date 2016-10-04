@@ -1,12 +1,13 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,FormBuilder,Validators,FormGroup} from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
+import {  ReactiveFormsModule } from '@angular/forms';
 import { ToolbarComponent } from './toolbar/index';
 import { NavbarComponent } from './navbar/index';
 import { NameListService } from './name-list/index';
 import{PaginationComponent,GlobalSearchComponent,HttpService,ResourceService,FiltersService,GlobalSearchPipe,SearchPipe,PaginationPipe}from'./index'
+
 /**
  * Do not specify providers for modules that might be imported by a lazy loaded module.
  */
@@ -16,7 +17,7 @@ import{PaginationComponent,GlobalSearchComponent,HttpService,ResourceService,Fil
    //providers:[FiltersService,ConfigService,ResourceService,HttpService],
 declarations: [ToolbarComponent, NavbarComponent,PaginationComponent,GlobalSearchComponent,GlobalSearchPipe,SearchPipe,PaginationPipe],
   exports: [ToolbarComponent, NavbarComponent,PaginationComponent,GlobalSearchComponent,GlobalSearchPipe,SearchPipe,PaginationPipe,
-    CommonModule, FormsModule, RouterModule]
+    CommonModule, FormsModule,ReactiveFormsModule, RouterModule]
 })
 
 export class SharedModule {

@@ -16,7 +16,7 @@
                         </div>
                         <div class="col-xs-12 col-md-6 col-lg-6">
                             <label for="showNumberOfItems" style="line-height: 47px;">Show:
-                                <select  id="showNumberOfItems" style="float:right; padding-top:10px;  width: 65%;" class="form-control" >
+                                <select  id="showNumberOfItems" style="float:right; padding-top:10px;  width: 65%;" class="form-control" [(ngModel)]="showNumberOfItems" (ngModelChange)="changeRange($event)" >
                                     <option [value]=10>10</option>
                                     <option [value]=15>15</option>
                                     <option [value]=20>20</option>

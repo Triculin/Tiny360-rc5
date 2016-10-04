@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
-
 import { DashboardModule } from './+dashboard/dashboard.module';
 import { ShopModule } from './+shop/shop.module';
 import { WorkshopModule } from './+workshop/workshop.module';
@@ -28,7 +27,7 @@ import { SharedModule } from './shared/shared.module';
   providers: [{
     provide: APP_BASE_HREF,
     useValue: '<%= APP_BASE %>'
-  }],
+  },],
   bootstrap: [AppComponent]
 
 })
