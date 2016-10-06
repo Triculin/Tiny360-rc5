@@ -1,5 +1,5 @@
 {
-	"masterConfig": {
+	"pagesData": {
 		"staff": {
 			"sortedCols": [
 				0,
@@ -549,7 +549,7 @@
 					"popImage": "fa fa-fw fa-line-chart"
 				}
 			],
-			"Data": [
+			"globalsettingsData": [
 				{
 					"id": 0,
 					"name": "ClothTypes",
@@ -862,7 +862,9 @@
 					]
 				}
 			]
-		},
+		}
+	},
+	"masterConfig": {
 		"menuList": [
 			{
 				"name": "Dashboard",

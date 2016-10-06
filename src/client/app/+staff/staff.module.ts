@@ -7,5 +7,5 @@ import { SharedModule } from '../shared/shared.module';
     declarations: [StaffComponent],
     exports: [StaffComponent]
 })
-
-export class StaffModule { }
+export class StaffModule {
+}

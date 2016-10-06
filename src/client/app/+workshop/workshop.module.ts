@@ -8,4 +8,5 @@ import { WorkshopComponent } from './workshop.component';
     exports: [WorkshopComponent]
 })
 
-export class WorkshopModule { }
+export class WorkshopModule {
+}

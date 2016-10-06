@@ -1,4 +1,4 @@
-import {Component, OnInit, Output, EventEmitter} from "@angular/core";
+import {Component, Output, EventEmitter} from '@angular/core';
 @Component({
   selector: 'global-search',
   template: `
@@ -8,13 +8,11 @@ import {Component, OnInit, Output, EventEmitter} from "@angular/core";
            class="form-control"
            #input
            (input)="globalUpdate.emit({value: input.value})"
-           placeholder="Search" />
-           
+           placeholder="Search" />          
 </label>
 `
 })
 
 export class GlobalSearchComponent {
   @Output() globalUpdate = new EventEmitter();
-
 }

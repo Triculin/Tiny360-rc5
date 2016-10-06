@@ -1,24 +1,22 @@
-import {Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {ResourceService} from '../services/resource-service';
 @Component({
-  selector: 'pagination',
+  selector: 'pagination-comp',
   templateUrl: 'app/shared/pagination/pagination.component.html'
 })
 export class PaginationComponent {
   public totalItems: number;
   public pageNumbers: Array<any>;
+  @Input() numberOfItems: number;
+  @Output() updateRange = new EventEmitter();
+  @Input() pageSize: number;
   private pageNumber: number;
   private range: number;
   private pageList: Array<number> = [];
-  private onChange: Function;
-  private onTouched: Function;
   private seletedPage: number = 1;
   private nextItemValid: boolean;
   private previousItemValid: boolean;
-  currentpage: number = 1;
-  @Input() numberOfItems: number;
-  @Output() updateRange = new EventEmitter();
-  @Input('paginationRange') pageSize: number;
+  private currentpage: number = 1;
   constructor(public resource: ResourceService) {
     this.pageNumber = 1;
     this.range = 10;
@@ -93,31 +91,28 @@ export class PaginationComponent {
     this.updatePagination();
   }
   doPagenumbers() {
-    var listFirst = this.pageList[0]
-    var listLast = this.pageList[this.pageList.length - 1]
+    var listFirst = this.pageList[0];
+    var listLast = this.pageList[this.pageList.length - 1];
     var i: number, count: number;
-    var remaining = this.totalItems % this.pageSize;
     var totalSize = ((this.totalItems));
-    if (this.currentpage == 1) {
+    if (this.currentpage === 1) {
       this.pageList = [];
       for (i = 1, count = 0; i <= totalSize && count < this.pageSize; i++ , count++) {
         this.pageList.push(i);
       }
     }
-    if (this.currentpage != this.totalItems + 1 && this.currentpage >= 1 && this.currentpage <= totalSize) {
-      if (this.currentpage == 1) {
+    if (this.currentpage !== this.totalItems + 1 && this.currentpage >= 1 && this.currentpage <= totalSize) {
+      if (this.currentpage === 1) {
         this.pageList = [];
         for (i = 1, count = 0; i <= totalSize && count < this.pageSize; i++ , count++) {
           this.pageList.push(i);
         }
-      }
-      else if (listFirst > this.currentpage) {
+      } else if (listFirst > this.currentpage) {
         this.pageList = [];
         for (i = (this.currentpage + 1) - this.pageSize, count = 0; i <= totalSize && count < this.pageSize; i++ , count++) {
           this.pageList.push(i);
         }
-      }
-      else if (listLast < this.currentpage) {
+      } else if (listLast < this.currentpage) {
         this.pageList = [];
         for (i = this.currentpage, count = 0; i <= totalSize && count < this.pageSize; i++ , count++) {
           this.pageList.push(i);
@@ -129,15 +124,13 @@ export class PaginationComponent {
   validation() {
     if (this.currentpage < this.totalItems) {
       this.nextItemValid = false;
-    }
-    else {
+    } else {
       this.nextItemValid = true;
-    }
+    };
     if ((this.currentpage) > 1) {
       this.previousItemValid = false;
-    }
-    else {
+    } else {
       this.previousItemValid = true;
-    }
+    };
   }
 }

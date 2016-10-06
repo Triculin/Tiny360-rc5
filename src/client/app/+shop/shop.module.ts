@@ -7,5 +7,5 @@ import { SharedModule } from '../shared/shared.module';
     declarations: [ShopComponent],
     exports: [ShopComponent]
 })
-
-export class ShopModule { }
+export class ShopModule {
+}

@@ -1,6 +1,6 @@
 import { EventEmitter } from '@angular/core';
-import {ResourceService} from "../index";
-import { ConfigService } from "../index";
+import {ResourceService} from '../index';
+import { ConfigService } from '../index';
 export declare class Pagination {
     resource: ResourceService;
     config: ConfigService;

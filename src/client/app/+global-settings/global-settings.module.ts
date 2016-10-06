@@ -7,4 +7,5 @@ import { SharedModule } from '../shared/shared.module';
     declarations: [GlobalSettingsComponent],
     exports: [GlobalSettingsComponent]
 })
-export class GlobalSettingsModule { }
+export class GlobalSettingsModule {
+}

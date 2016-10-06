@@ -1,18 +1,18 @@
-import {Pipe} from '@angular/core';
-import {FiltersService} from "../../index";
-import {ResourceService} from "../../index";
+import { Pipe, PipeTransform } from '@angular/core';
+import {FiltersService} from '../../index';
+import {ResourceService} from '../../index';
 
 @Pipe({
   name: 'search'
 })
 
-export class SearchPipe {
+export class SearchPipe implements PipeTransform {
   constructor(public filtersService:FiltersService,
               public resource:ResourceService) {
   }
 
   transform(value:any, filters:any) {
-    if (typeof value === "undefined") {
+    if (typeof value === 'undefined') {
       return;
     }
     this.resource.data = value.slice();
@@ -28,13 +28,13 @@ export class SearchPipe {
       for (var filterKey in filtersArr) {
         if (filtersArr.hasOwnProperty(filterKey)) {
           let element:any;
-          if (typeof item[filterKey] === "string") {
+          if (typeof item[filterKey] === 'string') {
             element = item[filterKey].toLocaleLowerCase();
           }
-          if (typeof item[filterKey] === "object") {
+          if (typeof item[filterKey] === 'object') {
             element = JSON.stringify(item[filterKey]);
           }
-          if (typeof item[filterKey] === "number") {
+          if (typeof item[filterKey] === 'number') {
             element = item[filterKey].toString();
           }
           if (element.indexOf(filtersArr[filterKey].toLocaleLowerCase()) === -1) {
