@@ -95,7 +95,7 @@ export class GlobalSettingsComponent implements OnInit {
     }
     this.numberOfItems = 0;
     this.itemsObservables = this.httpService.getData();
-    this.itemsObservables.subscribe(res => {
+    this.itemsObservables.subscribe((res:any) => {
     //   this.data = res;
     //   this.numberOfItems = res.length;
     //   this.keys = Object.keys(this.data[0]);

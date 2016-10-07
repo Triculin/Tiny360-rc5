@@ -7,7 +7,6 @@ import { ToolbarComponent } from './toolbar/index';
 import { NavbarComponent } from './navbar/index';
 import { NameListService } from './name-list/index';
 
-
 /**
  * Do not specify providers for modules that might be imported by a lazy loaded module.
  */
@@ -17,7 +16,7 @@ import { NameListService } from './name-list/index';
    //providers:[FiltersService,ConfigService,ResourceService,HttpService],
   declarations: [ToolbarComponent, NavbarComponent],
   exports: [ToolbarComponent, NavbarComponent,
-    CommonModule, FormsModule, RouterModule]
+    CommonModule, FormsModule, RouterModule],
 })
 
 export class SharedModule {

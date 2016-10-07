@@ -7,8 +7,7 @@ import { DialogComponent } from '../shared/dialog/dialog.component';
 @Component({
   moduleId: module.id,
   selector: 'ap-staff',
-   directives : [DialogComponent],
-  templateUrl: 'staff.component.html',
-  styleUrls: ['staff.component.css']
+  templateUrl: 'staff.component.html'
 })
-export class StaffComponent { }
+export class StaffComponent { 
+}

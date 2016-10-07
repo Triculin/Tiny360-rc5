@@ -57,6 +57,9 @@ body {
   -webkit-font-smoothing: antialiased;
   position: relative;
 }
+.modal-dialog{
+    margin:17% 32%;
+}
 
 a {
   color: #363f45;
@@ -1026,6 +1029,11 @@ all_add:hover .add_icon {
 .row {
   margin-left: -12px;
   margin-right: -12px;
+}
+
+control-messages  {
+  color: #E82C0C;
+  margin: 6px 0;
 }
 
 /*# sourceMappingURL=app.min-2.css.map */

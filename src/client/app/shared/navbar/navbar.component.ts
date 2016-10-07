@@ -19,6 +19,7 @@ import {menuList} from "./menuList";
 
 export class NavbarComponent {
 
+  
   menuItems:menuList;
 
   public selected:number=999;
@@ -36,6 +37,7 @@ export class NavbarComponent {
       this.count++;
 
     }
+
 
 expandMenu(index:number) {
 	  (this.selected===index)?this.selected=999:this.selected=index;

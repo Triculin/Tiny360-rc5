@@ -1,12 +1,11 @@
 {
     "masterConfig": {
-
         "shop":[
-                    {   "name":"FirstName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"First Name","id":"basicInput"   },
-                    {   "name":"LastName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"Last Name","id":"basicInput" },
-                    {   "name":"DateOfJoined","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Date of Jonied","id":"basicInput"    },
-                    {   "name":"Designation","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Designation","id":"basicInput"    },
-                    {   "name":"ContactNumber","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Contact Number","id":"basicInput"   },
+                    {"formControlName":"firstName","name":"firstName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"First Name","id":"basicInput"   },
+                    {"formControlName":"lastName","name":"LastName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"Last Name","id":"basicInput" },
+                    {"formControlName":"dateOfJoined","name":"dateOfJoined","field":"mandatory","size":"col-xs-12 col-sm-4","type":"date","placeholder":"Date of Jonied","id":"basicInput"    },
+                    {"formControlName":"Designation","name":"Designation","field":"mandatory","size":"col-xs-12 col-sm-4","type":"number","placeholder":"Designation","id":"basicInput"    },
+                    {"formControlName":"contactNumber","name":"contactNumber","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Contact Number","id":"basicInput"   },
                     {   "name":"Address","field":"optional","size":"col-xs-12 col-sm-12","type":"text","placeholder":"Address","id":"basicInput"    },
                     {   "name":"Landmark","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Landmark","id":"basicInput"   },
                     {   "name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","id":"basicInput"   },
@@ -14,6 +13,15 @@
                     {   "name":"State","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"State","id":"basicInput" },
                     {   "name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    }
         ],
+        "shopForm":
+            {
+      "firstname": [" ", "Validators.required"],
+      "lastname": ["","Validators.required"],
+      "date": [" "," Validators.required"],
+      "designation": ["", ["Validators.required", "Validators.minLength(10)"]],
+      "contactnumber":["",["Validators.required", "Validators.minLength(10)"]]
+    },
+        
         "globalsettings": {
                                 "TGSlstCatageory":[
 			                                            {   "id":0,"value":"Cloth Types"    },
@@ -186,14 +194,7 @@
                         "styleIcon": "zmdi zmdi-collection-text zmdi-hc-fw icon"
                     }
         ],
-        "test1": [
-                    {   "ClothCode": "Pt502",
-                        "ClothImage": "app/tmp/icon/order-pant.jpg"
-                    },
-                    {   "ClothCode": "Pt502",
-                        "ClothImage": "app/tmp/icon/order-pant.jpg"
-                    }
-        ],
+       
         "test2": {  "ClothCode": "Pt502",
                     "ClothImage": "app/tmp/icon/order-pant.jpg"
         }

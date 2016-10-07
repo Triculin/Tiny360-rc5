@@ -1,0 +1,21 @@
+ <form  [formGroup]="userForm" (submit)="saveUser()" >
+
+  <input formControlName="firstName" id="firstName" />
+  <control-messages [control]="userForm.controls.firstName"></control-messages>
+
+  <input formControlName="lastName" id="lastName" />
+  <control-messages [control]="userForm.controls.lastName"></control-messages>
+
+
+  <input type="date" formControlName="dateOfJoined" id="dateOfJoined" />
+  <control-messages [control]="userForm.controls.dateOfJoined"></control-messages>
+ 
+  <input formControlName="Designation" id="profile">
+  <control-messages [control]="userForm.controls.Designation"></control-messages>
+
+  
+  <input formControlName="contactNumber" id="contactNumber" />
+  <control-messages [control]="userForm.controls.contactNumber"></control-messages>
+
+  <button type="submit" [disabled]="!userForm.valid">Submit</button>
+</form>

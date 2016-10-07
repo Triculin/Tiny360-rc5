@@ -40,7 +40,7 @@ export class Pagination {
     this.pageNumber = 1;
     this.range = this.config.rows || 10;
     this.pageNumbers = [];
-    ResourceService.getPipedData().subscribe(data => {
+    ResourceService.getPipedData().subscribe((data:any) => {
       this.numberOfItems = data;
       this.updateNumberPerPage();
     });
