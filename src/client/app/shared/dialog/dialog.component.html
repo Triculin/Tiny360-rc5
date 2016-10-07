@@ -4,7 +4,9 @@
         <div class="modal-content">
 			<div class="modal-header rte">
 				<button type="button" class="close" data-dismiss="modal" (click)="close()">&times;</button>
-				<h2 class="modal-title">Create Employee</h2>
+               <div *ngFor="let data of data">
+                    <h2 class="modal-title" *ngIf="data.type == 'h2'">{{    data.content   }}</h2>
+               </div>
 			</div>
 			<div class="modal-body">
                 <div class="pop_box1" id="info1" [hidden]="hideElement">
