@@ -7,4 +7,3 @@ export * from './toolbar/index';
 export * from './pagination/index';
 export * from './global-search/index';
 export * from './config/env.config';
-export * from './dialog/index';

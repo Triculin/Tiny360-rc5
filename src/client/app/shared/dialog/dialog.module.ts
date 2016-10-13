@@ -7,4 +7,5 @@ import{SharedModule} from '../shared.module';
     declarations: [DialogComponent],
     exports: [DialogComponent]
 })
-export class DialogModule { }
+
+export class DialogModule {}

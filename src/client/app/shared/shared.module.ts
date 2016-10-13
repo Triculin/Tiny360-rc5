@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { ToolbarComponent } from './toolbar/index';
 import { NavbarComponent } from './navbar/index';
+//import { DialogComponent } from './dialog/index';
 import { NameListService } from './name-list/index';
 
 /**
@@ -18,7 +19,6 @@ import { NameListService } from './name-list/index';
   exports: [ToolbarComponent, NavbarComponent,
     CommonModule, FormsModule, RouterModule],
 })
-
 export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {

@@ -1,59 +1,58 @@
 <button id="myBtn" (click)="onClickedExit()">Open Modal</button>
-<div id="myModal" class="modal" role="dialog" [style.display]="modalstatus">
+<div id="myModal" class="modal" role="dialog" [style.display]="modalstatus" >
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header rte">
-                <button type="button" class="close" data-dismiss="modal" (click)="close()">&times;</button>
-                <h2 class="modal-title">Create Employee</h2>
-            </div>
-            <div class="modal-body">
-           
+      <div class="modal-header rte">
+        <button type="button" class="close" data-dismiss="modal" (click)="close()">&times;</button>
+               <div *ngFor="let data of data">
+                    <h2 class="modal-title" *ngIf="data.type == 'h2'">{{    data.content   }}</h2>
+               </div>
+      </div>
+      <div class="modal-body">
+                <!--<ng-content></ng-content>-->
                 <div class="pop_box1" id="info1" [hidden]="hideElement">
-                    <div  *ngFor="let data of data" >
-                        <div class="col-xs-12 col-sm-12" *ngIf="data.field == 'mandatory'">
-                            <div class="form-group">
-                                    <!--{{data.name|uppercase}}   -->
-                                        <input type="text" class={{data.class}} id={{data.id}} placeholder={{data.placeholder}}>
+                    <div class="row">
+                        <div class="{{data.size}}" *ngFor="let data of data">
+                            <div class="form-group" *ngIf="data.field == 'mandatory'">
+                                <input type={{data.type}} class="form-control" id={{data.id}} placeholder={{data.placeholder}}>
                             </div>
                         </div>
                     </div>
                         
                     <div class="pop_box_btn">
                         <ul class="fl">
-                            <li><a  id="info1_add" (click)="hideDiv()">Additional Info</a></li>
-                            <li><a href="#"></a></li>
+                            <li><a id="info1_add" (click)="hideDiv()">Additional Info</a></li>
                         </ul>
                         <ul class="fr">
-                            <li><a href="#" data-dismiss="modal" (click)="onClickedExit()">Cancel</a></li>
-                             <li><a href="#" data-dismiss="modal">Create</a></li>
-                             <!--<button type="submit" [disabled]="!userForm.valid">Submit</button>-->
+                            <li><a (click)="close()">Cancel</a></li>
+                            <li><a >Create</a></li>
                         </ul>
                         <div class="clear"></div>
                     </div>
                 </div>
                     
                 <div class="pop_box1" id="info2" [hidden]="hideElement1">
-                    <div class="row" *ngFor="let data of data">
-                        <div class="col-xs-12 col-sm-12" *ngIf="data.field == 'optional'">
-                            <div class="form-group">
-                                <input type="text" class={{data.class}} id={{data.id}} placeholder={{data.placeholder}}>
+                    <div class="row">
+                        <div class="{{data.size}}" *ngFor=" let data of data">
+                            <div class="form-group" *ngIf="data.field == 'optional'">
+                                <input type="text" class="form-control" id={{data.id}} placeholder={{data.placeholder}}>
                             </div>
                         </div>
                     </div>
                     
                     <div class="pop_box_btn">
                         <ul class="fl">
-                            	<li><a href="#" id="info2_prev" (click)="hideDiv1()">Previous</a></li>
+                              <li><a id="info2_prev" (click)="hideDiv1()">Previous</a></li>
                         </ul>
                         <ul class="fr">
-                            <li><a href="#" data-dismiss="modal" (click)="onClickedExit()">Cancel</a></li>
-                            <li><a href="#" data-dismiss="modal">Create</a></li>
+                            <li><a  (click)="close()">Cancel</a></li>
+                            <li><a  >Create</a></li>
                         </ul>
                         <div class="clear"></div>
                     </div>
                 </div>
-   
-            </div>
-        </div>
+                    
+      </div>
     </div>
+  </div>
 </div>
