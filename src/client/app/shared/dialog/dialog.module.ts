@@ -1,11 +1,21 @@
 import { NgModule } from '@angular/core';
-import { DialogComponent } from './dialog.component';
-import {HttpService} from "../../services/http-service";
-import{SharedModule} from '../shared.module';
-@NgModule({
-    imports: [SharedModule],
-    declarations: [DialogComponent],
-    exports: [DialogComponent]
-})
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import {SharedModule  } from '../../shared/shared.module';
+import { ControlMessagesComponent } from './control-messages.component';
+import { DynamicCmp} from './dialog';
+import { ValidationService } from './validation.service';
 
-export class DialogModule {}
+@NgModule({
+  imports: [
+    BrowserModule,SharedModule
+  ],
+  declarations: [
+  DynamicCmp
+  ],
+  exports: [
+  DynamicCmp
+  ],
+})
+export class DialogModule {
+}

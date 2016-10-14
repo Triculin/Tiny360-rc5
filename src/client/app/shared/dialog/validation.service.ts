@@ -5,7 +5,8 @@ export class ValidationService {
             'invalidCreditCard': 'Is invalid credit card number',
             'invalidEmailAddress': 'Invalid email address',
             'invalidPassword': 'Invalid password. Password must be at least 6 characters long, and contain a number.',
-            'minlength': `Minimum length ${validatorValue.requiredLength}`
+            'minlength': `Minimum length ${validatorValue.requiredLength}`,
+            'invalidfirstName':'only allow alphabets'
         };
 
         return config[validatorName];
@@ -36,6 +37,15 @@ export class ValidationService {
             return null;
         } else {
             return { 'invalidPassword': true };
+        }
+    }
+
+     static firstNameValidator(control:any) {
+       
+        if (control.value.match(/^[A-Za-z]*$/)) {
+            return null;
+        } else {
+            return { 'invalidfirstName': true };
         }
     }
 }

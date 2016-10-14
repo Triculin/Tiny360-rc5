@@ -30,7 +30,7 @@
         ],
         "staff":[
                     {   "type":"h2","content":"Create Employee"   },
-                    {   "name":"FirstName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"First Name","id":"basicInput"   },
+                    { "formControlName":"firstName",  "name":"FirstName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"First Name","id":"basicInput"   },
                     {   "name":"LastName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"Last Name","id":"basicInput" },
                     {   "name":"DateOfJoined","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Date of Jonied","id":"basicInput"    },
                     {   "name":"Designation","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Designation","id":"basicInput"    },
