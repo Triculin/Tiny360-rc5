@@ -6,7 +6,9 @@ export class ValidationService {
             'invalidEmailAddress': 'Invalid email address',
             'invalidPassword': 'Invalid password. Password must be at least 6 characters long, and contain a number.',
             'minlength': `Minimum length ${validatorValue.requiredLength}`,
-            'invalidfirstName':'only allow alphabets'
+            'invalidfirstName':'only allow alphabets',
+            'invalidlastName':'allow characters not numbers',
+            'invaliddateOfJoined':'correct format is required'
         };
 
         return config[validatorName];
@@ -46,6 +48,24 @@ export class ValidationService {
             return null;
         } else {
             return { 'invalidfirstName': true };
+        }
+    }
+
+     static lastNameValidator(control:any) {
+       
+        if (control.value.match(/^[A-Za-z]*$/)) {
+            return null;
+        } else {
+            return { 'invalidlastName': true };
+        }
+    }
+
+     static dateOfJoinedValidator(control:any) {
+       
+        if (control.value.match('/^\d{1,2}\.\d{1,2}\.\d{4}$/')) {
+            return null;
+        } else {
+            return { 'invaliddateOfJoined': true };
         }
     }
 }
