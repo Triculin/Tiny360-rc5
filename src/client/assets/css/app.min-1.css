@@ -1298,9 +1298,25 @@ a:focus {
    cursor:not-allowed;
 }
 .disable1{
-  
    pointer-events: none;
-  
+}
+.table>thead>tr>th>span{
+display: inline-flex;
+}
+.table>thead>tr>th>span>span{
+padding-left: 20%;float:right
+}
+.table>tbody>tr>td>img{
+width:35px !important;height:35px !important;
+}
+label{
+    line-height: 47px !important;display: inline-flex !important; 
+}
+label>select{
+    padding-top:10px !important;
+}
+.tabcontent_Container{
+   float:none;margin: 0 auto;
 }
 /*SORTING*/
 .sorting{

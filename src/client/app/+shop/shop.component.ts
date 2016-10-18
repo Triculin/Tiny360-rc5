@@ -21,6 +21,7 @@ export class ShopComponent implements OnInit {
   search: any = '';
   showNumberOfItems: number = 10;
   sortedCols: Array<number>;
+  showNumberOfItemsList:Array<any>;
   constructor(public filtersService: FiltersService, public resource: ResourceService, public httpService: HttpService) {
   }
   ngOnInit() {
@@ -28,6 +29,7 @@ export class ShopComponent implements OnInit {
     this.itemsObservables = this.httpService.getData();
     this.itemsObservables.subscribe((res: any) => {
       this.data = res.shop.shopList;
+      this.showNumberOfItemsList= res.shop.showRowsList;
       this.sortedCols = res.shop.sortedCols;
       this.numberOfItems = res.shop.shopList.length;
       this.keys = Object.keys(this.data[0]);

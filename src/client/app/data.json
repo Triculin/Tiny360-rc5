@@ -1,6 +1,7 @@
 {
 	"pagesData": {
 		"staff": {
+			"showRowsList":[5,10,15,20,50,100],
 			"sortedCols": [
 				0,
 				1,
@@ -216,6 +217,7 @@
 			]
 		},
 		"shop": {
+			"showRowsList":[5,10,15,20,50,100],
 			"sortedCols": [
 				0,
 				1,
@@ -400,6 +402,7 @@
 			]
 		},
 		"globalsettings": {
+
 			"TGSlstCatageory": [
 				{
 					"id": 0,
@@ -558,6 +561,7 @@
 						1,
 						2
 					],
+					"showRowsList":[5,10,15,20,50,100],
 					"values": [
 						{
 							"id": 1,
@@ -684,6 +688,7 @@
 				{
 					"id": 1,
 					"name": "InventoryTypes",
+					"showRowsList":[5,10,15,20,50,100],
 					"sorted": [
 						0,
 						1,
@@ -760,6 +765,7 @@
 				{
 					"id": 2,
 					"name": "PettyCash",
+					"showRowsList":[5,10,15,20,50,100],
 					"sorted": [
 						0,
 						1
@@ -780,6 +786,7 @@
 				{
 					"id": 3,
 					"name": "Locations",
+					"showRowsList":[5,10,15,20,50,100],
 					"sorted": [
 						0,
 						1
@@ -806,6 +813,7 @@
 				{
 					"id": 4,
 					"name": "Process",
+					"showRowsList":[5,10,15,20,50,100],
 					"sorted": [
 						0,
 						1
@@ -828,6 +836,7 @@
 				{
 					"id": 5,
 					"name": "UserType",
+					"showRowsList":[5,10,15,20,50,100],
 					"sorted": [
 						0,
 						1
@@ -846,6 +855,7 @@
 				{
 					"id": 6,
 					"name": "Others",
+					"showRowsList":[5,10,15,20,50,100],
 					"sorted": [
 						0,
 						1
@@ -865,6 +875,7 @@
 		}
 	},
 	"masterConfig": {
+		"showRowsList":[5,10,15,20,50,100],
 		"menuList": [
 			{
 				"name": "Dashboard",
@@ -940,20 +951,6 @@
 					}
 				]
 			}
-		],
-		"test1": [
-			{
-				"ClothCode": "Pt502",
-				"ClothImage": "app/tmp/icon/order-pant.jpg"
-			},
-			{
-				"ClothCode": "Pt502",
-				"ClothImage": "app/tmp/icon/order-pant.jpg"
-			}
-		],
-		"test2": {
-			"ClothCode": "Pt502",
-			"ClothImage": "app/tmp/icon/order-pant.jpg"
-		}
+		]
 	}
 }

@@ -19,6 +19,7 @@ export class GlobalSettingsComponent implements OnInit {
   search: any = '';
   tabs: any;
   tabIndex: number = 0;
+  showNumberOfItemsList:Array<any>;
   showNumberOfItems: number = 10;
   sortedCols: Array<number>;
   constructor(public filtersService: FiltersService,
@@ -27,13 +28,16 @@ export class GlobalSettingsComponent implements OnInit {
   }
   ngOnInit() {
     this.numberOfItems = 0;
+    this.resource.order=[];
     this.itemsObservables = this.httpService.getData();
     this.itemsObservables.subscribe((res: any) => {
       this.tabs = res.globalsettings.globalsettingsData;
       this.data = res.globalsettings.globalsettingsData[0].values;
+      this.showNumberOfItemsList=res.globalsettings.globalsettingsData[0].showRowsList;
       this.sortedCols = res.globalsettings.globalsettingsData[0].sorted;
       this.numberOfItems = res.globalsettings.globalsettingsData[0].values.length;
       this.keys = Object.keys(this.data[0]);
+
     });
   }
   public orderBy(key: string, i: number) {
@@ -62,10 +66,11 @@ export class GlobalSettingsComponent implements OnInit {
   goTab(i: number, tab: any) {
     this.showNumberOfItems = 10;
     this.search = '';
-    this.resource.sortBy('');
+    this.resource.order=[];
     this.keys = Object.keys(tab.values[0]);
     this.paginationTable.changeRange(10);
     this.data = tab.values;
+    this.showNumberOfItemsList=tab.showRowsList;
     this.sortedCols = tab.sorted;
     this.tabIndex = i;
   }

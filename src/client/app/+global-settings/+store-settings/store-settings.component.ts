@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
 @Component({
   moduleId: module.id,
   selector: 'ap-store-settings',
-  templateUrl: 'store-settings.component.html',
-  styleUrls: ['store-settings.component.css']
+  templateUrl: 'store-settings.component.html'
 })
 export class StoreSettingsComponent { }

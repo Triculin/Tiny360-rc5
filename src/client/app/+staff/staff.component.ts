@@ -22,6 +22,7 @@ export class StaffComponent implements OnInit {
   search: any = '';
   showNumberOfItems: number = 10;
   sortedCols: Array<number>;
+  showNumberOfItemsList:Array<any>;
   constructor(public filtersService: FiltersService,
     public resource: ResourceService,
     public httpService: HttpService) {
@@ -31,6 +32,7 @@ export class StaffComponent implements OnInit {
     this.itemsObservables = this.httpService.getData();
     this.itemsObservables.subscribe((res: any) => {
       this.data = res.staff.staffList;
+      this.showNumberOfItemsList= res.staff.showRowsList;
       this.sortedCols = res.staff.sortedCols;
       this.numberOfItems = res.staff.staffList.length;
       this.keys = Object.keys(this.data[0]);
