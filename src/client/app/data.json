@@ -12,7 +12,13 @@
                     {   "name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","id":"basicInput"   },
                     {   "name":"City","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"City","id":"basicInput"   },
                     {   "name":"State","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"State","id":"basicInput" },
-                    {   "name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    }
+                    {   "name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    },
+                    {   "name":"AdditionalInfo","field":"mandatory","type":"link","content":"Additional Info","class":"f1","function":"modalMandatoryInfoHide()"    },
+                    {   "name":"Cancel","field":"mandatory","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
+                    {   "name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":""     },
+                    {   "name":"Previous","field":"optional","type":"link","content":"Previous","class":"f1","function":"modalOptionalInfoHide()"    },
+                    {   "name":"Cancel","field":"optional","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
+                    {   "name":"Create","field":"optional","type":"link","content":"Create","class":"fr","function":""     }
         ],
         "workshop":[
                     {   "type":"h2","content":"Create Workshop"   },
@@ -26,7 +32,13 @@
                     {   "name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","id":"basicInput"   },
                     {   "name":"City","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"City","id":"basicInput"   },
                     {   "name":"State","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"State","id":"basicInput" },
-                    {   "name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    }
+                    {   "name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    },
+                    {   "name":"AdditionalInfo","field":"mandatory","type":"link","content":"Additional Info","class":"f1","function":"modalMandatoryInfoHide()"    },
+                    {   "name":"Cancel","field":"mandatory","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
+                    {   "name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":""     },
+                    {   "name":"Previous","field":"optional","type":"link","content":"Previous","class":"f1","function":"modalOptionalInfoHide()"    },
+                    {   "name":"Cancel","field":"optional","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
+                    {   "name":"Create","field":"optional","type":"link","content":"Create","class":"fr","function":""     }
         ],
         "staff":[
                     {   "type":"h2","content":"Create Employee"   },
@@ -40,7 +52,53 @@
                     {   "name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","id":"basicInput"   },
                     {   "name":"City","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"City","id":"basicInput"   },
                     {   "name":"State","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"State","id":"basicInput" },
-                    {   "name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    }
+                    {   "name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    },
+                    {   "name":"AdditionalInfo","field":"mandatory","type":"link","content":"Additional Info","class":"f1","function":"modalMandatoryInfoHide()"    },
+                    {   "name":"Cancel","field":"mandatory","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
+                    {   "name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":""     },
+                    {   "name":"Previous","field":"optional","type":"link","content":"Previous","class":"f1","function":"modalOptionalInfoHide()"    },
+                    {   "name":"Cancel","field":"optional","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
+                    {   "name":"Create","field":"optional","type":"link","content":"Create","class":"fr","function":""     }
+        ],
+        "systemUsers":[
+                        {   "type":"h2","content":"System Users"   },
+                        {   "name":"FirstName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"First Name","id":"basicInput"   },
+                        {   "name":"LastName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"Last Name","id":"basicInput" },
+                        {   "name":"EmailAddress","field":"mandatory","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Email Address","id":"basicInput"    },
+                        {   "name":"MobileNumber","field":"mandatory","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Mobile Number","id":"basicInput"    },
+                        {   "name":"UserName","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"User Name","id":"basicInput"   },
+                        {   "name":"Password","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Password","id":"basicInput"    },
+                        {   "name":"ConfirmPassword","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Confirm Password","id":"basicInput"   },
+                        {   "name":"Dropdown","field":"mandatory","size":"col-xs-12 col-sm-6","type":"dropdown",
+                            "values":[  {"name":"Type Of User","value":"userType"},
+                                        {"name":"Shop","value":"shop"},
+                                        {"name":"Workshop","value":"workshop"},
+                                        {"name":"Manager","value":"manager"},
+                                        {"name":"Sr.Manager","value":"srManager"}
+                            ]    
+                        },
+                        {   "name":"MultiSelectDropdown","field":"mandatory","size":"col-xs-12 col-sm-6","type":"multiSelectDropdown",
+                            "values":[  {"name":"Hyderabad","value":"AL"},
+                                        {"name":"Secunderabad","value":"AR"},
+                                        {"name":"Delhi","value":"IL"},
+                                        {"name":"Indore","value":"IA"},
+                                        {"name":"Kolkatta","value":"KS"},
+                                        {"name":"Kashmir","value":"KY"},
+                                        {"name":"Locknow","value":"LA"},
+                                        {"name":"Mumbai","value":"MN"},
+                                        {"name":"Miyapur","value":"MS"},
+                                        {"name":"Madras","value":"MO"},
+                                        {"name":"Ooty","value":"OK"},
+                                        {"name":"Srinagar","value":"SD"},
+                                        {"name":"Tirupathi","value":"TX"},
+                                        {"name":"Tenali","value":"TN"},
+                                        {"name":"Warangal","value":"WI"},
+                                        {"name":"Chennai","value":"CT"},
+                                        {"name":"Dehradun","value":"DE"}
+                            ]
+                        },
+                        {   "name":"Cancel","field":"mandatory","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
+                        {   "name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":""     }
         ],
         "globalsettings": {
                                 "TGSlstCatageory":[
@@ -214,14 +272,7 @@
                         "styleIcon": "zmdi zmdi-collection-text zmdi-hc-fw icon"
                     }
         ],
-        "test1": [
-                    {   "ClothCode": "Pt502",
-                        "ClothImage": "app/tmp/icon/order-pant.jpg"
-                    },
-                    {   "ClothCode": "Pt502",
-                        "ClothImage": "app/tmp/icon/order-pant.jpg"
-                    }
-        ],
+      
         "test2": {  "ClothCode": "Pt502",
                     "ClothImage": "app/tmp/icon/order-pant.jpg"
         }

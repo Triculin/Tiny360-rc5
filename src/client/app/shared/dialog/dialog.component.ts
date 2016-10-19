@@ -5,23 +5,32 @@ import {  Component , Input  } from '@angular/core';
 })
 export class DialogComponent {
   public modalstatus:string = 'none';
-  public hideElement:boolean = false;
-  public hideElement1:boolean = true;
+  public modalHideMandatoryInfo:boolean = false;
+  public modalHideOptionalInfo:boolean = true;
   @Input() data : any;
-  onClickedExit() {
+  modalPopupOpen() {
     this.modalstatus = 'block';
   }
-  close() {
+  modalClickEvents(modalClickFunctionName:any) {
+    if(modalClickFunctionName === 'modalPopupClose()') {
+        this.modalPopupClose();
+    }else if(modalClickFunctionName === 'modalMandatoryInfoHide()') {
+        this.modalMandatoryInfoHide();
+    }else if(modalClickFunctionName === 'modalOptionalInfoHide()') {
+        this.modalOptionalInfoHide();
+    }
+  }
+  modalPopupClose() {
     this.modalstatus = 'none';
-    this.hideElement = false;
-    this.hideElement1 = true;
+    this.modalHideMandatoryInfo = false;
+    this.modalHideOptionalInfo = true;
   }
-  hideDiv() {
-        this.hideElement = true;
-        this.hideElement1 = false;
+  modalMandatoryInfoHide() {
+        this.modalHideMandatoryInfo = true;
+        this.modalHideOptionalInfo = false;
   }
-  hideDiv1() {
-         this.hideElement = false;
-        this.hideElement1 = true;
+  modalOptionalInfoHide() {
+         this.modalHideMandatoryInfo = false;
+        this.modalHideOptionalInfo = true;
   }
 }

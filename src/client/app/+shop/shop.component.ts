@@ -1,15 +1,18 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit,ViewChild  } from '@angular/core';
 import {HTTP_PROVIDERS} from '@angular/http';
 import {HttpService} from '../services/http-service';
+import { DialogComponent } from '../shared/dialog/dialog.component';
 @Component({
   moduleId: module.id,
   selector: 'ap-shop',
-  providers: [HttpService,HTTP_PROVIDERS],
+  providers: [  HttpService,HTTP_PROVIDERS  ],
+  directives: [ DialogComponent ],
   templateUrl: 'shop.component.html'
 })
 export class ShopComponent implements OnInit {
   itemsObservables:any;
-  shopData:any;
+  shopData:Array<any>;
+  @ViewChild(DialogComponent) modalShopComponent: DialogComponent;
   constructor ( public httpService:HttpService) {
   }
    ngOnInit() {
@@ -18,4 +21,7 @@ export class ShopComponent implements OnInit {
     this.shopData = res.shop;
     });
   }
- }
+  modalShopOpen() {
+    this.modalShopComponent.modalPopupOpen();
+  }
+}
