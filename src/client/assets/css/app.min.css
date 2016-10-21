@@ -6195,3 +6195,77 @@ all_add:hover .add_icon {
 /* ----- Profile Edit user end  ----- */
 
 /*# sourceMappingURL=app.min.css.map */
+
+
+.multiple-select .select2-selection__rendered li {
+	list-style-type: none!important
+}
+.multiple-select .select2-selection__rendered li:before {
+	content: none!important
+}
+.multiple-select .select2-container--default .select2-selection--multiple {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	outline: 0;
+	border-color: #e6e7ed;
+	/*border-left: 3px solid #4bae4f;height: 56px;*/
+	font-weight: 400;
+	height: 100%;
+	padding: 16px 18px;
+	margin-bottom: 20px;
+	padding: 3px 18px;
+}
+.multiple-select .select2-container--default .select2-selection--multiple:focus, .multiple-select .select2-container--default .select2-selection--multiple:hover {
+	outline: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none
+}
+.multiple-select .select2-container--default .select2-selection--multiple:focus {
+	border-color: #4bae4f
+}
+.multiple-select .select2-container--default .select2-selection--multiple.error, .multiple-select .select2-container--default .select2-selection--multiple.parsley-error {
+	border-color: #f34235
+}
+.multiple-select .select2-container--default .select2-selection--multiple.error.simple-form-control, .multiple-select .select2-container--default .select2-selection--multiple.parsley-error.simple-form-control {
+	border-color: #f34235
+}
+.multiple-select .select2-container--default .select2-selection--multiple::-webkit-input-placeholder {
+font-style:italic;
+color:#919599
+}
+.multiple-select .select2-container--default .select2-selection--multiple:-moz-placeholder {
+font-style:italic;
+color:#919599
+}
+.multiple-select .select2-container--default .select2-selection--multiple::-moz-placeholder {
+font-style:italic;
+color:#919599
+}
+.multiple-select .select2-container--default .select2-selection--multiple:-ms-input-placeholder {
+font-style:italic;
+color:#919599
+}
+.multiple-select .select2-container--default .select2-selection--multiple.simple-form-control {
+	border-left: 1px solid #e6e7ed
+}
+.multiple-select .select2-container--default .select2-selection--multiple.simple-form-control:focus {
+	border-color: #e6e7ed
+}
+.multiple-select .select2-container--default .select2-selection--multiple .select2-selection__choice {
+	background: #f0f1f5;
+	border-color: #f0f1f5;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box
+}

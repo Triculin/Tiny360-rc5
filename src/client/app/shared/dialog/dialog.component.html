@@ -16,18 +16,37 @@
                                     <input type={{data.type}} class="form-control" id={{data.id}} placeholder={{data.placeholder}}>
                                 </div>
                                 <div *ngIf="data.type == 'dropdown'">
-                                    <select class="form-control {{data.size}}">
+                                    <form [formGroup]="formSingle">
+	                                    <ng-select class="{{data.size}}"
+                                            #singleSelectComponent
+                                            [options]="data.values"
+                                            [multiple]="multipleSingle"
+                                            placeholder="Type Of User"
+                                            formControlName="selectSingle">
+                                        </ng-select>
+                                    </form>
+                                    <!--<select class="form-control {{data.size}}">
                                         <option *ngFor="let values of data.values;let i=index" value={{values.value}} [disabled]="i==0" [selected]="i==0">
                                             {{  values.name   }}
                                         </option>
-                                    </select>
+                                    </select>-->
                                 </div>
-                                <div class="multiple-select" *ngIf="data.type == 'multiSelectDropdown'">
-                                    <select class="select2 js-select2 form-control {{data.size}}" multiple placeholder="Try typing some USA country name">
+                                <div *ngIf="data.type == 'multiSelectDropdown'">
+                                    <form [formGroup]="formMultiple">
+                                            <ng-select class="{{data.size}}"
+                                                #multipleSelectComponent
+                                                [options]="data.values"
+                                                [multiple]="multipleMultiple"
+                                                placeholder="Try typing some USA country name"
+                                                formControlName="selectMultiple"
+                                                >
+                                            </ng-select>
+                                    </form>
+                                    <!--<select class="select2 js-select2 form-control {{data.size}}" multiple placeholder="Try typing some USA country name">
                                         <option *ngFor="let values of data.values;let i=index" value={{values.value}} [selected]="i==0">
                                             {{  values.name   }}
                                         </option>
-                                    </select>
+                                    </select>-->
                                 </div>
                             </div>
                         </div>
