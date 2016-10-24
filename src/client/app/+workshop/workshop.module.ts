@@ -8,4 +8,5 @@ import { DialogModule    } from '../shared/dialog/dialog.module';
     declarations: [WorkshopComponent],
     exports: [WorkshopComponent]
 })
-export class WorkshopModule { }
+export class WorkshopModule {
+}

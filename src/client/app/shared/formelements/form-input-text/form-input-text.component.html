@@ -1,0 +1,15 @@
+
+<form  [formGroup]="userForm" (submit)="saveUser()" >
+  <label for="firstname">FirstName</label>
+  <input formControlName="firstName" id="firstname" />
+  
+ <label for="lastname">LastName</label>
+  <input formControlName="lastName" id="lastname" />
+  <label for="date">DateofJoined</label>
+  <input type="date"  formControlName="dateOfJoined"  id="date" />
+  <label for="designation">Designation</label>
+  <input formControlName="Designation" id="designation" />
+   <label for="">ContactNumber</label>
+   <input  formControlName="contactNumber" type ="number" id="contactnumber" /> 
+  <button type="submit" [disabled]="!userForm.valid">Submit</button>
+</form>

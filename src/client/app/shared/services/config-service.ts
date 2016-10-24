@@ -1,4 +1,4 @@
-import {Injectable} from "@angular/core";
+import {Injectable} from '@angular/core';
 @Injectable()
 export class ConfigService {
     public searchEnabled = true;
@@ -8,6 +8,6 @@ export class ConfigService {
     public paginationEnabled = true;
     public exportEnabled = true;
     public editEnabled = false;
-    public resourceUrl = "app/data.json";
+    public resourceUrl = 'app/data.json';
     public rows = 10;
 }
