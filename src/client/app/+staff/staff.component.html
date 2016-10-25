@@ -50,8 +50,27 @@
                     <pagination-comp class="pagination" [numberOfItems]="numberOfItems" (updateRange)="range = $event" [pageSize]="6"></pagination-comp>
                 </div>
             </div>
-              <button id="myBtn" (click)="modalStaffOpen()">Staff Modal</button>
-    <pop-up [data]="staffData"></pop-up>
+            <!--<button id="myBtn" (click)="modalStaffOpen()">Staff Modal</button>-->
+            <pop-up [data]="staffData"></pop-up>
         </div>
+    </div>
+    <div class="all_add" style="position:fixed; z-index:99; bottom:30px; right:30px; display:none;">
+        <a (click)="modalStaffOpen()">
+            <img src="client/assets/img/icon/plus.png" />
+        </a>
+    </div>
+    <div style="clear:both; display:block;"></div>
+    <div class="all_add " style="position:fixed; z-index:999; bottom:40px; right:25px; ">
+        <a (click)="modalStaffOpen()">
+            <i class="add_icon"></i>
+        </a>
+        <ul class="animated bounceInLeft">
+            <li>
+                <a (click)="modalStaffOpen()">
+                    <i class="fa fa-fw fa-industry"></i>
+                    Add Employee
+                </a>
+            </li>
+        </ul>
     </div>
 </div>

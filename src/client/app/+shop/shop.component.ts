@@ -30,13 +30,11 @@ export class ShopComponent implements OnInit {
   constructor(public filtersService: FiltersService, public resource: ResourceService, public httpService: HttpService) {
   }
   ngOnInit() {
-    this.httpService.getMasterConfig();
-    this.itemsObservables.subscribe((res:any) => {
+    this.httpService.getMasterConfig().subscribe((res:any) => {
     this.shopData = res.shop;
     });
     this.numberOfItems = 0;
-    this.itemsObservables = this.httpService.getData();
-    this.itemsObservables.subscribe((res: any) => {
+    this.httpService.getData().subscribe((res: any) => {
       this.data = res.shop.shopList;
       this.showNumberOfItemsList= res.shop.showRowsList;
       this.sortedCols = res.shop.sortedCols;

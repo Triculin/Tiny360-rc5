@@ -1,5 +1,24 @@
-<div>
+<div class="pageContent extended">
     This is workshops page
-    <button id="myBtn" (click)="modalWorkshopOpen()">Workshop Modal</button>
+    <!--<button id="myBtn" (click)="modalWorkshopOpen()">Workshop Modal</button>-->
     <pop-up [data]="workshopData"></pop-up>
+    <div class="all_add" style="position:fixed; z-index:99; bottom:30px; right:30px; display:none;">
+        <a (click)="modalWorkshopOpen()">
+            <img src="client/assets/img/icon/plus.png" />
+        </a>
+    </div>
+    <div style="clear:both; display:block;"></div>
+    <div class="all_add " style="position:fixed; z-index:999; bottom:40px; right:25px; ">
+        <a (click)="modalWorkshopOpen()">
+            <i class="add_icon"></i>
+        </a>
+        <ul class="animated bounceInLeft">
+            <li>
+                <a (click)="modalWorkshopOpen()">
+                    <i class="fa fa-fw fa-industry"></i>
+                    Add Employee
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>

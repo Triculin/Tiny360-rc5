@@ -1,6 +1,6 @@
 import { Component,OnInit,ViewChild } from '@angular/core';
 import {HTTP_PROVIDERS} from '@angular/http';
-import {HttpService} from '../services/http-service';
+import {HttpService} from '../shared/services/http-service';
 import { DialogComponent } from '../shared/dialog/dialog.component';
 @Component({
   moduleId: module.id,

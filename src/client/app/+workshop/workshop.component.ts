@@ -24,4 +24,4 @@ export class WorkshopComponent implements OnInit {
   modalWorkshopOpen() {
     this.modalWorkshopComponent.modalPopupOpen();
   }
-
+}

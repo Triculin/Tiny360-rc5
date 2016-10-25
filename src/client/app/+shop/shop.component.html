@@ -43,7 +43,7 @@
                                                     <span><i class="zmdi zmdi-view-list zmdi-hc-fw"></i></span>
                                     <span><i class="zmdi zmdi-edit zmdi-hc-fw"></i></span>
                                     </span>
-                                    <img *ngIf="imageShow(row[key])" [src]=row[key] >
+                                    <img *ngIf="imageShow(row[key])" [src]=row[key]>
                                 </td>
                             </tr>
                         </tbody>
@@ -51,8 +51,27 @@
                     <pagination-comp class="pagination" [numberOfItems]="numberOfItems" (updateRange)="range = $event" [pageSize]="6"></pagination-comp>
                 </div>
             </div>
-            <button id="myBtn" (click)="modalShopOpen()">Shop Modal</button>
-    <pop-up [data]="shopData"></pop-up>
+            <!--<button id="myBtn" (click)="modalShopOpen()">Shop Modal</button>-->
+            <pop-up [data]="shopData"></pop-up>
         </div>
+    </div>
+    <div class="all_add" style="position:fixed; z-index:99; bottom:30px; right:30px; display:none;">
+        <a (click)="modalShopOpen()">
+            <img src="client/assets/img/icon/plus.png" />
+        </a>
+    </div>
+    <div style="clear:both; display:block;"></div>
+    <div class="all_add " style="position:fixed; z-index:999; bottom:40px; right:25px; ">
+        <a (click)="modalShopOpen()">
+            <i class="add_icon"></i>
+        </a>
+        <ul class="animated bounceInLeft">
+            <li>
+                <a (click)="modalShopOpen()">
+                    <i class="fa fa-fw fa-industry"></i>
+                    Add Shop
+                </a>
+            </li>
+        </ul>
     </div>
 </div>
