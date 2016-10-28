@@ -1,67 +1,102 @@
-import { Component,Input} from '@angular/core';
+import { Component,Input,ViewChild,OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators,FormControl,REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
 import { ValidationService } from './validation.service';
 import { ControlMessagesComponent } from './control-messages.component';
-
+import {Validationservice1} from './formvalidate';
 @Component({
   selector : 'pop-up',
   directives:[ControlMessagesComponent,REACTIVE_FORM_DIRECTIVES],
   templateUrl : 'app/shared/dialog/dialog.component.html'
 
 })
- export class DynamicCmp  {
+ export class DynamicCmp implements OnInit  {
+   @ViewChild(Validationservice1) userProfile: Validationservice1;
+   //@ViewChild(Validationservice1) validation:Validationservice1;
+   validation=new Validationservice1();
  public modalstatus:string = "none";
- public hideElement:boolean = false;
- public hideElement1:boolean = true;
-  // @Input() data : any;
-  // @Input()  formdata : any;
-  userForm:any;
-data:any;
-  shopformdata={
-      'firstName': ['',[ Validators.required,ValidationService.firstNameValidator]],
-      'lastName': ['',[Validators.required,ValidationService.lastNameValidator]],
-      'dateOfJoined': ['', Validators.required],
-      'Designation': ['', [Validators.required, Validators.minLength(3)]],
-      'contactNumber':['',[Validators.required]]
+  public modalHideMandatoryInfo:boolean = false;
+  public modalHideOptionalInfo:boolean = true;
+ public popupopen:boolean=false;
+
+ @Input() data : any;
+  @Input() formdata : any;
+  userForm:FormGroup;
+ userform:FormGroup;
+ formvalidator:any={};
+  formSingle: FormGroup;
+  multipleSingle: boolean = false;
+  optionsSingle: Array<any> = [];
+  formMultiple: FormGroup;
+  multipleMultiple: boolean = true;
+  optionsMultiple: Array<any> = [];
+  allowClear: boolean = true;
+  @ViewChild('singleSelectComponent') singleSelectComponent:any;
+  @ViewChild('multipleSelectComponent') multipleSelectComponent:any;
+  ngOnInit() {
+    this.formSingle = new FormGroup({});
+    this.formSingle.addControl('selectSingle', new FormControl());
+    this.formMultiple = new FormGroup({});
+    this.formMultiple.addControl('selectMultiple', new FormControl());
+
     
-    };
-constructor(private formBuilder: FormBuilder){   
-   this.data =[
-                    {"formControlName":"firstName","name":"firstName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"First Name","id":"basicInput"   },
-                    {"formControlName":"lastName","name":"lastName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"Last Name","id":"basicInput" },
-                    {"formControlName":"dateOfJoined","name":"dateOfJoined","field":"mandatory","size":"col-xs-12 col-sm-4","type":"date","placeholder":"Date of Jonied","id":"basicInput"    },
-                    {"formControlName":"Designation","name":"Designation","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Designation","id":"basicInput"    },
-                    {"formControlName":"contactNumber","name":"contactNumber","field":"mandatory","size":"col-xs-12 col-sm-4","type":"number","placeholder":"Contact Number","id":"basicInput"   },
-                    {"name":"Address","field":"optional","size":"col-xs-12 col-sm-12","type":"text","placeholder":"Address","id":"basicInput"    },
-                    {"name":"Landmark","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Landmark","id":"basicInput"   },
-                    {"name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","id":"basicInput"   },
-                    {"name":"City","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"City","id":"basicInput"   },
-                    {"name":"State","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"State","id":"basicInput" },
-                    {"name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    }
-        ];
-        this.userForm = this.formBuilder.group(this.shopformdata);
+  }
+ 
+constructor( private formBuilder:FormBuilder){   
+
    };
-
-
   onClickedExit() {
-    this.modalstatus = "block";
+    // this.modalstatus = "block";
+
+    // "Validators.required".valueOf
+    
   }
 
+   modalPopupOpen() {
+    this.modalstatus = 'block';
+     this.formvalidator={};
+    var valdations:any=this.validation.formData();
+    if (this.formdata){
+  var keys=Object.keys(this.formdata)
+for(var key in this.formdata)
+{
+  this.formvalidator[key]=[];
+this.formvalidator[key].push("");
+  this.formvalidator[key].push(valdations[this.formdata[key]]);
+  
+}
+  
+    this.userform = this.formBuilder.group(this.formvalidator);
+    this.popupopen=true;
+    }
+  }
 
-  close(){
+ modalClickEvents(modalClickFunctionName:any) {
+    if(modalClickFunctionName === 'modalPopupClose()') {
+        this.modalPopupClose();
+    }else if(modalClickFunctionName === 'modalMandatoryInfoHide()') {
+        this.modalMandatoryInfoHide();
+    }else if(modalClickFunctionName === 'modalOptionalInfoHide()') {
+        this.modalOptionalInfoHide();
+    }
+  }
+
+  modalPopupClose(){
     this.modalstatus = "none";
-    this.hideElement = false;
-    this.hideElement1 = true;
+    this.modalHideMandatoryInfo = false;
+    this.modalHideOptionalInfo = true;
+    
   }
-  hideDiv(){
-        this.hideElement = true;
-        this.hideElement1 = false;
+  modalMandatoryInfoHide(){
+        this.modalHideMandatoryInfo = true;
+        this.modalHideOptionalInfo  = false;
     }
 
-    hideDiv1(){
-         this.hideElement = false;
-        this.hideElement1 = true;
+     modalOptionalInfoHide(){
+         this.modalHideMandatoryInfo = false;
+        this.modalHideOptionalInfo = true;
     }
+
+  
    
   
 }

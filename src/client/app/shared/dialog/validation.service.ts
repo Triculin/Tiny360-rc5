@@ -6,9 +6,10 @@ export class ValidationService {
             'invalidEmailAddress': 'Invalid email address',
             'invalidPassword': 'Invalid password. Password must be at least 6 characters long, and contain a number.',
             'minlength': `Minimum length ${validatorValue.requiredLength}`,
-            'invalidfirstName':'only allow alphabets',
-            'invalidlastName':'allow characters not numbers',
-            'invaliddateOfJoined':'correct format is required'
+            'maxlength':`Maximum length ${validatorValue.requiredLength}`,
+            'textWithAlphabets ':'only allow alphabets',
+            'textWithNumbers':'allow numbers not characters',
+           'textWithAlphanumeric':'allow characters and numbers'
         };
 
         return config[validatorName];
@@ -42,30 +43,40 @@ export class ValidationService {
         }
     }
 
-     static firstNameValidator(control:any) {
+     static textValidator(control:any) {
        
-        if (control.value.match(/^[A-Za-z]*$/)) {
+        if (control.value.match(/^[A-Za-z!#$%&'*+/=?^_`{|}~-]*$/)) {
             return null;
         } else {
-            return { 'invalidfirstName': true };
+            return { 'textWithAlphabets': true };
         }
     }
 
-     static lastNameValidator(control:any) {
+     static numberValidator(control:any) {
        
-        if (control.value.match(/^[A-Za-z]*$/)) {
+        if (control.value.match(/^[0-9]*$/)) {
             return null;
         } else {
-            return { 'invalidlastName': true };
+            return { 'textWithNumbers': true };
         }
     }
 
-     static dateOfJoinedValidator(control:any) {
+     static textNumberValidator(control:any) {
        
-        if (control.value.match('/^\d{1,2}\.\d{1,2}\.\d{4}$/')) {
+         if (control.value.match(/^[A-Za-z0-9]*$/)) {
             return null;
         } else {
-            return { 'invaliddateOfJoined': true };
+            return { 'textWithAlphanumeric': true };
         }
     }
+
+     static dateValidator(control:any) {
+       
+         if (control.value>(new Date())) {
+            return null;
+        } else {
+            return { 'textWithNumbers': true };
+        }
+    }
+    
 }

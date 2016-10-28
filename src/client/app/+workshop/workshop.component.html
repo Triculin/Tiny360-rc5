@@ -1,4 +1,5 @@
 <div>
     This is workshops page
-    <!--<pop-up [data]="workshopData"></pop-up>-->
+    <button (click)="modalWorkShopOpen()">Add workshop</button>
+    <pop-up  [data]="workshopData" [formdata]="userForm" ></pop-up>
 </div>

@@ -1,4 +1,11 @@
 <div class="container">
     This is shops page
-    <!--<pop-up [data]="shopData"></pop-up>-->
+    <button (click)="modalShopOpen()">Add shop</button>
+    <pop-up [data]="shopData" [formdata]="userForm" ></pop-up>
 </div>
+ <!--<div class="all_add" style="position:fixed; z-index:99; bottom:30px; right:30px; display:none;">
+        <a (click)="modalShopOpen()">
+            Add shop-->
+            <!--<img src="client/assets/img/icon/plus.png" />-->
+        <!--</a>
+    </div>-->

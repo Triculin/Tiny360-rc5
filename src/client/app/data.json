@@ -2,53 +2,149 @@
     "masterConfig": {
         "shop":[
                     {   "type":"h2","content":"Create Shop"   },
-                    {   "name":"ShopCode","field":"mandatory","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Shop Code","id":"basicInput"   },
-                    {   "name":"ShopName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"Shop Name","id":"basicInput" },
-                    {   "name":"UserName","field":"mandatory","size":"col-xs-12","type":"text","placeholder":"User Name","id":"basicInput"    },
-                    {   "name":"Password","field":"mandatory","size":"col-xs-12 col-sm-6","type":"password","placeholder":"Password","id":"basicInput"    },
-                    {   "name":"ConfirmPassword","field":"mandatory","size":"col-xs-12 col-sm-6","type":"password","placeholder":"Confirm Password","id":"basicInput"   },
-                    {   "name":"Address","field":"optional","size":"col-xs-12 col-sm-12","type":"text","placeholder":"Address","id":"basicInput"    },
-                    {   "name":"Landmark","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Landmark","id":"basicInput"   },
-                    {   "name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","id":"basicInput"   },
-                    {   "name":"City","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"City","id":"basicInput"   },
-                    {   "name":"State","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"State","id":"basicInput" },
-                    {   "name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    }
+                    { "formControlName":"shopCode","name":"shopCode","field":"mandatory","size":"col-xs-12 col-sm-6","type":"text","placeholder":"ShopCode","id":"basicInput"   },
+                    { "formControlName":"shopName","name":"shopName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"ShopName","id":"basicInput" },
+                    { "formControlName":"userName","name":"userName","field":"mandatory","size":"col-xs-12","type":"text","placeholder":"UserName","id":"basicInput"    },
+                    { "formControlName":"Password","name":"Password","field":"mandatory","size":"col-xs-12 col-sm-6","type":"password","placeholder":"Password","id":"basicInput"    },
+                    {  "formControlName":"confirmPassword", "name":"confirmPassword","field":"mandatory","size":"col-xs-12 col-sm-6","type":"password","placeholder":"ConfirmPassword","id":"basicInput"   },
+                    {  "formControlName":"Address","name":"Address","field":"optional","size":"col-xs-12 col-sm-12","type":"text","placeholder":"Address","id":"basicInput"    },
+                    {  "formControlName":"Landmark","name":"Landmark","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Landmark","id":"basicInput"   },
+                    {  "formControlName":"Location", "name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","id":"basicInput"   },
+                    { "formControlName":"City","name":"City","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"City","id":"basicInput"   },
+                    { "formControlName":"State", "name":"State","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"State","id":"basicInput" },
+                    {  "formControlName":"PinCode" ,"name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    },
+                     {"name":"AdditionalInfo","field":"mandatory","type":"link","content":"Additional Info","class":"f1","function":"modalMandatoryInfoHide()"    },
+                    { "name":"Cancel","field":"mandatory","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
+                    {  "name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":""     },
+                    { "name":"Previous","field":"optional","type":"link","content":"Previous","class":"f1","function":"modalOptionalInfoHide()"    },
+                    { "name":"Cancel","field":"optional","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
+                    {"name":"Create","field":"optional","type":"link","content":"Create","class":"fr","function":""     }
         ],
         "workshop":[
                     {   "type":"h2","content":"Create Workshop"   },
-                    {   "name":"WorkshopCode","field":"mandatory","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Workshop Code","id":"basicInput"   },
-                    {   "name":"WorkshopName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"Workshop Name","id":"basicInput" },
-                    {   "name":"UserName","field":"mandatory","size":"col-xs-12","type":"text","placeholder":"User Name","id":"basicInput"    },
-                    {   "name":"Password","field":"mandatory","size":"col-xs-12 col-sm-6","type":"password","placeholder":"Password","id":"basicInput"    },
-                    {   "name":"ConfirmPassword","field":"mandatory","size":"col-xs-12 col-sm-6","type":"password","placeholder":"Confirm Password","id":"basicInput"   },
-                    {   "name":"Address","field":"optional","size":"col-xs-12 col-sm-12","type":"text","placeholder":"Address","id":"basicInput"    },
-                    {   "name":"Landmark","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Landmark","id":"basicInput"   },
-                    {   "name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","id":"basicInput"   },
-                    {   "name":"City","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"City","id":"basicInput"   },
-                    {   "name":"State","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"State","id":"basicInput" },
-                    {   "name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    }
+                    { "formControlName":"workshopCode",  "name":"workshopCode","field":"mandatory","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Workshop Code","id":"basicInput"   },
+                    {  "formControlName":"workshopName", "name":"workshopName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"Workshop Name","id":"basicInput" },
+                    { "formControlName": "userName" ,"name":"userName","field":"mandatory","size":"col-xs-12","type":"text","placeholder":"User Name","id":"basicInput"    },
+                    {  "formControlName":"Password", "name":"Password","field":"mandatory","size":"col-xs-12 col-sm-6","type":"password","placeholder":"Password","id":"basicInput"    },
+                    {  "formControlName":"confirmPassword", "name":"confirmPassword","field":"mandatory","size":"col-xs-12 col-sm-6","type":"password","placeholder":"Confirm Password","id":"basicInput"   },
+                    {  "formControlName":"Address", "name":"Address","field":"optional","size":"col-xs-12 col-sm-12","type":"text","placeholder":"Address","id":"basicInput"    },
+                    {  "formControlName":"Landmark", "name":"Landmark","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Landmark","id":"basicInput"   },
+                    {  "formControlName":"Location", "name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","id":"basicInput"   },
+                    {  "formControlName":"City", "name":"City","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"City","id":"basicInput"   },
+                    {  "formControlName":"State", "name":"State","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"State","id":"basicInput" },
+                    {  "formControlName":"pinCode", "name":"pinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    },
+                      { "name":"AdditionalInfo","field":"mandatory","type":"link","content":"Additional Info","class":"f1","function":"modalMandatoryInfoHide()"    },
+                    {"name":"Cancel","field":"mandatory","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
+                    {  "name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":""     },
+                    { "name":"Previous","field":"optional","type":"link","content":"Previous","class":"f1","function":"modalOptionalInfoHide()"    },
+                    {"name":"Cancel","field":"optional","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
+                    {"name":"Create","field":"optional","type":"link","content":"Create","class":"fr","function":""     }
         ],
+ 
+"systemUsers":[
+                       {   "type":"h2","content":"System Users"   },
+                       { "formControlName":"firstName","name":"firstName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"FirstName","id":"basicInput"   },
+                       { "formControlName":"lastName",  "name":"lastName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"LastName","id":"basicInput" },
+                       {  "formControlName":"emailAddress", "name":"emailAddress","field":"mandatory","size":"col-xs-12 col-sm-6","type":"text","placeholder":"EmailAddress","id":"basicInput"    },
+                       {  "formControlName":"mobileNumber", "name":"mobileNumber","field":"mandatory","size":"col-xs-12 col-sm-6","type":"text","placeholder":"MobileNumber","id":"basicInput"    },
+                       { "formControlName":"userName",  "name":"userName","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"UserName","id":"basicInput"   },
+                       {  "formControlName":"Password", "name":"Password","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Password","id":"basicInput"    },
+                       {  "formControlName":"confirmPassword", "name":"confirmPassword","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"ConfirmPassword","id":"basicInput"   },
+                       {  "formControlName":"userType", "name":"userType","field":"mandatory","size":"col-xs-12 col-sm-6","type":"dropDown",
+                           "values":[  {"label":"Shop","value":"shop"},
+                                       {"label":"Workshop","value":"workshop"},
+                                       {"label":"Manager","value":"manager"},
+                                       {"label":"Sr.Manager","value":"srManager"}
+                           ]  
+                       },
+                       { "formControlName":"mulType",  "name":"mulType","field":"mandatory","size":"col-xs-12 col-sm-6","type":"MultiSelectDropdown",
+                           "values":[  {"label":"Hyderabad","value":"AL"},
+                                       {"label":"Secunderabad","value":"AR"},
+                                       {"label":"Delhi","value":"IL"},
+                                       {"label":"Indore","value":"IA"},
+                                       {"label":"Kolkatta","value":"KS"},
+                                       {"label":"Kashmir","value":"KY"},
+                                       {"label":"Locknow","value":"LA"},
+                                       {"label":"Mumbai","value":"MN"},
+                                       {"label":"Miyapur","value":"MS"},
+                                       {"label":"Madras","value":"MO"},
+                                       {"label":"Ooty","value":"OK"},
+                                       {"label":"Srinagar","value":"SD"},
+                                       {"label":"Tirupathi","value":"TX"},
+                                       {"label":"Tenali","value":"TN"},
+                                       {"label":"Warangal","value":"WI"},
+                                       {"label":"Chennai","value":"CT"},
+                                       {"label":"Dehradun","value":"DE"}
+                           ]
+                       },
+
+                       { "name":"Cancel","field":"mandatory","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
+                       {"name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":""     }
+    ],
+     "systemUsersForm":{
+            "firstName":"text",
+            "lastName":"text",
+            "emailAddress":"email",
+            "mobileNumber":"number",
+            "userName":"text",
+            "Password":"password",
+            "confirmPassword":"password",
+            "userType":"text",
+            "mulType":"text"
+        },
+
         "staff":[
-                   {"formControlName":"firstName","name":"firstName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"First Name","id":"basicInput"   },
-                    {"formControlName":"lastName","name":"lastName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"Last Name","id":"basicInput" },
-                    {"formControlName":"dateOfJoined","name":"dateOfJoined","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Date of Jonied","id":"basicInput"    },
-                    {"formControlName":"Designation","name":"Designation","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Designation","id":"basicInput"    },
-                    {"formControlName":"contactNumber","name":"contactNumber","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Contact Number","id":"basicInput"   },
-                    {"name":"Address","field":"optional","size":"col-xs-12 col-sm-12","type":"text","placeholder":"Address","id":"basicInput"    },
-                    {"name":"Landmark","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Landmark","id":"basicInput"   },
-                    {"name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","id":"basicInput"   },
-                    {"name":"City","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"City","id":"basicInput"   },
-                    {"name":"State","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"State","id":"basicInput" },
-                    {"name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    }
+                 {   "type":"h2","content":"Create Staff"   },
+                   {"formControlName":"firstName","name":"firstName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"FirstName","id":"basicInput"   },
+                    {"formControlName":"lastName","name":"lastName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"LastName","id":"basicInput" },
+                    {"formControlName":"dateOfJoined","name":"dateOfJoined","field":"mandatory","size":"col-xs-12 col-sm-6","type":"date","placeholder":"DateofJonied","id":"basicInput"    },
+                    {"formControlName":"Designation","name":"Designation","field":"mandatory","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Designation","id":"basicInput"    },
+                    {"formControlName":"contactNumber","name":"contactNumber","field":"mandatory","size":"col-xs-12 col-sm-6","type":"number","placeholder":"ContactNumber","id":"basicInput"   },
+                    {"formControlName":"Address","name":"Address","field":"optional","size":"col-xs-12 col-sm-12","type":"text","placeholder":"Address","id":"basicInput"    },
+                    {"formControlName":"Landmark","name":"Landmark","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Landmark","id":"basicInput"   },
+                    {"formControlName":"Location","name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","id":"basicInput"   },
+                    {"formControlName":"City","name":"City","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"City","id":"basicInput"   },
+                    {"formControlName":"State","name":"State","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"State","id":"basicInput" },
+                    {"formControlName":"PinCode","name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    },
+                      { "name":"AdditionalInfo","field":"mandatory","type":"link","content":"Additional Info","class":"f1","function":"modalMandatoryInfoHide()"    },
+                    {  "name":"Cancel","field":"mandatory","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
+                    { "name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":""     },
+                    { "name":"Previous","field":"optional","type":"link","content":"Previous","class":"f1","function":"modalOptionalInfoHide()"    },
+                    {"name":"Cancel","field":"optional","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
+                    { "name":"Create","field":"optional","type":"link","content":"Create","class":"fr","function":""     }
         ],
 
-        "staffForm":  [  {
-    "firstName": [" ", "Validators.required"],
-      "lastName": ["","Validators.required"],
-      "dateOfJoined": [" "," Validators.required"],
-     "Designation": ["", ["Validators.required", "Validators.minLength(10)"]],
-      "contactNumber":["",["Validators.required", "Validators.minLength(10)"]]
-                }  ],
+       
+
+        "shopForm":{
+           "shopCode":"text",
+           "shopName":"text",
+           "Locations":"text",
+           "userName":"text",
+           "dateCreated":"date",
+           "Password":"password",
+           "confirmPassword":"password"
+           
+        },
+
+        "workshopForm":{
+           "workshopCode":"text",
+           "workshopName":"text",
+           "Locations":"text",
+           "userName":"text",
+           "dateCreated":"date",
+           "Password":"password",
+           "confirmPassword":"password"
+           
+        },
+
+        "staffForm":   {
+    "firstName": "text",
+      "lastName": "text",
+      "dateOfJoined": "date",
+     "Designation":"text",
+      "contactNumber":"number"
+                }  ,
         
         "globalsettings": {
                                 "TGSlstCatageory":[

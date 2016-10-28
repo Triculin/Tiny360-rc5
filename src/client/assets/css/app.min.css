@@ -14,12 +14,21 @@
 /*-------------------------select2.min.scss mixin start-----------------*/
 /*-------------------------select2.min.scss mixin End-----------------*/
 /*-------------------------jquery-ui.min.scss mixin Start-----------------*/
+/*-------------------------jquery-ui.min.scss mixin End-----------------*/
+/*-------------------------bootstrap-datepicker.min.scss mixin Start-----------------*/
+/*-------------------------bootstrap-datepicker.min.scss mixin End-----------------*/
+/*-------------------------style.scss mixin Start-----------------*/
 /* Scss Document */
 /*----------------------app.min.scss variables start------------------*/
 /*----------------------app.min.scss variables end------------------*/
 /*-----------------------------own-styles.scss variables start--------------*/
 /*-----------------------------own-styles.scss variables end--------------*/
 /*-----------------------------select2.min.scss variables start------------*/
+/*-----------------------------select2.min.scss variables End------------*/
+/*-----------------------------style.scss variables start------------*/
+/*-----------------------------style.scss variables End------------*/
+/*-----------------------------chartist.scss variables start------------*/
+/*-----------------------------chartist.scss variables End------------*/
 ul, li, h1, h2, h3, h4, h5, h6, p {
   list-style: none !important;
   margin: 0;
@@ -67,11 +76,11 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
 }
 
 .unselectable {
-  -webkit-touch-callout: none;
+  touch-callout: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .text-gray {
@@ -133,12 +142,15 @@ a:active {
 }
 
 a:focus {
+  color: #f05b4f;
+}
+
+a:hover {
   outline: 0;
   text-decoration: none;
   color: #363f45;
 }
 
-/*a:hover { @include defaulttype;}*/
 .pagewrap {
   position: relative;
   height: 100%;
@@ -415,8 +427,8 @@ a:focus {
 }
 .statsBar .i .c .title {
   margin: 0 0 5px 0;
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -432,7 +444,7 @@ a:focus {
 
 .statsBar .i .c:before {
   content: '';
-  height: 100%;
+  @includ height;
   position: absolute;
   right: 0;
   top: 0;
@@ -513,7 +525,8 @@ a:focus {
 }
 
 .statsInfo {
-  border-top: 1px solid #e6e7ed;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   margin: 25px 0 0 0;
   padding-top: 25px;
 }
@@ -540,13 +553,14 @@ a:focus {
   padding-top: 25px;
 }
 .ct-pie-chart .text {
-  border-top: 1px solid #e6e7ed;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   margin-top: -28%;
   text-transform: uppercase;
   text-align: center;
   padding: 18px 0;
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 .ct-pie-chart .info {
@@ -589,7 +603,8 @@ a:focus {
 
 .recentTasks .checkboxes.checkboxes-sm .i {
   margin: 0;
-  border-top: 1px solid #e6e7ed;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .recentTasks .checkboxes.checkboxes-sm input[type=checkbox] + span {
@@ -1001,7 +1016,8 @@ blockquote :berfore {
 }
 
 .search-results .i {
-  border-top: 1px solid #e6e7ed;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   padding: 15px 0;
 }
 .search-results :first-child {
@@ -1259,8 +1275,7 @@ select .select2-selection__arrow {
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
   border: 0;
   font-style: normal;
-  top: 0;
-  left: 0;
+  margin: 0;
   position: relative;
   margin: 0;
 }
@@ -1271,7 +1286,7 @@ select .select2-selection__arrow {
   font-size: 1.8rem;
 }
 
-.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b:after {
+.select2-container--default .select2-container--open .select2-selection--single .select2-selection__arrow b:after {
   content: '\f077';
 }
 
@@ -1289,7 +1304,7 @@ select .select2-selection__arrow {
   text-transform: uppercase;
   font-weight: 700;
   height: 58px;
-  line-height: 40px;
+  line-height: 400;
   top: -1px;
   left: -1px;
   min-width: 185px;
@@ -1303,9 +1318,6 @@ select .select2-selection__arrow {
   line-height: 54px;
 }
 .fileUploadWrap input[type=file] {
-  -moz-opacity: 0;
-  -khtml-opacity: 0;
-  -webkit-opacity: 0;
   opacity: 0;
   cursor: pointer;
   margin: 0;
@@ -1337,8 +1349,6 @@ select .select2-selection__arrow {
 
 .checkboxes input[type=checkbox] {
   position: absolute;
-  -moz-opacity: 0;
-  -webkit-opacity: 0;
   opacity: 0;
 }
 .checkboxes .error + span {
@@ -1495,8 +1505,6 @@ select .select2-selection__arrow {
 }
 .radiobuttons input[type=radio] {
   position: absolute;
-  -moz-opacity: 0;
-  -webkit-opacity: 0;
   opacity: 0;
 }
 .radiobuttons :disabled + span {
@@ -1576,8 +1584,6 @@ select .select2-selection__arrow {
 }
 .checkboxToggler input[type=checkbox] {
   position: absolute;
-  -moz-opacity: 0;
-  -webkit-opacity: 0;
   opacity: 0;
 }
 .checkboxToggler + span {
@@ -1864,8 +1870,8 @@ select .select2-selection__arrow {
 }
 
 .fc-toolbar h2 {
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 20px;
+  font-size: 2rem;
   margin: 8px 0 0 0;
 }
 
@@ -1944,10 +1950,12 @@ select .select2-selection__arrow {
 
 .userCard .c .image {
   position: absolute;
+  top: 0;
   left: 0;
-  top: 0 img;
-  top-width: 44px;
-  top-height: 44px;
+}
+.userCard .c .image img {
+  width: 44px;
+  height: 44px;
 }
 
 .userCard .c .info {
@@ -2183,7 +2191,8 @@ select .select2-selection__arrow {
 
 .userActivities .comments {
   background: #f5f6fa;
-  border-top: 1px solid #e6e7ed;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .userActivities .comments li :last-child {
   border-bottom: 0;
@@ -2191,8 +2200,8 @@ select .select2-selection__arrow {
 }
 .userActivities .comments li .image {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
 }
 .userActivities .comments li .image img {
   margin: 0;
@@ -2293,8 +2302,8 @@ hr {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   position: absolute;
 }
 .loginContentWrap .container {
@@ -2530,6 +2539,7 @@ hr {
   width: 100%;
   display: block;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  background: linear-gradient(bottom, rgba(0, 0, 0, 0.9), transparent);
   -moz-opacity: 0;
   -khtml-opacity: 0;
   -webkit-opacity: 0;
@@ -2629,7 +2639,11 @@ hr {
 .short-side-bar .aside {
   width: 56px;
 }
-.short-side-bar .aside .simpleList ul > li span {
+.short-side-bar .aside .simpleList ul > li :hover {
+  background: #f2f9ff;
+  color: #fe5621;
+}
+.short-side-bar .aside .simpleList ul > li :hover span {
   display: none;
 }
 
@@ -2662,8 +2676,8 @@ hr {
 }
 .aside {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   width: 210px;
   background: #fff;
   min-height: 100%;
@@ -2734,15 +2748,13 @@ hr {
   color: #9da2a6;
   font-size: 20px;
   font-size: 2rem;
-  vertical-align: middle; 
+  vertical-align: middle;
   margin: 0 12px 0 0;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   -ms-transition: all .3s ease;
   -o-transition: all .3s ease;
 }
-
-
 .simpleList > ul > li div .icon {
   color: #9da2a6;
   font-size: 20px;
@@ -2762,10 +2774,6 @@ hr {
   margin: 0 12px 0 0;
 }
 
-.simpleList > ul > li:hover{
-	color:#fe5621;
-}
-
 .simpleList > ul > li a .info {
   font-weight: 400;
 }
@@ -2773,24 +2781,24 @@ hr {
   font-weight: 400;
 }
 
-.simpleList > ul > li .active div {
+.simpleList > ul > li.active div {
   background: #f0f1f5;
   color: #fe5621;
 }
-.simpleList > ul > li .active a {
+.simpleList > ul > li.active a {
   background: #f0f1f5;
   color: #fe5621;
 }
-.simpleList > ul > li :hover div {
+.simpleList > ul > li:hover div {
   background: #f0f1f5;
   color: #fe5621;
 }
-.simpleList > ul > li :hover > a {
+.simpleList > ul > li:hover> a {
   background: #f0f1f5;
   color: #fe5621;
 }
 
-.simpleList > ul > li.active div .icon, .simpleList > ul > li.active > a .icon, .simpleList > ul > li:hover div .icon, .simpleList > ul > li:hover > a .icon{
+.simpleList > ul > li.active div .icon, .simpleList > ul > li.active > a .icon, .simpleList > ul > li:hover div .icon, .simpleList > ul > li:hover > a .icon {
   color: #fe5621;
 }
 
@@ -2830,7 +2838,7 @@ hr {
   display: inline-block;
 }
 
-.simpleList.simpleListLighten> ul>li>a, .simpleList.simpleListLighten>ul>li>div {
+.simpleList .simpleListLighten > ul > li a {
   font-weight: 400;
   color: #919599;
 }
@@ -2850,10 +2858,10 @@ hr {
   -o-transition: all .3s ease;
 }
 
-.simpleList .simpleListLighten>ul>li>a:hover {
+.simpleList .simpleListLighten > ul > li a:hover {
   color: #fe5621;
 }
-.simpleList .simpleListLighten> ul>li>div:hover {
+.simpleList .simpleListLighten > ul > li div:hover {
   color: #fe5621;
 }
 
@@ -2978,7 +2986,7 @@ hr {
   font-size: 1.6rem;
   /*padding: 20px;*/
   padding: 15px 20px 9px 30px;
-  border-bottom: 3px solid #fe5621;
+  border-bottom: 1px solid #e6e7ed;
   color: #363f45;
   position: relative;
 }
@@ -3022,7 +3030,7 @@ hr {
   /*color: #fe5621;
   background: #f0f1f5*/
   color: #fff;
-  background: #FE5621;
+  background: #e6e7ed;
   position: relative;
 }
 
@@ -3030,13 +3038,13 @@ hr {
   /*color: #fe5621;
   background: #f0f1f5;*/
   color: #fff;
-  background: #FE5621;
+  background: #e6e7ed;
 }
 .wizardWrap .wizard > .steps .current a :hover {
   /*color: #fe5621;
   background: #f0f1f5;*/
   color: #fff;
-  background: #FE5621;
+  background: #e6e7ed;
 }
 
 .wizardWrap .wizard > .steps .current .done a {
@@ -3222,7 +3230,7 @@ hr {
   border-style: solid;
   border-color: rgba(84, 39, 39, 0);
   font-size: 17px;
-  border-left-color: #FE5621;
+  border-left-color: #e6e7ed;
 }
 .wizardWrap .wizard > .steps .current a:after {
   content: "";
@@ -3419,11 +3427,11 @@ hr {
   color: #fe5621;
 }
 
-.btn:focus {
+.btn :focus {
   background: #ebecf2;
   color: #fe5621;
 }
-.btn:focus:active {
+.btn :focus :active {
   color: #fe5621;
 }
 .btn :hover {
@@ -4103,9 +4111,6 @@ textarea {
 }
 
 .modal-backdrop.in {
-  -moz-opacity: .8;
-  -khtml-opacity: .8;
-  -webkit-opacity: .8;
   opacity: 0.8;
 }
 
@@ -4253,7 +4258,8 @@ textarea {
 
 .panel-footer {
   background: #fff;
-  border-top: 1px solid #e6e7ed;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   padding: 20px;
   border-radius: 0;
   background-clip: padding-box;
@@ -4586,7 +4592,7 @@ textarea {
 }
 
 .color-orange {
-  color: #fe9700;
+  color: #f34235;
 }
 
 .color-deep-orange {
@@ -4894,12 +4900,10 @@ textarea {
     border: 0;
     border-left: 1px solid #fe5621;
     border-bottom: 1px solid #e6e7ed;
-    border-top: 1px solid #e6e7ed;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     position: relative;
-    -webkit-transition: none;
-    -moz-transition: none;
-    -ms-transition: none;
-    -o-transition: none;
+    transition: none;
   }
 
   .nav-tabs-vertical > li.active a:focus {
@@ -4907,14 +4911,16 @@ textarea {
     color: #fe5621;
     border-left: 1px solid #fe5621;
     border-bottom: 1px solid #e6e7ed;
-    border-top: 1px solid #e6e7ed;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
   .nav-tabs-vertical > li.active a:hover {
     background: 0 0;
     color: #fe5621;
     border-left: 1px solid #fe5621;
     border-bottom: 1px solid #e6e7ed;
-    border-top: 1px solid #e6e7ed;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   .nav-tabs-vertical > li.active > a:after {
@@ -5432,7 +5438,7 @@ textarea {
   padding: 4px 0;
   margin: 0 10px;
   border-bottom: 0px solid #DFDFDF;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 15px;
   color: #555;
 }
@@ -5494,7 +5500,7 @@ textarea {
   border: 0;
   border-bottom: 1px solid #ccc;
   outline: none;
-  color: #ffffff;
+  color: #fff;
   font-weight: 900;
 }
 
@@ -5967,8 +5973,6 @@ table.dataTable thead{
 }
 .global_industry .global_industry .checkboxToggler input[type=checkbox] {
   position: absolute;
-  -moz-opacity: 0;
-  -webkit-opacity: 0;
   opacity: 0;
 }
 .global_industry .global_industry .checkboxToggler input[type=checkbox] + span {
@@ -6088,7 +6092,7 @@ all_add:hover {
 all_add:hover .add_icon {
   width: 50px;
   height: 50px;
-  background:url(../img/icon/add-plus-hover.png) no-repeat left top;
+  background: url(../img/icon/add-plus-hover.png) no-repeat left top;
   display: block;
   background-size: 100% 100%;
   transition: width 0.5s,  height .5s,  -webkit-transform .5s;
@@ -6102,10 +6106,9 @@ all_add:hover .add_icon {
 .all_add .add_icon {
   width: 30px;
   height: 30px;
-  background:url(../img/icon/add-plus.png) no-repeat left top;
+  background: url(../img/icon/add-plus.png) no-repeat left top;
   display: block;
   background-size: 100% 100%;
-  /* Safari */
   transition: width .5s, height .5s, -webkit-transform .5s;
   transition: width .5s, height .5s, transform .5s;
   transition: width .5s, height .5s, transform .5s, -webkit-transform .5s;
@@ -6114,7 +6117,7 @@ all_add:hover .add_icon {
 .all_add .add_icon:hover {
   width: 50px;
   height: 50px;
-  background:url(../img/icon/add-plus-hover.png) no-repeat left top;
+  background: url(../img/icon/add-plus-hover.png) no-repeat left top;
   display: block;
   background-size: 100% 100%;
   -webkit-transform: rotate(180deg);
@@ -6140,7 +6143,7 @@ all_add:hover .add_icon {
 .all_add ul li {
   border-bottom: 1px solid #ccc;
 }
-.all_add ul li:last-child {
+.all_add ul li :last-child {
   border-bottom: 0px;
 }
 .all_add ul li a {
@@ -6149,7 +6152,7 @@ all_add:hover .add_icon {
   display: block;
   padding: 3px 0 3px 10px;
 }
-.all_add ul li a:hover {
+.all_add ul li a :hover {
   background: #eaeaea;
 }
 

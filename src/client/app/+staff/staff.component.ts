@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit,ViewChild } from '@angular/core';
 import {HTTP_PROVIDERS} from '@angular/http';
 import {HttpService} from '../services/http-service';
 import { DynamicCmp} from '../shared/dialog/dialog';
@@ -13,6 +13,7 @@ import { FormBuilder, FormGroup, Validators,FormControl,REACTIVE_FORM_DIRECTIVES
   templateUrl: 'staff.component.html'
 })
 export class StaffComponent implements OnInit {
+  @ViewChild(DynamicCmp) modalstaffComponent: DynamicCmp;
   itemsObservables:any;
 staffData:any;
 staffformData:any;
@@ -24,9 +25,12 @@ staffForm:any;
     this.itemsObservables = this.httpService.getMasterConfig();
     this.itemsObservables.subscribe((res:any) => { 
     this.staffData = res.staff;
-    // this.staffformData=res.staffForm;
-    // this.userForm = this.formBuilder.group(this.staffformData);
+      this.staffformData=res.staffForm;
+    this.userForm = this.staffformData;
     });
      
   }
+   modalStaffOpen() {
+    this.modalstaffComponent.modalPopupOpen();
+    }
 }

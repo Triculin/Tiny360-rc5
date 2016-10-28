@@ -1035,5 +1035,10 @@ control-messages  {
   color: #E82C0C;
   margin: 6px 0;
 }
+.disable 
+{
+    cursor: not-allowed;
+    pointer-events: none;
+}
 
 /*# sourceMappingURL=app.min-2.css.map */

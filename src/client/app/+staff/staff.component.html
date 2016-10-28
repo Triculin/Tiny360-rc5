@@ -1,7 +1,6 @@
 <div class="container">
-    This is staff page
-    
-    <pop-up ></pop-up>
-  
+    This is staff page 
+    <button (click)="modalStaffOpen()">Add staff</button>
+    <pop-up  [data]="staffData" [formdata]="userForm" ></pop-up>
 </div>
 

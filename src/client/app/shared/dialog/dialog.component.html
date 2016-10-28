@@ -1,66 +1,93 @@
-  <input type="button" value="open Model" (click)="onClickedExit()"/>
-<div id="myModal" class="modal" [style.display]="modalstatus">
-  <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header rte">
-        <button type="button" class="close" (click)="close()">&times;</button>
-       <div *ngFor="let data of data">
-                    <h2 class="modal-title" *ngIf="data.type == 'h2'">{{    data.content   }}</h2>
-               </div>
-    </div>
-        <div class="modal-body">
-            
-            <div class="pop_box1" id="info1" >
-                <div class="form-group" >
-                   <form  [formGroup]="userForm" (submit)="saveUser()" >
-                <div class="pop_box1" id="info1" [hidden]="hideElement">
+ <!--<input type="button" value="open Model" (click)="modalPopupOpen()"/>-->
+<div id="myModal" class="modal" role="dialog" [style.display]="modalstatus" *ngIf="popupopen" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header rte">
+                <button type="button" class="close" data-dismiss="modal" (click)="modalPopupClose()">&times;</button>
+                <div *ngFor="let data of data">
+                    <h2 class="modal-title" *ngIf="data.type == 'h2'">{{ data.content }}</h2>
+                </div>
+            </div>
+            <div class="modal-body">
+                <!--{{data  | json}}-->
+                 <form  [formGroup]="userform" (submit)="saveUser()" >
+                <div class="pop_box1" id="info1" [hidden]="modalHideMandatoryInfo">
                     <div class="row">
-                    <div class="{{data.size}}"  *ngFor="let data of data" >
-                        <div class="col-sm-12 col-sm-12" *ngIf="data.field == 'mandatory'">
-                            <div class="form-group">
-                                    <input [id]="data.id" [name]="data.name" [placeholder]="data.placeholder" [type]="data.type" [formControlName]="data.formControlName" />
-                                 <control-messages [control]="userForm.controls[data.formControlName]"></control-messages>
+                        <div class="{{data.size}}" *ngFor="let data of data">
+                            <div *ngIf="data.field == 'mandatory'">
+                                <div *ngIf="data.type == 'text' || data.type == 'password' || data.type == 'date'  ||  data.type =='number'">
+                                    <input type={{data.type}} class="form-control" id={{data.id}} placeholder={{data.placeholder}} formControlName={{data.formControlName}}>
+                                 <control-messages [control]="userform.controls[data.formControlName]"></control-messages>
+                                </div>
+                                <div *ngIf="data.type == 'dropDown'">
+                                    
+	                                    <ng-select class="{{data.size}}"
+                                            
+                                            [options]="data.values"
+                                            [multiple]="multipleSingle"
+                                            placeholder="Type Of User"
+                                            [formControlName]="data.formControlName">
+                                        </ng-select>
+                                </div>
+                                <div *ngIf="data.type == 'MultiSelectDropdown'">
+                                  
+                                            <ng-select class="{{data.size}}"
+                                                
+                                                [options]="data.values"
+                                                [multiple]="multipleMultiple"
+                                                placeholder="Try typing some USA country name"
+                                                [formControlName]="data.formControlName">
+                                            </ng-select>
+                                           
+                                </div>
                             </div>
                         </div>
                     </div>
-                    </div>
-                        
-                    <div class="pop_box_btn">
-                        <ul class="fl">
-                            <li><a  id="info1_add" (click)="hideDiv()">Additional Info</a></li>
-                            <li><a ></a></li>
-                        </ul>
-                        <ul class="fr">
-                            <li><a  data-dismiss="modal" (click)="onClickedExit()">Cancel</a></li>
-                             <button type="submit" [disabled]="!userForm.valid">Submit</button>
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
-                </div>    
-                <div class="pop_box1" id="info2" [hidden]="hideElement1">
                     <div class="row">
-                   <div class= "{{data.size}}" *ngFor="let data of data">
-                        <div class="col-sm-6 col-xs-6" *ngIf="data.field == 'optional'">
-                            <div class="form-group">
-                               <input [id]="data.id" [name]="data.name" [placeholder]="data.placeholder" [type]="data.type">
+                        <div class="{{data.size}}" *ngFor="let data of data">
+                            <div *ngIf="data.field == 'mandatory'">
+                                <div *ngIf="data.type == 'link'" [ngClass]="{f1:data.class=='f1',fr:data.class=='fr',pop_box_btn:true}">
+                                    <ul>
+                                        <li>
+                                            <a id="info1_add" (click)="modalClickEvents(data.function)">
+                                                {{  data.content   }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="pop_box_btn">
-                        <ul class="fl">
-                            	<li><a id="info2_prev" (click)="hideDiv1()">Previous</a></li>
-                        </ul>
-                        <ul class="fr">
-                            <li><a  data-dismiss="modal" (click)="onClickedExit()">Cancel</a></li>
-                            <li><a  data-dismiss="modal">Create</a></li>
-                        </ul>
-                        <div class="clear"></div>
+                </div>
+
+                <div class="pop_box1" id="info2" [hidden]="modalHideOptionalInfo">
+                    <div class="row">
+                        <div class="{{data.size}}" *ngFor=" let data of data">
+                            <div *ngIf="data.field == 'optional'">
+                                <div class="form-group" *ngIf="data.type == 'text'">
+                                    <input type="text" class="form-control" id={{data.id}} placeholder={{data.placeholder}}>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="{{data.size}}" *ngFor=" let data of data">
+                            <div *ngIf="data.field == 'optional'">
+                                <div class="form-group" *ngIf="data.type == 'link'" [ngClass]="{f1:data.class=='f1',fr:data.class=='fr',pop_box_btn:true}">
+                                    <ul>
+                                        <li>
+                                            <a id="info1_add" (click)="modalClickEvents(data.function)">
+                                                {{  data.content   }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-        </form>       	
+                 </form>
             </div>
         </div>
     </div>
-  </div>
 </div>
