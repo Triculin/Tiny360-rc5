@@ -1,3 +1,77 @@
-<div class="container">
-    This is shops page
+<div class="pageContent extended">
+    <div>
+        <h1>shops</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-lg-12">
+                <div class="box global">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6 col-lg-6">
+
+                            <label for="search">Search:
+                                 <input id="search" class="form-control" type="text" [(ngModel)]="search"/>    
+                            </label>
+                        </div>
+                        <div class="col-xs-12 col-md-6 col-lg-6">
+                            <label for="showNumberOfItems">Show:
+                                <select  id="showNumberOfItems"  class="form-control" [(ngModel)]="showNumberOfItems" (ngModelChange)="changeRange($event)" >
+                                     <option *ngFor="let item of showNumberOfItemsList;" [value]="item">{{item}}</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>SNO</th>
+                                <th *ngFor="let key of keys;let i=index" (click)="orderBy(key,i+1);">
+                                    <span>{{ key|uppercase}}
+                                                <span *ngIf="resource.order[key]!='asc'&& resource.order[key]!='desc'&&sortedCols.indexOf(i+1)>-1;" class="glyphicon glyphicon-sort"></span>
+                                    <span *ngIf="resource.order[key]==='asc' &&sortedCols.indexOf(i+1)>-1;" class="glyphicon glyphicon-sort-by-attributes-alt"></span>
+                                    <span *ngIf="resource.order[key]==='desc'&&sortedCols.indexOf(i+1)>-1; " class="glyphicon glyphicon-sort-by-attributes"></span>
+                                    </span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let row of data| search : term  | global : search| pagination : range;let i=index">
+                                <td>{{i+1}}</td>
+                                <td *ngFor="let key of keys">
+                                    <span *ngIf="stringShow(row[key],key)">{{ row[key] }}</span>
+                                    <span *ngIf="key==='actions'"> 
+                                                    <span><i class="zmdi zmdi-view-list zmdi-hc-fw"></i></span>
+                                    <span><i class="zmdi zmdi-edit zmdi-hc-fw"></i></span>
+                                    </span>
+                                    <img *ngIf="imageShow(row[key])" [src]=row[key]>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <pagination-comp class="pagination" [numberOfItems]="numberOfItems" (updateRange)="range = $event" [pageSize]="6"></pagination-comp>
+                </div>
+            </div>
+            <!--<button id="myBtn" (click)="modalShopOpen()">Shop Modal</button>-->
+            <pop-up [data]="shopData"></pop-up>
+        </div>
+    </div>
+    <div class="all_add" style="position:fixed; z-index:99; bottom:30px; right:30px; display:none;">
+        <a (click)="modalShopOpen()">
+            <img src="client/assets/img/icon/plus.png" />
+        </a>
+    </div>
+    <div style="clear:both; display:block;"></div>
+    <div class="all_add " style="position:fixed; z-index:999; bottom:40px; right:25px; ">
+        <a (click)="modalShopOpen()">
+            <i class="add_icon"></i>
+        </a>
+        <ul class="animated bounceInLeft">
+            <li>
+                <a (click)="modalShopOpen()">
+                    <i class="fa fa-fw fa-industry"></i>
+                    Add Shop
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>

@@ -1,13 +1,17 @@
 <header id="header">
     <h1 class="logo">
         <!--<a href="#" title="#" class="js-nav-toggler">-->
-        <a class="js-nav-toggler">
+        <a>
             <i class="icon icon-close" (click)="toggleSidebar()"></i>
         </a>
-        <a>Tiny 360</a>
+        <a>Tiny 360</a> {{sidebar}}
         <!--<a href="#" title="#">Tiny 360</a>-->
     </h1>
 </header>
-<div [style.display]="sidebar" class="aside">
+<!--<div [style.display]="sidebar" [@visibilityChanged]="sidebar" class="aside">-->
+<div class="aside" [@visibilityChanged]="sidebar">
     <sd-navbar></sd-navbar>
+</div>
+<div [@routerVisibilityChanged]="sidebar" style="border:1px solid orange">
+    <router-outlet></router-outlet>
 </div>

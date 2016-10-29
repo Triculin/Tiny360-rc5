@@ -1,8 +1,10 @@
-<aside class="aside">
+<!--<aside class="aside">-->
+<aside [@visibilityChanged1]="sidebar1">
     <div>
         <!-- User profile -->
         <div class="asideUserProfile">
-            <a href="user-profile.html" title="#" class="c">
+            <!--<a href="user-profile.html" title="#" class="c">-->
+            <a>
                 <img src="../assets/img/happy-210x210.jpg" alt="#" class="img-responsive">
                 <!--<img src="tmp/washio-210x210.jpg" alt="#" class="img-responsive">
 				<span class="name hidden-xs hidden-sm">Patricia<br /> Brown-Johnes</span>-->
@@ -11,10 +13,15 @@
 
 
         <!-- Navigation -->
-        <nav class="simpleList asideNavigation">
+        <!--<nav class="simpleList asideNavigation">-->
+        <nav class="simpleList">
             <ul>
                 <!--<li *ngFor="let items of menuItems let i=index" class="sub js-submenu active">-->
-                <li *ngFor="let items of menuItems;let i=index" class="sub js-submenu">
+
+                <li *ngFor="let items of menuItems;let i=index" [ngClass]="{'sub': true, 'js-submenu': true, 'active':i==menuindex}" (click)="activeClassFun(i)">
+
+                    <!--<li *ngFor="let items of menuItems;let i=index" class="sub js-submenu active">-->
+
                     <a (click)="go(items.routerLink)" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
                         <!--<a [routerLink]="[items.routerLink]" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">-->
                         <i class="{{items.styleIcon}}"></i>
@@ -22,8 +29,8 @@
                         <span *ngIf="menuItems[i].subMenuList.length"><i class="zmdi zmdi-plus plus" (click)="expandMenu(i)"></i> </span></span>
                     </a>
                     <div *ngIf="i==selected">
-                        <span class="sub js-submenu" style="display: block;" *ngFor="let subitems of menuItems[i].subMenuList">
-                        <a (click)="go(subitems.routerLink)" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{subitems.name}}</a>
+                        <span [ngClass]="{'sub1': true, 'js-submenu': true}" style="display: block;" *ngFor="let subitems of menuItems[i].subMenuList; let j=index;">
+                        <a (click)="activeClassFun1(j);go(subitems.routerLink);" [ngClass]="{'active':(j==subindex)}" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:i==subindex}" >{{subitems.name}}</a>
                         <!--<a [routerLink]="[subitems.routerLink]" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">{{subitems.name}}</a>-->
                         </span>
                     </div>

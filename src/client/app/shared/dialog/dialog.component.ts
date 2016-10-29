@@ -1,44 +1,54 @@
-import { Component  } from '@angular/core';
-import {HTTP_PROVIDERS} from "@angular/http";
-import {HttpService} from "../../services/http-service";
+import {  Component , Input ,ViewChild,OnInit  } from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
 @Component({
   selector: 'pop-up',
-  providers: [HttpService,HTTP_PROVIDERS],
-  templateUrl:'app/shared/dialog/dialog.component.html',
-  styleUrls:['app/shared/dialog/dialog.component.css'] 
+  templateUrl:'app/shared/dialog/dialog.component.html'
 })
-export class DialogComponent { 
-
-  modalstatus:string = "none";
-   hideElement:boolean = false;
-   hideElement1:boolean = true;
-   data : any;
-   itemsObservables:any;
-   constructor( public httpService:HttpService) {
+export class DialogComponent implements OnInit {
+  public modalstatus:string = 'none';
+  public modalHideMandatoryInfo:boolean = false;
+  public modalHideOptionalInfo:boolean = true;
+  @Input() data : any;
+  formSingle: FormGroup;
+  multipleSingle: boolean = false;
+  optionsSingle: Array<any> = [];
+  formMultiple: FormGroup;
+  multipleMultiple: boolean = true;
+  optionsMultiple: Array<any> = [];
+  allowClear: boolean = true;
+  @ViewChild('singleSelectComponent') singleSelectComponent:any;
+  @ViewChild('multipleSelectComponent') multipleSelectComponent:any;
+  ngOnInit() {
+    this.formSingle = new FormGroup({});
+    this.formSingle.addControl('selectSingle', new FormControl());
+    this.formMultiple = new FormGroup({});
+    this.formMultiple.addControl('selectMultiple', new FormControl());
   }
-   ngOnInit() {
-    this.itemsObservables = this.httpService.getMasterConfig();
-    this.itemsObservables.subscribe((res:any) => {
-     this.data = res.shop;
-    });
+  modalPopupOpen() {
+    this.modalstatus = 'block';
   }
-  onClickedExit() {
-    this.modalstatus = "block";
-  }
-
-  close(){
-    this.modalstatus = "none";
-    this.hideElement = false;
-    this.hideElement1 = true;
-  }
-  hideDiv(){
-        this.hideElement = true;
-        this.hideElement1 = false;
+  modalClickEvents(modalClickFunctionName:any) {
+    if(modalClickFunctionName === 'modalPopupClose()') {
+        this.modalPopupClose();
+    }else if(modalClickFunctionName === 'modalMandatoryInfoHide()') {
+        this.modalMandatoryInfoHide();
+    }else if(modalClickFunctionName === 'modalOptionalInfoHide()') {
+        this.modalOptionalInfoHide();
     }
-
-    hideDiv1(){
-         this.hideElement = false;
-        this.hideElement1 = true;
-    }
-  
+  }
+  modalPopupClose() {
+    this.modalstatus = 'none';
+    this.modalHideMandatoryInfo = false;
+    this.modalHideOptionalInfo = true;
+    this.formSingle.reset();
+    this.formMultiple.reset();
+  }
+  modalMandatoryInfoHide() {
+        this.modalHideMandatoryInfo = true;
+        this.modalHideOptionalInfo = false;
+  }
+  modalOptionalInfoHide() {
+         this.modalHideMandatoryInfo = false;
+        this.modalHideOptionalInfo = true;
+  }
 }

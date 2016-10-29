@@ -952,7 +952,11 @@ all_add:hover .add_icon {
   margin-bottom: 0;
 }
 .modal-dialog{
+<<<<<<< HEAD
     margin:17% 32%;
+=======
+    margin:17% 32% !important;
+>>>>>>> d7619be8935fecef9d0442a669239e6633c1a0bc
 }
 .modal-content {
   border-radius: 0;

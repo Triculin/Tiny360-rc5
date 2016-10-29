@@ -1,0 +1,11 @@
+<ul class="pagination" *ngIf="pageList.length>1">
+    <li [ngClass]="{'disable':previousItemValid }"><span [ngClass]="{'disable1':previousItemValid }" (click)="firstPage()">First</span></li>
+    <li [ngClass]="{'disable':previousItemValid }"> <span [ngClass]="{'disable1':previousItemValid }" (click)="previousPage($event)" aria-label="Previous"> <span aria-hidden="true">&laquo;</span>        </span>
+    </li>
+    <li *ngFor="let pageNo of pageList" [ngClass]="{'active':seletedPage=== pageNo}">
+        <a (click)="changePage($event, pageNo)">{{pageNo}}</a>
+    </li>
+    <li [ngClass]="{'disable':nextItemValid }"> <span [ngClass]="{'disable1':nextItemValid }" (click)="nextPage($event)" aria-label="Next"> <span aria-hidden="true">&raquo;</span>        </span>
+    </li>
+    <li [ngClass]="{'disable':nextItemValid }"><span [ngClass]="{'disable1':nextItemValid }" (click)="lastPage()" aria-label="Last">Last</span></li>
+</ul>
