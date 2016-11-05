@@ -8,9 +8,9 @@
                             This is global-settings page.
                         </div>
                         <ul class="nav nav-tabs userProfileTabs" role="tablist">
-                            <li *ngFor="let tab of tabs;let i=index" role="presentation" [class.active]="i==tabIndex"><a (click)="goTab(i,tab)"> {{ tab.name }}</a></li>
+                            <li *ngFor="let tab of tabs;let i=index" role="presentation" [class.active]="i==tabIndex"><a (click)="goTab(i,tab,$event);"> {{ tab.name }}</a></li>
                         </ul>
-                        <div class="col-xs-12 col-md-8 col-lg-8 tabcontent_Container" >
+                        <div class="col-xs-12 col-md-8 col-lg-8 tabcontent_Container">
                             <div class="box box-without-bottom-padding ">
                                 <div class="row">
                                     <div class="col-xs-12 col-md-6 col-lg-6">
@@ -54,12 +54,33 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <pagination-comp class="pagination" [numberOfItems]="numberOfItems" (updateRange)="range = $event" [pageSize]="6"></pagination-comp>
+                                <pagination-comp class="pagination" [numberOfItems]="numberOfItems" (updateRange)="range = $event;" [pageSize]="6"></pagination-comp>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--<button id="myBtn" (click)="modalGlobalsettingsOpen()">GlobalSettings Modal</button>-->
+            <pop-up [data]="modalPopup"></pop-up>
         </div>
+    </div>
+    <div class="all_add" style="position:fixed; z-index:99; bottom:30px; right:30px; display:none;">
+        <a (click)="modalGlobalsettingsOpen()">
+            <img src="client/assets/img/icon/plus.png" />
+        </a>
+    </div>
+    <div style="clear:both; display:block;"></div>
+    <div class="all_add " style="position:fixed; z-index:999; bottom:40px; right:25px; ">
+        <a (click)="modalGlobalsettingsOpen()">
+            <i class="add_icon"></i>
+        </a>
+        <ul class="animated bounceInLeft">
+            <li>
+                <a (click)="modalGlobalsettingsOpen()">
+                    <i class="fa fa-fw fa-industry"></i>
+                    {{  modalPopupName  }}
+                </a>
+            </li>
+        </ul>
     </div>
 </div>

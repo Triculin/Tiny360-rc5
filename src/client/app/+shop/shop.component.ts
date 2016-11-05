@@ -14,7 +14,6 @@ import { DialogComponent } from '../shared/dialog/dialog.component';
   encapsulation: ViewEncapsulation.None
 })
 export class ShopComponent implements OnInit {
-
   @ViewChild(DialogComponent) modalShopComponent: DialogComponent;
   @ViewChild(PaginationComponent)
   paginationTable: PaginationComponent;
@@ -31,7 +30,7 @@ export class ShopComponent implements OnInit {
   }
   ngOnInit() {
     this.httpService.getMasterConfig().subscribe((res:any) => {
-    this.shopData = res.shop;
+      this.shopData = res.shop;
     });
     this.numberOfItems = 0;
     this.httpService.getData().subscribe((res: any) => {
@@ -65,7 +64,7 @@ export class ShopComponent implements OnInit {
       return true;
     }
   }
-    modalShopOpen() {
+  modalShopOpen() {
     this.modalShopComponent.modalPopupOpen();
-    }
+  }
 }
