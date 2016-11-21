@@ -7,19 +7,35 @@
                     { "formControlName":"userName","name":"userName","field":"mandatory","size":"col-xs-12","type":"text","placeholder":"UserName","id":"basicInput"    },
                     { "formControlName":"Password","name":"Password","field":"mandatory","size":"col-xs-12 col-sm-6","type":"password","placeholder":"Password","id":"basicInput"    },
                     {  "formControlName":"confirmPassword", "name":"confirmPassword","field":"mandatory","size":"col-xs-12 col-sm-6","type":"password","placeholder":"ConfirmPassword","id":"basicInput"   },
-                    {  "formControlName":"Address","name":"Address","field":"optional","size":"col-xs-12 col-sm-12","type":"text","placeholder":"Address","id":"basicInput"    },
-                    {  "formControlName":"Landmark","name":"Landmark","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Landmark","id":"basicInput"   },
-                    {  "formControlName":"Location", "name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","id":"basicInput"   },
-                    { "formControlName":"City","name":"City","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"City","id":"basicInput"   },
-                    { "formControlName":"State", "name":"State","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"State","id":"basicInput" },
-                    {  "formControlName":"PinCode" ,"name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    },
+                    { "formControlName":"Address","name":"Address","field":"optional","size":"col-xs-12 col-sm-12","type":"text","placeholder":"Address","id":"basicInput"    },
+                    { "formControlName":"Landmark", "name":"Landmark","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Landmark","id":"basicInput"   },
+                    { "formControlName":"Location", "name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","id":"basicInput"   },
+                    {"formControlName":"City","name":"City","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"City","id":"basicInput"   },
+                    {"formControlName":"State", "name":"State","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"State","id":"basicInput" },
+                    {"formControlName":"PinCode","name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    },
                      {"name":"AdditionalInfo","field":"mandatory","type":"link","content":"Additional Info","class":"f1","function":"modalMandatoryInfoHide()"    },
                     { "name":"Cancel","field":"mandatory","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
-                    {  "name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":""     },
+                    {  "name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":"modalPopupCreate()"     },
                     { "name":"Previous","field":"optional","type":"link","content":"Previous","class":"f1","function":"modalOptionalInfoHide()"    },
                     { "name":"Cancel","field":"optional","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
-                    {"name":"Create","field":"optional","type":"link","content":"Create","class":"fr","function":""     }
+                    {"name":"Create","field":"optional","type":"link","class":"fr","content":"Create","function":"modalPopupCreate()"     }
         ],
+
+     
+        "shopForm":{
+           "shopCode":"textNumber",
+           "shopName":"text",
+           "userName":"text", 
+           "Password":"password",
+           "confirmPassword":"password",
+           "Address":"empty",
+           "Landmark":"empty",
+           "Location":"empty",
+           "City":"empty",
+           "State":"empty",
+           "PinCode":"empty"
+        },
+
         "workshop":[
                     {   "type":"h2","content":"Create Workshop"   },
                     { "formControlName":"workshopCode",  "name":"workshopCode","field":"mandatory","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Workshop Code","id":"basicInput"   },
@@ -27,37 +43,52 @@
                     { "formControlName": "userName" ,"name":"userName","field":"mandatory","size":"col-xs-12","type":"text","placeholder":"User Name","id":"basicInput"    },
                     {  "formControlName":"Password", "name":"Password","field":"mandatory","size":"col-xs-12 col-sm-6","type":"password","placeholder":"Password","id":"basicInput"    },
                     {  "formControlName":"confirmPassword", "name":"confirmPassword","field":"mandatory","size":"col-xs-12 col-sm-6","type":"password","placeholder":"Confirm Password","id":"basicInput"   },
-                    {  "formControlName":"Address", "name":"Address","field":"optional","size":"col-xs-12 col-sm-12","type":"text","placeholder":"Address","id":"basicInput"    },
+                    { "formControlName":"Address", "name":"Address","field":"optional","size":"col-xs-12 col-sm-12","type":"text","placeholder":"Address","id":"basicInput"    },
                     {  "formControlName":"Landmark", "name":"Landmark","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Landmark","id":"basicInput"   },
                     {  "formControlName":"Location", "name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","id":"basicInput"   },
-                    {  "formControlName":"City", "name":"City","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"City","id":"basicInput"   },
+                    { "formControlName":"City", "name":"City","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"City","id":"basicInput"   },
                     {  "formControlName":"State", "name":"State","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"State","id":"basicInput" },
-                    {  "formControlName":"pinCode", "name":"pinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    },
+                    {  "formControlName":"PinCode", "name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    },
                       { "name":"AdditionalInfo","field":"mandatory","type":"link","content":"Additional Info","class":"f1","function":"modalMandatoryInfoHide()"    },
                     {"name":"Cancel","field":"mandatory","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
-                    {  "name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":""     },
+                    {  "name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":"modalPopupCreate()"     },
                     { "name":"Previous","field":"optional","type":"link","content":"Previous","class":"f1","function":"modalOptionalInfoHide()"    },
                     {"name":"Cancel","field":"optional","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
-                    {"name":"Create","field":"optional","type":"link","content":"Create","class":"fr","function":""     }
+                    {"name":"Create","field":"optional","type":"link","content":"Create","class":"fr","function":"modalPopupCreate()"     }
         ],
+
+        "workshopForm":{
+           "workshopCode":"textNumber",
+           "workshopName":"text",
+           "userName":"text",
+           "Password":"password",
+           "confirmPassword":"password",
+            "Address":"empty",
+           "Landmark":"empty",
+           "Location":"empty",
+           "City":"empty",
+           "State":"empty",
+           "PinCode":"empty"
+           
+        },
  
 "systemUsers":[
                        {   "type":"h2","content":"System Users"   },
                        { "formControlName":"firstName","name":"firstName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"FirstName","id":"basicInput"   },
                        { "formControlName":"lastName",  "name":"lastName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"LastName","id":"basicInput" },
-                       {  "formControlName":"emailAddress", "name":"emailAddress","field":"mandatory","size":"col-xs-12 col-sm-6","type":"text","placeholder":"EmailAddress","id":"basicInput"    },
-                       {  "formControlName":"mobileNumber", "name":"mobileNumber","field":"mandatory","size":"col-xs-12 col-sm-6","type":"text","placeholder":"MobileNumber","id":"basicInput"    },
-                       { "formControlName":"userName",  "name":"userName","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"UserName","id":"basicInput"   },
-                       {  "formControlName":"Password", "name":"Password","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Password","id":"basicInput"    },
-                       {  "formControlName":"confirmPassword", "name":"confirmPassword","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"ConfirmPassword","id":"basicInput"   },
-                       {  "formControlName":"userType", "name":"userType","field":"mandatory","size":"col-xs-12 col-sm-6","type":"dropDown",
+                        {  "formControlName":"emailAddress", "name":"emailAddress","field":"mandatory","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Email Address","id":"basicInput"    },
+                        {  "formControlName":"Password", "name":"Password","field":"mandatory","size":"col-xs-12 col-sm-6","type":"password","placeholder":"Password","id":"basicInput"    },
+                       {  "formControlName":"mobileNumber", "name":"mobileNumber","field":"mandatory","size":"col-xs-12 col-sm-4","type":"number","placeholder":"MobileNumber","id":"basicInput"    },
+                       { "formControlName":"userName",  "name":"userName","field":"mandatory","size":"col-xs-12 col-sm-4","type":"text","placeholder":"UserName","id":"basicInput"   },  
+                       {  "formControlName":"confirmPassword", "name":"confirmPassword","field":"mandatory","size":"col-xs-12 col-sm-4","type":"password","placeholder":"ConfirmPassword","id":"basicInput"   },
+                       {  "formControlName":"userType", "name":"userType","field":"mandatory","size":"col-xs-12 col-md-6","type":"dropdown",
                            "values":[  {"label":"Shop","value":"shop"},
                                        {"label":"Workshop","value":"workshop"},
                                        {"label":"Manager","value":"manager"},
                                        {"label":"Sr.Manager","value":"srManager"}
                            ]  
                        },
-                       { "formControlName":"mulType",  "name":"mulType","field":"mandatory","size":"col-xs-12 col-sm-6","type":"MultiSelectDropdown",
+                       { "formControlName":"mulType",  "name":"mulType","field":"mandatory","size":"col-xs-12 col-md-6","type":"MultiSelectDropdown",
                            "values":[  {"label":"Hyderabad","value":"AL"},
                                        {"label":"Secunderabad","value":"AR"},
                                        {"label":"Delhi","value":"IL"},
@@ -79,18 +110,19 @@
                        },
 
                        { "name":"Cancel","field":"mandatory","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
-                       {"name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":""     }
+                       {"name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":"modalPopupCreate()"     }
     ],
      "systemUsersForm":{
             "firstName":"text",
             "lastName":"text",
-            "emailAddress":"email",
             "mobileNumber":"number",
-            "userName":"text",
+            "emailAddress":"email",
+            "userName":"email",
             "Password":"password",
             "confirmPassword":"password",
-            "userType":"text",
-            "mulType":"text"
+            "userType":"dropdown",
+            "mulType":"dropdown"
+           
         },
 
         "staff":[
@@ -99,7 +131,7 @@
                     {"formControlName":"lastName","name":"lastName","field":"mandatory","size":"col-xs-12 col-md-6","type":"text","placeholder":"LastName","id":"basicInput" },
                     {"formControlName":"dateOfJoined","name":"dateOfJoined","field":"mandatory","size":"col-xs-12 col-sm-6","type":"date","placeholder":"DateofJonied","id":"basicInput"    },
                     {"formControlName":"Designation","name":"Designation","field":"mandatory","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Designation","id":"basicInput"    },
-                    {"formControlName":"contactNumber","name":"contactNumber","field":"mandatory","size":"col-xs-12 col-sm-6","type":"number","placeholder":"ContactNumber","id":"basicInput"   },
+                    {"formControlName":"contactNumber","name":"contactNumber","field":"mandatory","size":"col-xs-12 col-sm-6","type":"text","placeholder":"ContactNumber","id":"basicInput"   },
                     {"formControlName":"Address","name":"Address","field":"optional","size":"col-xs-12 col-sm-12","type":"text","placeholder":"Address","id":"basicInput"    },
                     {"formControlName":"Landmark","name":"Landmark","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Landmark","id":"basicInput"   },
                     {"formControlName":"Location","name":"Location","field":"optional","size":"col-xs-12 col-sm-6","type":"text","placeholder":"Location","id":"basicInput"   },
@@ -108,42 +140,25 @@
                     {"formControlName":"PinCode","name":"PinCode","field":"optional","size":"col-xs-12 col-sm-4","type":"text","placeholder":"Pin Code","id":"basicInput"    },
                       { "name":"AdditionalInfo","field":"mandatory","type":"link","content":"Additional Info","class":"f1","function":"modalMandatoryInfoHide()"    },
                     {  "name":"Cancel","field":"mandatory","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
-                    { "name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":""     },
+                    { "name":"Create","field":"mandatory","type":"link","content":"Create","class":"fr","function":"modalPopupCreate()"     },
                     { "name":"Previous","field":"optional","type":"link","content":"Previous","class":"f1","function":"modalOptionalInfoHide()"    },
                     {"name":"Cancel","field":"optional","type":"link","content":"Cancel","class":"fr","function":"modalPopupClose()"     },
-                    { "name":"Create","field":"optional","type":"link","content":"Create","class":"fr","function":""     }
+                    { "name":"Create","field":"optional","type":"link","content":"Create","class":"fr","function":"modalPopupCreate()"     }
         ],
 
-       
-
-        "shopForm":{
-           "shopCode":"text",
-           "shopName":"text",
-           "Locations":"text",
-           "userName":"text",
-           "dateCreated":"date",
-           "Password":"password",
-           "confirmPassword":"password"
-           
-        },
-
-        "workshopForm":{
-           "workshopCode":"text",
-           "workshopName":"text",
-           "Locations":"text",
-           "userName":"text",
-           "dateCreated":"date",
-           "Password":"password",
-           "confirmPassword":"password"
-           
-        },
 
         "staffForm":   {
     "firstName": "text",
       "lastName": "text",
       "dateOfJoined": "date",
      "Designation":"text",
-      "contactNumber":"number"
+      "contactNumber":"number",
+       "Address":"empty",
+           "Landmark":"empty",
+           "Location":"empty",
+           "City":"empty",
+           "State":"empty",
+           "PinCode":"empty"
                 }  ,
         
         "globalsettings": {

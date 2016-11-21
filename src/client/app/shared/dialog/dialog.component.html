@@ -9,28 +9,35 @@
                 </div>
             </div>
             <div class="modal-body">
-                <!--{{data  | json}}-->
-                 <form  [formGroup]="userform" (submit)="saveUser()" >
+                
+                 <form   [formGroup]="userform"  >
                 <div class="pop_box1" id="info1" [hidden]="modalHideMandatoryInfo">
                     <div class="row">
                         <div class="{{data.size}}" *ngFor="let data of data">
                             <div *ngIf="data.field == 'mandatory'">
-                                <div *ngIf="data.type == 'text' || data.type == 'password' || data.type == 'date'  ||  data.type =='number'">
-                                    <input type={{data.type}} class="form-control" id={{data.id}} placeholder={{data.placeholder}} formControlName={{data.formControlName}}>
+                                <div *ngIf="data.type == 'text'  || data.type == 'password' || data.type == 'date'  ||  data.type =='number' ">
+                                    <input type={{data.type}} class="form-control" id={{data.id}}  placeholder={{data.placeholder}}   formControlName={{data.formControlName}}>
                                  <control-messages [control]="userform.controls[data.formControlName]"></control-messages>
                                 </div>
-                                <div *ngIf="data.type == 'dropDown'">
-                                    
-	                                    <ng-select class="{{data.size}}"
-                                            
+                                <div *ngIf="data.type == 'dropdown'"  >
+                                  
+	                                    <!--<ng-select 
+                                              class=" form-control {{data.size}}"
                                             [options]="data.values"
                                             [multiple]="multipleSingle"
-                                            placeholder="Type Of User"
-                                            [formControlName]="data.formControlName">
-                                        </ng-select>
-                                </div>
-                                <div *ngIf="data.type == 'MultiSelectDropdown'">
+                                            [formControlName]="data.formControlName"> 
+                                        </ng-select>-->
                                   
+                                    <select class ="form-control {{data.size}}"
+                                    [formControlName]="data.formControlName"
+                                    placeholder="select any one">
+                                        <option *ngFor="let p of data.values" [value]="p.value" >{{p.value}}</option>                                       
+                                    </select>
+                                         <control-messages [control]="userform.controls[data.formControlName]"></control-messages>
+                                    
+                                </div>
+                                <div *ngIf="data.type == 'MultiSelectDropdown'" >
+                                       
                                             <ng-select class="{{data.size}}"
                                                 
                                                 [options]="data.values"
@@ -38,7 +45,24 @@
                                                 placeholder="Try typing some USA country name"
                                                 [formControlName]="data.formControlName">
                                             </ng-select>
-                                           
+                                            
+
+                                              <!--<div class ="form-control {{data.size}}" *ngIf="filteredList > 0">
+                                        <ul *ngFor="let p of data.values">
+                                            <li>
+                                                <a (click)="select(p)">{{p}}</a>
+                                                </li>
+                                                </ul>
+                                              </div>
+                                                  <div *ngFor=" let p of selected">
+                                                    <div class="selected" >
+                                                     <span>{{p}}</span>
+                                             <a (click)="remove(p)">x</a>
+                                                  </div>
+                                                  </div>-->
+
+                                    
+                  <control-messages [control]="userform.controls[data.formControlName]"></control-messages>
                                 </div>
                             </div>
                         </div>
@@ -46,10 +70,17 @@
                     <div class="row">
                         <div class="{{data.size}}" *ngFor="let data of data">
                             <div *ngIf="data.field == 'mandatory'">
-                                <div *ngIf="data.type == 'link'" [ngClass]="{f1:data.class=='f1',fr:data.class=='fr',pop_box_btn:true}">
+                                <div  *ngIf="data.type == 'link'"  [ngClass]="{f1:data.class=='f1',fr:data.class=='fr',pop_box_btn:true}" >
                                     <ul>
-                                        <li>
-                                            <a id="info1_add" (click)="modalClickEvents(data.function)">
+                                        <li *ngIf="data.content=='Create'">
+                                            <!--{{!userform.valid}}-->
+                                            <a id="info1_add" [ngClass]="{disabled:!userform.valid}" (click)="modalClickEvents(data.function)">
+                                                {{  data.content   }} 
+                                            </a>
+                                        </li>
+                                         <li *ngIf="data.content!='Create'">
+                                            
+                                            <a id="info1_add"   (click)="modalClickEvents(data.function)">
                                                 {{  data.content   }}
                                             </a>
                                         </li>
@@ -59,13 +90,13 @@
                         </div>
                     </div>
                 </div>
-
+                 <!--</form>-->
                 <div class="pop_box1" id="info2" [hidden]="modalHideOptionalInfo">
                     <div class="row">
                         <div class="{{data.size}}" *ngFor=" let data of data">
                             <div *ngIf="data.field == 'optional'">
                                 <div class="form-group" *ngIf="data.type == 'text'">
-                                    <input type="text" class="form-control" id={{data.id}} placeholder={{data.placeholder}}>
+                                    <input type="text" class="form-control" id={{data.id}} placeholder={{data.placeholder}}   formControlName={{data.formControlName}}  >
                                 </div>
                             </div>
                         </div>
@@ -73,7 +104,7 @@
                     <div class="row">
                         <div class="{{data.size}}" *ngFor=" let data of data">
                             <div *ngIf="data.field == 'optional'">
-                                <div class="form-group" *ngIf="data.type == 'link'" [ngClass]="{f1:data.class=='f1',fr:data.class=='fr',pop_box_btn:true}">
+                                <div class="form-group" *ngIf="data.type == 'link'" [ngClass]="{f1:data.class=='f1',fr:data.class=='fr', pop_box_btn:true}">
                                     <ul>
                                         <li>
                                             <a id="info1_add" (click)="modalClickEvents(data.function)">
@@ -86,8 +117,9 @@
                         </div>
                     </div>
                 </div>
-                 </form>
+               </form> 
             </div>
         </div>
     </div>
-</div>
+ 
+

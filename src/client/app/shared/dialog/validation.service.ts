@@ -3,13 +3,17 @@ export class ValidationService {
         let config:any = {
             'required': 'Required',
             'invalidCreditCard': 'Is invalid credit card number',
-            'invalidEmailAddress': 'Invalid email address',
+            'invalidEmailAddress': 'Invalid email address like john@gmail.com',
             'invalidPassword': 'Invalid password. Password must be at least 6 characters long, and contain a number.',
             'minlength': `Minimum length ${validatorValue.requiredLength}`,
             'maxlength':`Maximum length ${validatorValue.requiredLength}`,
-            'textWithAlphabets ':'only allow alphabets',
-            'textWithNumbers':'allow numbers not characters',
-           'textWithAlphanumeric':'allow characters and numbers'
+            'textWithAlphabets':'only allow alphabets',
+            'textwithNumbers':'only allow numbers',
+           'textWithAlphanumeric':'allow characters and numbers',
+           'invalidDate':'invalid date format'
+        //    'invalidDropdown':'select any one'
+           
+
         };
 
         return config[validatorName];
@@ -26,7 +30,7 @@ export class ValidationService {
 
     static emailValidator(control:any) {
         // RFC 2822 compliant regex
-        if (control.value.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)) {
+        if (control.value==null ||control.value.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)) {
             return null;
         } else {
             return { 'invalidEmailAddress': true };
@@ -36,7 +40,7 @@ export class ValidationService {
     static passwordValidator(control:any) {
         // {6,100}           - Assert password is between 6 and 100 characters
         // (?=.*[0-9])       - Assert a string has at least one number
-        if (control.value.match(/^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,100}$/)) {
+        if (control.value==null ||control.value.match(/^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,100}$/)) {
             return null;
         } else {
             return { 'invalidPassword': true };
@@ -45,16 +49,17 @@ export class ValidationService {
 
      static textValidator(control:any) {
        
-        if (control.value.match(/^[A-Za-z!#$%&'*+/=?^_`{|}~-]*$/)) {
+        if (control.value==null ||control.value.match(/^[A-Za-z]*$/)) {
             return null;
-        } else {
+        } 
+        else {
             return { 'textWithAlphabets': true };
         }
     }
 
      static numberValidator(control:any) {
        
-        if (control.value.match(/^[0-9]*$/)) {
+        if (control.value==null ||control.value.match(/^[0-9]*$/)) {
             return null;
         } else {
             return { 'textWithNumbers': true };
@@ -63,7 +68,7 @@ export class ValidationService {
 
      static textNumberValidator(control:any) {
        
-         if (control.value.match(/^[A-Za-z0-9]*$/)) {
+         if (control.value==null ||control.value.match(/^[A-Za-z0-9]*$/)) {
             return null;
         } else {
             return { 'textWithAlphanumeric': true };
@@ -72,11 +77,20 @@ export class ValidationService {
 
      static dateValidator(control:any) {
        
-         if (control.value>(new Date())) {
+         if (control.value==null|| control.value>("/^\d{1,2}\.\d{1,2}\.\d{4}$/")) {
             return null;
         } else {
-            return { 'textWithNumbers': true };
+            return { 'invalidDate': true };
         }
     }
+
+    //   static dropDownValidator(control:any) {
+       
+    //      if (control.value==null || control.value.match("/^(?!.*(shop))/")) {
+    //         return null;
+    //     } else {
+    //         return { 'invalidDropdown': true };
+    //     }
+    // }
     
 }

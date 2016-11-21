@@ -1,7 +1,7 @@
 import { Component,OnInit,ViewChild } from '@angular/core';
 import {HTTP_PROVIDERS} from '@angular/http';
 import {HttpService} from '../services/http-service';
-import { DynamicCmp} from '../shared/dialog/dialog';
+import { DialogComponent} from '../shared/dialog/dialog.component';
 import { ValidationService } from '../shared/dialog/validation.service';
 import { ControlMessagesComponent } from '../shared/dialog/control-messages.component';
 import { FormBuilder, FormGroup, Validators,FormControl,REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
@@ -9,11 +9,11 @@ import { FormBuilder, FormGroup, Validators,FormControl,REACTIVE_FORM_DIRECTIVES
   moduleId: module.id,
   selector: 'ap-shop',
   providers: [HttpService,HTTP_PROVIDERS],
-   directives:[DynamicCmp],
+   directives:[DialogComponent],
   templateUrl: 'shop.component.html'
 })
 export class ShopComponent implements OnInit {
-   @ViewChild(DynamicCmp) modalShopComponent: DynamicCmp;
+   @ViewChild(DialogComponent) modalShopComponent: DialogComponent;
   itemsObservables:any;
   shopData:any;
   shopformData:any;

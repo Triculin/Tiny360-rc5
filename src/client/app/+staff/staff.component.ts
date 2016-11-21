@@ -1,7 +1,7 @@
 import { Component,OnInit,ViewChild } from '@angular/core';
 import {HTTP_PROVIDERS} from '@angular/http';
 import {HttpService} from '../services/http-service';
-import { DynamicCmp} from '../shared/dialog/dialog';
+import { DialogComponent} from '../shared/dialog/dialog.component';
 import { ValidationService } from '../shared/dialog/validation.service';
 import { ControlMessagesComponent } from '../shared/dialog/control-messages.component';
 import { FormBuilder, FormGroup, Validators,FormControl,REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
@@ -9,11 +9,11 @@ import { FormBuilder, FormGroup, Validators,FormControl,REACTIVE_FORM_DIRECTIVES
   moduleId: module.id,
   selector: 'ap-staff',
   providers: [HttpService,HTTP_PROVIDERS],
-   directives:[DynamicCmp],
+   directives:[DialogComponent],
   templateUrl: 'staff.component.html'
 })
 export class StaffComponent implements OnInit {
-  @ViewChild(DynamicCmp) modalstaffComponent: DynamicCmp;
+  @ViewChild(DialogComponent) modalstaffComponent: DialogComponent;
   itemsObservables:any;
 staffData:any;
 staffformData:any;
@@ -25,7 +25,7 @@ staffForm:any;
     this.itemsObservables = this.httpService.getMasterConfig();
     this.itemsObservables.subscribe((res:any) => { 
     this.staffData = res.staff;
-      this.staffformData=res.staffForm;
+    this.staffformData=res.staffForm;
     this.userForm = this.staffformData;
     });
      

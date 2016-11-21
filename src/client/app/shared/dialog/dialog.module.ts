@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import {SharedModule  } from '../../shared/shared.module';
 import { ControlMessagesComponent } from './control-messages.component';
 import {    SelectModule   } from 'angular2-select';
-import { DynamicCmp} from './dialog';
+import { DialogComponent} from './dialog.component';
 import { ValidationService } from './validation.service';
 import {Validationservice1} from './formvalidate';
 
@@ -13,10 +13,10 @@ import {Validationservice1} from './formvalidate';
     BrowserModule,SharedModule,SelectModule
   ],
   declarations: [
-  DynamicCmp,
+  DialogComponent,
   ],
   exports: [
-  DynamicCmp
+  DialogComponent
   ],
 })
 export class DialogModule {

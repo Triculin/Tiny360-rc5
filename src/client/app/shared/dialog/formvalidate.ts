@@ -9,12 +9,13 @@ constructor() {
     // formvalidator: any = {};
     formvalidations: any =
   {
-        "text": [Validators.required, ValidationService.textValidator] ,
-         "number": [Validators.required] ,
-         "textNumber": [Validators.required],
-         "email": [Validators.required] ,
+        "text": [Validators.required, ValidationService.textValidator, Validators.minLength(3)],
+         "number": [Validators.required, ValidationService.numberValidator] ,
+         "textNumber": [Validators.required, ValidationService.textNumberValidator],
+         "email": [Validators.required, ValidationService.emailValidator] ,
          "password":[Validators.required],
-         "date":[Validators.required]
+         "date":[Validators.required, ValidationService.dateValidator],
+         "dropdown":[Validators.required]
          
         
   }
