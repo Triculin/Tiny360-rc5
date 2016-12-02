@@ -7,7 +7,7 @@ import {    SelectModule   } from 'angular2-select';
 import { DialogComponent} from './dialog.component';
 import { ValidationService } from './validation.service';
 import {Validationservice1} from './formvalidate';
-
+import {    FormsModule    } from '@angular/forms';
 @NgModule({
   imports: [
     BrowserModule,SharedModule,SelectModule

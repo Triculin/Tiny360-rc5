@@ -8,6 +8,7 @@ export class ValidationService {
             'minlength': `Minimum length ${validatorValue.requiredLength}`,
             'maxlength':`Maximum length ${validatorValue.requiredLength}`,
             'textWithAlphabets':'only allow alphabets',
+            // 'allowalphabets':'alphabetes allowed',
             'textwithNumbers':'only allow numbers',
            'textWithAlphanumeric':'allow characters and numbers',
            'invalidDate':'invalid date format'
@@ -57,12 +58,31 @@ export class ValidationService {
         }
     }
 
+      static text(control:any) {
+       
+        if (control.value==null ||control.value.match(/^[A-Za-z]*$/)) {
+            return null;
+        } 
+        else {
+            return { 'allowalphabets': true };
+        }
+    }
+
      static numberValidator(control:any) {
        
         if (control.value==null ||control.value.match(/^[0-9]*$/)) {
             return null;
         } else {
             return { 'textWithNumbers': true };
+        }
+    }
+
+     static number(control:any) {
+       
+        if (control.value==null ||control.value.match(/^[0-9]*$/)) {
+            return null;
+        } else {
+            return { 'only numbers': true };
         }
     }
 

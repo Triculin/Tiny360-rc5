@@ -1,0 +1,309 @@
+"storesettingsData": [
+                            {
+                                "id": 0,
+                                "name": "TimeZone",
+                                "sorted": [
+                                    0,
+                                    1,
+                                    2
+                                ],
+                                "showRowsList":[5,10,15,20,50,100],
+                                "values": [
+                                            {
+                                                "id": 1,
+                                                "ClothType": "Shrit",
+                                                "Code": "St501",
+                                                "ClothImage": "assets/img/icon/order-shirt.jpg"
+                                            },
+                                            {
+                                                "id": 2,
+                                                "ClothType": "Pents",
+                                                "Code": "Pt502",
+                                                "ClothImage": "assets/img/icon/order-pant.jpg"
+                                            },
+                                            {
+                                                "id": 3,
+                                                "ClothType": "Skirt",
+                                                "Code": "Sk503",
+                                                "ClothImage": "assets/img/icon/order-skirt.jpg"
+                                            },
+                                            {
+                                                "id": 4,
+                                                "ClothType": "Shrit",
+                                                "Code": "St501",
+                                                "ClothImage": "assets/img/icon/order-shirt.jpg"
+                                            },
+                                            {
+                                                "id": 5,
+                                                "ClothType": "Skirt",
+                                                "Code": "Sk503",
+                                                "ClothImage": "assets/img/icon/order-skirt.jpg"
+                                            },
+                                            {
+                                                "id": 6,
+                                                "ClothType": "Pents",
+                                                "Code": "Pt502",
+                                                "ClothImage": "assets/img/icon/order-pant.jpg"
+                                            },
+                                            {
+                                                "id": 7,
+                                                "ClothType": "Shrit",
+                                                "Code": "St501",
+                                                "ClothImage": "assets/img/icon/order-shirt.jpg"
+                                            },
+                                            {
+                                                "id": 8,
+                                                "ClothType": "Pents",
+                                                "Code": "Pt502",
+                                                "ClothImage": "assets/img/icon/order-pant.jpg"
+                                            },
+                                            {
+                                                "id": 9,
+                                                "ClothType": "Shrit",
+                                                "Code": "St501",
+                                                "ClothImage": "assets/img/icon/order-shirt.jpg"
+                                            },
+                                            {
+                                                "id": 10,
+                                                "ClothType": "Pents",
+                                                "Code": "Pt502",
+                                                "ClothImage": "assets/img/icon/order-pant.jpg"
+                                            },
+                                            {
+                                                "id": 11,
+                                                "ClothType": "Shrit",
+                                                "Code": "St501",
+                                                "ClothImage": "assets/img/icon/order-shirt.jpg"
+                                            },
+                                            {
+                                                "id": 12,
+                                                "ClothType": "Skirt",
+                                                "Code": "Sk503",
+                                                "ClothImage": "assets/img/icon/order-skirt.jpg"
+                                            },
+                                            {
+                                                "id": 13,
+                                                "ClothType": "Pents",
+                                                "Code": "Pt502",
+                                                "ClothImage": "assets/img/icon/order-pant.jpg"
+                                            },
+                                            {
+                                                "id": 14,
+                                                "ClothType": "Skirt",
+                                                "Code": "Sk503",
+                                                "ClothImage": "assets/img/icon/order-skirt.jpg"
+                                            },
+                                            {
+                                                "id": 15,
+                                                "ClothType": "Shrit",
+                                                "Code": "St501",
+                                                "ClothImage": "assets/img/icon/order-shirt.jpg"
+                                            },
+                                            {
+                                                "id": 16,
+                                                "ClothType": "Pents",
+                                                "Code": "Pt502",
+                                                "ClothImage": "assets/img/icon/order-pant.jpg"
+                                            },
+                                            {
+                                                "id": 17,
+                                                "ClothType": "Shrit",
+                                                "Code": "St501",
+                                                "ClothImage": "assets/img/icon/order-shirt.jpg"
+                                            },
+                                            {
+                                                "id": 18,
+                                                "ClothType": "Skirt",
+                                                "Code": "Sk503",
+                                                "ClothImage": "assets/img/icon/order-skirt.jpg"
+                                            },
+                                            {
+                                                "id": 19,
+                                                "ClothType": "Shrit",
+                                                "Code": "St501",
+                                                "ClothImage": "assets/img/icon/order-shirt.jpg"
+                                            },
+                                            {
+                                                "id": 20,
+                                                "ClothType": "Pents",
+                                                "Code": "Pt502",
+                                                "ClothImage": "assets/img/icon/order-pant.jpg"
+                                            }
+                                ]
+                            },
+                            {
+					"id": 1,
+					"name": "taxes",
+					"showRowsList":[5,10,15,20,50,100],
+					"sorted": [
+						0,
+						1,
+						2
+					],
+					"values": [
+						{
+							"id": "01.",
+							"ItemName": "Shrit",
+							"Code": "St501"
+						},
+						{
+							"id": "02.",
+							"ItemName": "Shrit",
+							"Code": "St501"
+						},
+						{
+							"id": "03.",
+							"ItemName": "Shrit",
+							"Code": "St501"
+						},
+						{
+							"id": "04.",
+							"ItemName": "Shrit",
+							"Code": "St501"
+						},
+						{
+							"id": "05.",
+							"ItemName": "Shrit",
+							"Code": "St501"
+						},
+						{
+							"id": "06.",
+							"ItemName": "Shrit",
+							"Code": "St501"
+						},
+						{
+							"id": "07.",
+							"ItemName": "Shrit",
+							"Code": "St501"
+						},
+						{
+							"id": "08.",
+							"ItemName": "Shrit",
+							"Code": "St501"
+						},
+						{
+							"id": "09.",
+							"ItemName": "Shrit",
+							"Code": "St501"
+						},
+						{
+							"id": "10.",
+							"ItemName": "Shrit",
+							"Code": "St501"
+						},
+						{
+							"id": "11.",
+							"ItemName": "Shrit",
+							"Code": "St501"
+						},
+						{
+							"id": "12.",
+							"ItemName": "Shrit",
+							"Code": "St501"
+						},
+						{
+							"id": "13.",
+							"ItemName": "Shrit",
+							"Code": "St501"
+						}
+					]
+				},
+                {
+					"id": 3,
+					"name": "ordernumbers",
+					"showRowsList":[5,10,15,20,50,100],
+					"sorted": [
+						0,
+						1
+					],
+					"values": [
+						{
+							"id": "1",
+							"order": "Soap",
+							"cost": "₹20/-"
+						},
+						{
+							"id": "2",
+							"order": "Surf",
+							"cost": "₹50/-"
+						}
+					]
+				},
+                {
+					"id": 4,
+					"name": "deliverytime",
+					"showRowsList":[5,10,15,20,50,100],
+					"sorted": [
+						0,
+						1
+					],
+					"values": [
+						{
+							"id": "1",
+							"location": "Hyderbad"
+						},
+						{
+							"id": "2",
+							"location": "Secunderabad"
+						},
+						{
+							"id": "3",
+							"location": "Hydernagar"
+						},
+						{
+							"id": "4",
+							"location": "Hitech City"
+						}
+					]
+				},
+                {
+					"id": 5,
+					"name": "urgentorders",
+					"showRowsList":[5,10,15,20,50,100],
+					"sorted": [
+						0,
+						1
+					],
+					"values": [
+						{
+							"id": "1",
+							"ProcessName": "Soap",
+							"Code": "Pr510",
+							"price": "₹20/-"
+						},
+						{
+							"id": "2",
+							"ProcessName": "Soap",
+							"Code": "Pr520",
+							"price": "₹50/-"
+						}
+					]
+				}
+],
+"clothsettingsData": [
+                            {
+                                "id": 0,
+                                "name": "TimeZone",
+                                "sorted": [
+                                    0,
+                                    1,
+                                    2
+                                ],
+                                "showRowsList":[5,10,15,20,50,100],
+                                "values": [
+                                            {
+                                                "id": 1,
+                                                "ClothType": "Shrit",
+                                                "Code": "St501",
+                                                "ClothImage": "assets/img/icon/order-shirt.jpg"
+                                            }
+                                ]
+                            }
+]
+                        
+                
+
+10
+S.No.
+Cloth Category
+0 1.Man02.Women03.Kids04.Household05.Insituitional06.Others

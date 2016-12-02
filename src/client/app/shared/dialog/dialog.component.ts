@@ -24,21 +24,20 @@ import {Validationservice1} from './formvalidate';
   userform:FormGroup;
   userForm:FormGroup;
  formvalidator:any={};
-  // formSingle: FormGroup;
+   formSingle: FormGroup;
   multipleSingle: boolean = false;
   optionsSingle: Array<any> = [];
-  // formMultiple: FormGroup;
+   formMultiple: FormGroup;
   multipleMultiple: boolean = true;
   optionsMultiple: Array<any> = [];
   allowClear: boolean = true;
   @ViewChild('singleSelectComponent') singleSelectComponent:any;
   @ViewChild('multipleSelectComponent') multipleSelectComponent:any;
   ngOnInit() {
-    this.userform = new FormGroup({});
-    this.userform.addControl('userType', new FormControl());
-   this.userform = new FormGroup({});
-    this.userform.addControl('selectMultiple', new FormControl());
-
+      this.formSingle = new FormGroup({});
+ this.formSingle.addControl('selectSingle', new FormControl());
+    this.formMultiple = new FormGroup({});
+    this.formMultiple.addControl('selectMultiple', new FormControl());
     
   }
  
@@ -46,24 +45,25 @@ constructor( private formBuilder:FormBuilder){
       
    };
 
-   modalPopupOpen() {
+
+  modalPopupOpen() {
     this.modalstatus = 'block';
-     this.formvalidator={};
+     this.formvalidator={}; // // this will clear the form  
     var valdations:any=this.validation.formData();
     if (this.formdata){
-  var keys=Object.keys(this.formdata)
-for(var key in this.formdata)
+  var keys=Object.keys(this.formdata) //formdata keys wil cum 
+for(var key in this.formdata) //display keys
 {
-  this.formvalidator[key]=[];
-this.formvalidator[key].push("");
+  this.formvalidator[key]=[]; // we clear the errors
+this.formvalidator[key].push(""); // push the values
   this.formvalidator[key].push(valdations[this.formdata[key]]);
-  
 }
    this.userform = this.formBuilder.group(this.formvalidator);
     this.popupopen=true;
     }
   }
- modalClickEvents(modalClickFunctionName:any) {
+
+  modalClickEvents(modalClickFunctionName:any) {
     if(modalClickFunctionName === 'modalPopupClose()') {
         this.modalPopupClose();
     }else if(modalClickFunctionName === 'modalMandatoryInfoHide()') {
@@ -95,5 +95,5 @@ this.formvalidator[key].push("");
     this.userform.reset();
     this.modalstatus="none";
     this.popupopen=false; 
+    }
   }
-}

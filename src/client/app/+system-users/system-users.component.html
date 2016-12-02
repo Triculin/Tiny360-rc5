@@ -1,5 +1,24 @@
-<div>
+<div class="pageContent extended">
     This is system-users page
-     <button (click)="modalSystemUsersOpen()">Add systemuser</button>
-      <pop-up  [data]="systemUserData" [formdata]="userForm" ></pop-up>
+    <!--<button id="myBtn" (click)="modalSystemUsersOpen()">SystemUsers Modal</button>-->
+    <pop-up [data]="systemUsersData" [formdata]="userForm"></pop-up>
+    <div class="all_add" style="position:fixed; z-index:99; bottom:30px; right:30px; display:none;">
+        <a (click)="modalSystemUsersOpen()">
+            <img src="client/assets/img/icon/plus.png" />
+        </a>
+    </div>
+    <div style="clear:both; display:block;"></div>
+    <div class="all_add " style="position:fixed; z-index:999; bottom:40px; right:25px; ">
+        <a (click)="modalSystemUsersOpen()">
+            <i class="add_icon"></i>
+        </a>
+        <ul class="animated bounceInLeft">
+            <li>
+                <a (click)="modalSystemUsersOpen()">
+                    <i class="fa fa-fw fa-industry"></i>
+                    Add System User
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>

@@ -9,8 +9,10 @@ constructor() {
     // formvalidator: any = {};
     formvalidations: any =
   {
-        "text": [Validators.required, ValidationService.textValidator, Validators.minLength(3)],
+        "text": [Validators.required, ValidationService.textValidator],
+        "textoptional": [ ValidationService.text],
          "number": [Validators.required, ValidationService.numberValidator] ,
+         "numberoptional": [ ValidationService.number] ,
          "textNumber": [Validators.required, ValidationService.textNumberValidator],
          "email": [Validators.required, ValidationService.emailValidator] ,
          "password":[Validators.required],

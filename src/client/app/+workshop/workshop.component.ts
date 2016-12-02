@@ -1,15 +1,16 @@
 import {  Component , OnInit ,ViewChild } from '@angular/core';
 import {  HTTP_PROVIDERS  } from '@angular/http';
-import {  HttpService } from '../services/http-service';
+import {  HttpService } from '../shared/services/http-service';
 import { DialogComponent} from '../shared/dialog/dialog.component';
 import { ValidationService } from '../shared/dialog/validation.service';
 import { ControlMessagesComponent } from '../shared/dialog/control-messages.component';
 import { FormBuilder, FormGroup, Validators,FormControl,REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
+
 @Component({
   moduleId: module.id,
   selector: 'ap-workshop',
   providers: [HttpService,HTTP_PROVIDERS],
-   directives:[DialogComponent],
+  directives: [ DialogComponent ],
   templateUrl: 'workshop.component.html'
 })
 export class WorkshopComponent implements OnInit {
@@ -18,7 +19,8 @@ export class WorkshopComponent implements OnInit {
   workshopData:any;
   workshopformData:any;
   userForm :any;
-  constructor ( public httpService:HttpService) {
+  @ViewChild(DialogComponent) modalWorkshopComponent: DialogComponent;
+  constructor ( public httpService:HttpService,private formBuilder: FormBuilder) {
   }
   ngOnInit() {
     this.itemsObservables = this.httpService.getMasterConfig();
@@ -29,9 +31,10 @@ export class WorkshopComponent implements OnInit {
     });
   }
 
-   modalWorkShopOpen() {
-    this.modalWorkShopComponent.modalPopupOpen();
-    }
+
+  modalWorkshopOpen() {
+    this.modalWorkshopComponent.modalPopupOpen();
+  }
 }
 
 

@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
 @Component({
   moduleId: module.id,
   selector: 'ap-cloth-settings',
-  templateUrl: 'cloth-settings.component.html',
-  styleUrls: ['cloth-settings.component.css']
+  templateUrl: 'cloth-settings.component.html'
 })
 export class ClothSettingsComponent { }
