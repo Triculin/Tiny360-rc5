@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 
+
+
 import { DashboardModule } from './+dashboard/dashboard.module';
 import { ShopModule } from './+shop/shop.module';
 import { WorkshopModule } from './+workshop/workshop.module';
@@ -20,6 +22,7 @@ import { ClothSettingsModule } from './+global-settings/+cloth-settings/cloth-se
 import { CostCenterModule } from './+global-settings/+cost-center/cost-center.module';
 import { SharedModule } from './shared/shared.module';
 // import {DialogComponentModule } from './shared/dialog/dialog.component.module';
+
 
 @NgModule({
   imports: [BrowserModule, HttpModule, RouterModule.forRoot(routes), DashboardModule, ShopModule,
