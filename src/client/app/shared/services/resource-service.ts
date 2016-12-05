@@ -1,12 +1,13 @@
-import {Injectable, EventEmitter} from "@angular/core";
+import {Injectable, EventEmitter} from '@angular/core';
 @Injectable()
 export class ResourceService {
+  private static _pipedDataEmitter:any;
   public data:Array<any> = [];
   public keys:Array<any> = [];
   public key:any;
   public order:Array<any> = [];
   public previousData:Array<any> = [];
-  private static _pipedDataEmitter:any;
+
 
   static getPipedData():EventEmitter<any> {
     if (!this._pipedDataEmitter) {

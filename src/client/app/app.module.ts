@@ -19,6 +19,7 @@ import { ClothSettingsModule } from './+global-settings/+cloth-settings/cloth-se
 import { CostCenterModule } from './+global-settings/+cost-center/cost-center.module';
 import { SharedModule } from './shared/shared.module';
 
+
 @NgModule({
   imports: [BrowserModule, HttpModule, RouterModule.forRoot(routes), DashboardModule, ShopModule,
    WorkshopModule,StaffModule,HolidaysModule,SystemUsersModule,GlobalSettingsModule,ReportsModule,StoreSettingsModule,

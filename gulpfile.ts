@@ -8,10 +8,32 @@ import { loadTasks } from './tools/utils';
 
 loadTasks(SEED_TASKS_DIR);
 loadTasks(PROJECT_TASKS_DIR);
-
+var scss=require('gulp-scss')
 
 // --------------
 // Build dev.
+// Scss to Css Convertion task
+(function (r:any) {
+    "use strict";
+    var scss = r("gulp-scss");
+    var gulp = r("gulp");
+    gulp.task("scss", function () {
+        gulp.src(
+            "src/client/assets/_scss/**/*.scss"
+        ).pipe(scss(
+            {"bundleExec": true}
+        )).pipe(gulp.dest("src/client/assets/css1"));
+    });
+}(require));
+    // gulp.task("scss", function () {
+    //     gulp.src(
+    //         "src/client/assets/_scss/**/*.scss"
+    //     ).pipe(scss(
+    //         {"bundleExec": true}
+    //     )).pipe(gulp.dest("src/client/assets/css1"));
+    // });
+
+
 gulp.task('build.dev', (done: any) =>
   runSequence(//'clean.dev',
 //              'tslint',
@@ -37,6 +59,7 @@ gulp.task('build.e2e', (done: any) =>
               'build.assets.dev',
               'build.js.e2e',
               'build.index.dev',
+              'scss',
               done));
 
 // --------------

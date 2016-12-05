@@ -156,7 +156,7 @@ export class SeedConfig {
    * The folder of the applications css files.
    * @type {string}
    */
-  CSS_SRC = `${this.APP_SRC}/css`;
+  CSS_SRC = `${this.ASSETS_SRC}/_scss`;
 
   /**
    * The directory of the applications tools
@@ -387,7 +387,11 @@ export class SeedConfig {
       },
       'rxjs': {
         defaultExtension: 'js'
-      }
+      },
+      'angular2-color-picker': {
+      format: 'register',
+      defaultExtension: 'js'
+    }
     }
   };
 
@@ -453,7 +457,9 @@ export class SeedConfig {
     'gulp-sass': {
       includePaths: ['./node_modules/']
     },
-
+    'gulp-scss': {
+      includePaths: ['./node_modules/']
+    },
     /**
      * The options to pass to gulp-concat-css
      * Reference: https://github.com/mariocasciaro/gulp-concat-css

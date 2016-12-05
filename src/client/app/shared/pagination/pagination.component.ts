@@ -40,7 +40,6 @@ export class PaginationComponent {
     this.updateNumberPerPage();
   }
   public nextPage(event: any): void {
-    event.preventDefault();
     if (!this.isLastPage()) {
       this.pageNumber++;
       this.currentpage = this.pageNumber;
@@ -49,7 +48,6 @@ export class PaginationComponent {
     this.updatePagination();
   }
   public previousPage(event: any): void {
-    event.preventDefault();
     if (!this.isFirstPage()) {
       this.pageNumber--;
       this.currentpage = this.pageNumber;
@@ -76,7 +74,6 @@ export class PaginationComponent {
     this.updatePagination();
   }
   changeRange(number: any): void {
-    event.preventDefault();
     this.range = number;
     this.pageNumber = 1;
     this.currentpage = 1;
@@ -84,7 +81,6 @@ export class PaginationComponent {
     this.updatePagination();
   }
   changePage(event: any, numberOfPage: number): void {
-    event.preventDefault();
     this.pageNumber = numberOfPage;
     this.currentpage = numberOfPage;
     this.seletedPage = this.currentpage;
