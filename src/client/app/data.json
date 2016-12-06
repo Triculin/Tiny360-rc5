@@ -415,6 +415,227 @@
 				}
 			]
 		},
+		"systemusers": {
+			"showRowsList": [
+				5,
+				10,
+				15,
+				20,
+				50,
+				100
+			],
+			"sortedCols": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6
+			],
+			"systemusersList": [
+				{
+					"id": 0,
+					"firstName": "Alden",
+					"lastName": "Adele",
+					"userName": "adele@mail.com",
+					"userType": "Shop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 1,
+					"firstName": "Alden",
+					"lastName": "Adele",
+					"userName": "adele@mail.com",
+					"userType": "Workshop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 2,
+					"firstName": "Hakeem",
+					"lastName": "Adele",
+					"userName": "hakeem@mail.com",
+					"userType": "Workshop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 3,
+					"firstName": "Francis",
+					"lastName": "Adele",
+					"userName": "francis@mail.com",
+					"userType": "Shop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 4,
+					"firstName": "  Ivor",
+					"lastName": "Adele",
+					"userName": "ivor@mail.com",
+					"userType": "Workshop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 5,
+					"firstName": "Beck",
+					"lastName": "Adele",
+					"userName": "beck@mail.com",
+					"userType": "Shop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 6,
+					"firstName": "Rajah",
+					"lastName": "Adele",
+					"userName": "rajah@mail.com",
+					"userType": "Shop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 7,
+					"firstName": "  Palmer",
+					"lastName": "Adele",
+					"userName": "palmer@mail.com",
+					"userType": "Workshop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 8,
+					"firstName": "Thor",
+					"lastName": "Adele",
+					"userName": "thor@mail.com",
+					"userType": "Workshop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 9,
+					"firstName": "Reed",
+					"lastName": "Adele",
+					"userName": "reed@mail.com",
+					"userType": "Workshop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 10,
+					"firstName": "Otto",
+					"lastName": "Adele",
+					"userName": "otto@mail.com",
+					"userType": "Shop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 11,
+					"firstName": "Sylvester",
+					"lastName": "Adele",
+					"userName": "sylvester@mail.com",
+					"userType": "Workshop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 12,
+					"firstName": "Russell",
+					"lastName": "Adele",
+					"userName": "russell@mail.com  ",
+					"userType": "Shop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 13,
+					"firstName": "  Fletcher",
+					"lastName": "Adele",
+					"userName": "fletcher@mail.com",
+					"userType": "Shop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 14,
+					"firstName": "Jesse",
+					"lastName": "Adele",
+					"userName": "jesse@mail.com",
+					"userType": "Workshop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 15,
+					"firstName": "Buckminster",
+					"lastName": "Adele",
+					"userName": "buckminster@mail.com",
+					"userType": "Shop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 16,
+					"firstName": "Barry",
+					"lastName": "Adele",
+					"userName": "berry@mail.com",
+					"userType": "Shop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 17,
+					"firstName": "Martin",
+					"lastName": "Adele",
+					"userName": "martin@mail.com",
+					"userType": "Workshop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 18,
+					"firstName": "Nasim",
+					"lastName": "Adele",
+					"userName": "nasim@mail.com",
+					"userType": "Shop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				},
+				{
+					"id": 19,
+					"firstName": "Merritt",
+					"lastName": "Adele",
+					"userName": "merritt@mail.com",
+					"userType": "Workshop",
+					"Date": "22 Jan 2016",
+					"lastLogin": "22 Jan 2016 04:29:41",
+					"actions": ""
+				}
+			]
+		},
 		"globalsettings": {
 			"TGSlstCatageory": [
 				{
@@ -1080,13 +1301,13 @@
 						{
 							"S.No": 1,
 							"ColorType": "Blue",
-							"Color": "0F19AB",
+							"Color": "#0F19AB",
 							"actions": ""
 						},
 						{
 							"S.No": 2,
 							"ColorType": "Red",
-							"Color": "FA0000",
+							"Color": "#FA0000",
 							"actions": ""
 						}
 					]
@@ -1525,7 +1746,7 @@
 					]
 				}
 			],
-			"costcenterData":[
+			"costcenterData": [
 				{
 					"id": 0,
 					"name": "pamentmode",
@@ -1778,7 +1999,6 @@
 					]
 				}
 			]
-
 		}
 	},
 	"masterConfig": {

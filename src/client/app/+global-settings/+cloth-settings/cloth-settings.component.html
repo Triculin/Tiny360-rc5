@@ -7,14 +7,8 @@
                         <div>
                             This is Cloth-settings page.
                                <!--<input [(colorPicker)]="color" [style.background]="color"/>-->
-                                 <div >
-            <input [(colorPicker)]="color" 
-                [style.background]="color"                   
-                [value]="color"
-                [cpCancelButton]="true"
-                [cpCancelButtonClass]= "'btn btn-primary btn-xs'"/>
-        </div>  
-        <h1>{{color}}</h1> 
+                                 <div  >
+          
                         </div>
                         <ul class="nav nav-tabs userProfileTabs" role="tablist">
                             <li *ngFor="let tab of tabs;let i=index" role="presentation" [class.active]="i==tabIndex"><a (click)="goTab(i,tab)"> {{ tab.name }}</a></li>
@@ -57,7 +51,14 @@
                                                 <span *ngIf="key==='actions'"> 
                                                     <span><i class="zmdi zmdi-view-list zmdi-hc-fw"></i></span>
                                                 <span><i class="zmdi zmdi-edit zmdi-hc-fw"></i></span>
-                                                </span>
+                                                </span>                
+                                                <span *ngIf="key==='Color'"> 
+                                                    <input [(colorPicker)]="row[key]" 
+                                                        [style.background]="row[key]"                   
+                                                        [value]="row[key]"
+                                                        [cpCancelButton]="true"
+                                                        [cpCancelButtonClass]= "'btn btn-primary btn-xs'"/> 
+                                                    </span>
                                                 <img *ngIf="imageShow(row[key])" [src]=row[key] >
                                             </td>
                                         </tr>

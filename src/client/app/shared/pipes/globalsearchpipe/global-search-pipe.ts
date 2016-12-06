@@ -8,7 +8,8 @@ export class GlobalSearchPipe implements PipeTransform {
   filter: any;
   constructor(public resource: ResourceService) {
   }
-  transform(dataArr: any, searchstring: any) {
+  transform(dataArr: any, searchstring: any,field:any) {
+
     this.filter = { value: searchstring };
     if (typeof dataArr === 'undefined') {
       return;

@@ -64,6 +64,8 @@ export class ClothSettingsComponent implements OnInit {
   stringShow(d: any, key: any) {
     if (typeof d === 'string') {
       var str = d.toString();
+       if (key=='Color')
+        return false;
       var i = (str.indexOf('.jpg') < 0);
       return i;
     } else {
